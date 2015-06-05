@@ -1,0 +1,74 @@
+﻿@model IEnumerable<MAFS_ReStart.Models.Restaurant>
+
+@{
+    ViewBag.Title = "Restaurants";
+}
+<div class="full_page_photo" style="background-image: url(../../../images/about.jpg);">
+
+
+    <div class="container">
+        <section class="call_to_action">
+            <h3 class="animated bounceInDown skincolored"> <strong>About us</strong></h3>
+            
+            <h4 class="animated bounceInUp">Serving the Chicagoland community <strong>for over 20 years</strong></h4>
+        </section>
+    </div>
+</div>
+<div class="main">
+    <div class="container">
+        <section class="hgroup">
+            <h1>Mission Statement</h1>
+            <h2>
+                To provide comprehensive & integrated Social Services to the Immigrant population of India, Pakistan, Bangladesh, the Middle East & European countries. These services include but are not limited to <strong>
+                    educate, counsel, assist & empower
+                    individuals & families
+                </strong> to become productive members in their new home.
+            </h2>
+            <ul class="breadcrumb pull-right">
+                <li><a href="/">Home</a> </li>
+                <li><a href="/Home/About2">About Us</a> </li>
+                <li class="active">Board of Directors</li>
+            </ul>
+        </section>
+        <h2>Restaurants</h2>
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table tabel-boardered table-hover">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Country)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.City)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Country)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })|
+                        @Html.ActionLink("Reviews", "Index", "Review", new { id = item.Id }, null)
+                    </td>
+                </tr>
+            }
+
+        </table>
+</div>

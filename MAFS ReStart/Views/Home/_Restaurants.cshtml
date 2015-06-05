@@ -1,0 +1,14 @@
+﻿@model MAFS_ReStart.Models.RestaurantListViewModel
+
+<div id="restaurantList">
+@foreach (var item in Model)
+{
+    <div>
+        <h4>@Html.ActionLink(item.Name, "Index","Review", new { Id = item.Id }, null)</h4>
+        <div>@item.City, @item.Country</div>
+        <p>Reviews: @item.CountOfReviews</p>
+        <hr />
+    </div>
+}
+
+</div>

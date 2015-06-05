@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace MAFS_ReStart.Models
+{
+    public class ReviewListViewModel
+    {
+        public int Id { get; set; }
+        public int Rating { get; set; }
+        public string Body { get; set; }
+        public string ReviewerName { get; set; }
+        public int RestaurantId { get; set; }
+        public string restaurantName { get; set; }
+        public int CountOfReviews { get; set; }
+
+    }
+}

@@ -1,0 +1,154 @@
+﻿@model MAFS_ReStart.Models.LoginModel
+
+@{
+    ViewBag.Title = "Log in";
+}
+
+<div class="main">
+    <div class="container">
+        <section class="hgroup">
+            <h1>Register or Sign in</h1>
+            <ul class="breadcrumb pull-right">
+                <li><a href="index.html">Home</a> </li>
+                <li class="active">Register of Sign in</li>
+            </ul>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-md-offset-3">
+                    <div class="signin">
+                        <div class="social_sign">
+                            <h3>Sign in with your social account</h3>
+                            <a class="fb" href="#facebook"><i class="fa fa-facebook"></i></a> <a class="tw" href="#twitter"><i class="fa fa-twitter"></i></a> <a class="gp" href="#googleplus"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                        <div class="or">
+                            <div class="or_l"></div>
+                            <span>or</span>
+                            <div class="or_r"></div>
+                        </div>
+                        <p class="sign_title">Log in with your site account</p>
+                        <div class="row">
+                            <div class="col-lg-2"></div>
+                            <div class="form col-lg-8">
+                                @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                    <div class="alert alert-danger">@Html.ValidationSummary(true)</div>
+
+                                    <fieldset>
+
+
+                                        <input placeholder="Email" class="form-control" type="text" id="UserName" name="UserName">
+                                        <input placeholder="Password" class="form-control" type="password" id="Password" name="Password">
+
+                                        <div class="forgot">
+                                            <div class="checkbox">
+                                                <label class="">
+                                                    <input type="checkbox" id="RememberMe" name="RememberMe">
+                                                    Remember me
+                                                </label>
+                                            </div>
+                                            <a href="#">Forgot password?</a>
+                                        </div>
+                                        @*@Html.LabelFor(m => m.UserName)
+                                @Html.TextBoxFor(m => m.UserName, "placeholder=\"Email\" class=\"form-control\" type=\"text\" ")
+                                @Html.ValidationMessageFor(m => m.UserName)*@
+
+                                        @*<li>
+                                        @Html.LabelFor(m => m.Password)
+                                        @Html.PasswordFor(m => m.Password)
+                                        @Html.ValidationMessageFor(m => m.Password)
+                                    </li>
+                                    <li>
+                                        @Html.CheckBoxFor(m => m.RememberMe)
+                                        @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+                                    </li>
+                                </ol>*@
+                                        @*<button type="submit" class="btn btn-primary btn-lg">Sign in</button>*@
+                                        <input type="submit" value="Log in" class="btn btn-primary btn-lg" />
+                                    </fieldset>
+                                    @*<p>
+                                @Html.ActionLink("Register", "Register") if you don't have an account.
+                            </p>*@
+                                }
+                            </div>
+                            <div class="col-lg-2"></div>
+                        </div>
+                    </div>
+                </div>
+                @*<div class="col-sm-6 col-md-6">
+                    <div class="signup">
+                        <form>
+                            <fieldset>
+                                <div class="social_sign">
+                                    <h3>Don't have a site account yet?</h3>
+                                    <a><i class="fa fa-user"></i></a>
+                                </div>
+                                <p class="sign_title">Create one now, it's fast &amp; free!</p>
+                                <div class="row">
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-8">
+                                        <input id="Username" name="Username" placeholder="Username" class="form-control" required="" type="text">
+                                        <input id="Emailaddress" name="Email address" placeholder="Email address" class="form-control" required="" type="text">
+                                        <input id="Password" name="Password" placeholder="Password" class="form-control" required="" type="password">
+                                        <div class="checkbox">
+                                            <label class="">
+                                                <input name="checkboxes" value="Option one" type="checkbox">
+                                                I agree to the <a href="#">terms and conditions</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2"></div>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-lg">Create your account</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>*@
+            </div>
+        </section>
+    </div>
+
+    <hgroup class="title">
+        <h1>@ViewBag.Title.</h1>
+    </hgroup>
+
+    <section id="loginForm">
+        <h2>Use a local account to log in.</h2>
+        @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <fieldset>
+                <legend>Log in Form</legend>
+                <ol>
+                    <li>
+                        @Html.LabelFor(m => m.UserName)
+                        @Html.TextBoxFor(m => m.UserName)
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.Password)
+                        @Html.PasswordFor(m => m.Password)
+                        @Html.ValidationMessageFor(m => m.Password)
+                    </li>
+                    <li>
+                        @Html.CheckBoxFor(m => m.RememberMe)
+                        @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+                    </li>
+                </ol>
+                <input type="submit" value="Log in" />
+            </fieldset>
+            <p>
+                @Html.ActionLink("Register", "Register") if you don't have an account.
+            </p>
+        }
+    </section>
+
+    <section class="social" id="socialLoginForm">
+        <h2>Use another service to log in.</h2>
+        @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+    </section>
+
