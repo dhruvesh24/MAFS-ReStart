@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Services";
+}
+<style type="text/css">
+    .service_details {
+        background-color: red;
+    }
+
+</style>
+<h2>Test</h2>
+<div class="full_page_photo" style="background-image: url(../../../images/coverphotos/healthy-lifestyle.jpg);">
+
+
+    <div class="container">
+        <section class="call_to_action">
+            <h3 class="animated bounceInDown">Our <strong>Services</strong></h3>
+            <h4 class="animated bounceInUp skincolored">Programs that help support <strong>our underserved population</strong></h4>
+        </section>
+    </div>
+</div>
+<div class="main">
+    <div class="container">
+        <section class="hgroup">
+            @*<h1>About us</h1>*@
+            <h2>
+                To provide comprehensive & integrated Social Services to the Immigrant population of India, Pakistan, Bangladesh, the Middle East & European countries. These services include but are not limited to <strong>
+                    educate, counsel, assist & empower individuals & families
+                </strong> to become productive members in their new home.
+            </h2>
+            <ul class="breadcrumb pull-right">
+                <li><a href="/">@ViewContext.RouteData.Values["controller"].ToString()</a> </li>
+                <li class="active">@ViewContext.RouteData.Values["action"].ToString()</li>
+            </ul>
+        </section>
+
+        <div class="row">
+               <div class="col-sm-4 col-md-4">
+                    <div class="service_teaser vertical my">
+                         <div class="service_photo">
+                              <figure style="background-image:url(../images/serv_6.jpg)"></figure>
+                         </div>
+                         <div class="service_details">
+                              <h2 class="section_header skincolored"><b>Service</b>Element<small>has many styles!</small></h2>
+                              <p>This is where you put the description of the service. The element has a default styling that can be altered just by adding the appropriate class to the <code>&lt;div class=&quot;service_teaser&quot;&gt;</code>. The available classes are <code>right</code>, <code>elegant</code>, <code>vertical</code> and <code>inverted</code>. See some examples at the <a href="services.html">services</a> page.</p>
+                              <a class="btn btn-primary" href="#"><i class="fa fa-info"></i>&nbsp; Optional button</a> </div>
+                    </div>
+               </div>
+
+            
+    </div> <!-- End Container -->

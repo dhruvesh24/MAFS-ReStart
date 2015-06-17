@@ -113,6 +113,11 @@ namespace MAFS_ReStart.Controllers
             return View();
         }
 
+        public ActionResult Services2()
+        {
+            return View();
+        }
+
         [HttpGet]
         public ActionResult Contact()
         {
