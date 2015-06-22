@@ -8002,3 +8002,28 @@ blockquote p {
     display: none;
   }
 }
+/***********************
+  OUTLINE BUTTONS
+************************/
+
+.btn-outline {
+    background: none;
+	padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    *letter-spacing: 1px;
+    *text-transform: uppercase;
+}
+.btn-outline {
+    border: 2px solid #e0e0e0;
+    color: #e0e0e0;
+}
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active, .open > .dropdown-toggle.btn-outline{
+    color: #fff;
+    border-color: #fff;
+}
+.btn-outline:active, .btn-outline.active {
+    border-color: #e2e2e2;
+    color: #e2e2e2;
+    box-shadow: none;
+}
