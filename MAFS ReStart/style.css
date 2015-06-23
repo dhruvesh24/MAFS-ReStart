@@ -8027,3 +8027,17 @@ blockquote p {
     color: #e2e2e2;
     box-shadow: none;
 }
+
+.dark{
+    border: 2px solid #428bca;
+   color: #428bca;
+}
+.btn-outline .dark:hover, .btn-outlin .dark:focus, .btn-outline .dark:active, .btn-outline .dark.active, .open > .dropdown-toggle.btn-outline .dark{
+    color: #000;
+    border-color: #000;
+}
+.btn-outline .dark:active, .btn-outline .dark.active {
+    border-color: #000;
+    color: #000;
+    box-shadow: none;
+}
