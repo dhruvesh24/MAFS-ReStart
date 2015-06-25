@@ -115,6 +115,8 @@ namespace MAFS_ReStart.Controllers
 
         public ActionResult Services2()
         {
+            Random random = new Random();
+            ViewBag.RandomNum = random.Next(9);
             return View();
         }
 

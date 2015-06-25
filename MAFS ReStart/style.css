@@ -8029,14 +8029,14 @@ blockquote p {
 }
 
 .dark{
-    border: 2px solid #428bca;
-   color: #428bca;
+    border: 2px solid #333;
+   color: #333;
 }
-.btn-outline .dark:hover, .btn-outlin .dark:focus, .btn-outline .dark:active, .btn-outline .dark.active, .open > .dropdown-toggle.btn-outline .dark{
+.dark:hover, .dark:focus, .dark:active, .dark.active, .open > .dropdown-toggle.dark{
     color: #000;
     border-color: #000;
 }
-.btn-outline .dark:active, .btn-outline .dark.active {
+.dark:active, .dark.active {
     border-color: #000;
     color: #000;
     box-shadow: none;

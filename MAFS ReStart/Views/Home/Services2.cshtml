@@ -1,9 +1,11 @@
 ﻿@{
     ViewBag.Title = "Services";
-    }
+}
 
 <style type="text/css">
-    h3 { font-size: 1.2em;}
+    h3 {
+        font-size: 1.2em;
+    }
 </style>
 @*<div class="full_page_photo" style="background-image: url(../../../images/coverphotos/healthy-lifestyle.jpg);">
 
@@ -19,115 +21,144 @@
     <div class="container">
         <section class="hgroup">
             <h1>Programs</h1>
-            <h2>
-                MAFS offers a breadth of services that are targeted to support our community. We can help you and you family with immigration, translation, nutrition, computer training, 
+            <h2>MAFS offers a breadth of services that are targeted to support our community. We can help you and you family with immigration, translation, nutrition, computer training, 
                 paying your light or heat bills, or if you’re just in need of a fresh home-cooked meal.
             </h2>
             <ul class="breadcrumb pull-right">
-                <li><a href="/">@ViewContext.RouteData.Values["controller"].ToString()</a> </li>
+                <li>@ViewBag.RandomNum <a href="/">@ViewContext.RouteData.Values["controller"].ToString()</a> </li>
                 <li class="active">@ViewContext.RouteData.Values["action"].ToString()</li>
             </ul>
         </section>
-     </div>
+    </div>
     <div class="container">
         <div class="row">
-               <div class="col-sm-4 col-md-4">
-                    <div class="service_teaser vertical">
-                         <div class="service_photo">
-                              <figure style="background-image:url(../images/nutrition.jpg)"></figure>
-                         </div>
-                         <div class="service_details">
-                              <h2 class="section_header skincolored"><b>Nutrition</b>Programs<small>To eat is a necessity, but to eat intelligently is an art.</small></h2>
-                               <p>Our staff and members strongly believe in this adage. <strong>We serve hot, fresh, home-cooked meals</strong> that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis.  We also help educate participants on choosing the right kind of foods that help prevent & manage diseases like diabetes and hypertension which are common in our culture. <br /><strong>Locations: </strong></p>
-                                <ul>
-                                    <li>Chicago</li>
-                                    <li>Niles</li>
-                                    <li>Roselle</li>
-                                    <li>Naperville</li>
-
-                                </ul><br />
-                             <a class="btn btn-success" href="#"><i class="fa fa-info"></i>&nbsp; Learn more</a> </div>
-                    </div>
-
-                   <div class="service_teaser vertical">
-                         <div class="service_photo">
-                              <figure style="background-image:url(../images/ceda.jpg)"></figure>
-                         </div>
-                         <div class="service_details">
-                              <h2 class="section_header skincolored"><b>Public Benefit</b>Programs<small>Have you ever wondered what benefits you qualify for?</small></h2>
-                               <p>Many people do not know what is available to them.  MAFS can help you understand and apply for <strong>benefits like:</strong>
-                                   <ul>
-                                       <li><a href="#">Medicare</a></li>
-                                       <li>Medicaid</li>
-                                       <li>Social Security</li>
-                                       <li>Access to Care</li>
-                                       <li>Citizenship Transportation</li>
-                                       <li>Kids Care</li>
-                                       <li>SSI Prescription Drug Assistance</li>
-                                       <li>Food Stamps</li>
-                                       <li>LIHEAP</li>
-
-                                   </ul>
-                                   <strong>and many others. </strong>  Come in and talk to our friendly staff about your needs and we will try our utmost to help! </p>
-                             @*<a class="btn btn-success" href="#"><i class="fa fa-info"></i>&nbsp; Learn more</a>*@ 
-
-                         </div>
-                    </div>
-               </div><!-- End Col -->
-
             <div class="col-sm-4 col-md-4">
-                    <div class="service_teaser vertical">
-                         <div class="service_photo">
-                              <figure style="background-image:url(../images/education.jpg)"></figure>
-                         </div>
-                         <div class="service_details">
-                              <h2 class="section_header skincolored"><b>Education</b>Programs<small>At MAFS we believe in education.</small></h2>
-                               <p>Education and knowledge help you better understand yourself and the world around you. It also helps you obtain a higher paying job.  
-                                   To help educate and train our community we offer educational and technical programs <strong>including:  </strong>  </p>
-                                       <ul>
-                                           <li><a href="#">English as a Second Language (ESL)</a></li>
-                                           <li><a href="#">Bright Ideas</a></li>
-                                           <li><a href="#">CPR training</a></li>
-                                           <li><a href="#">Computer training</a></li>
-                                       </ul>
-                             </div>
+                <div class="service_teaser vertical">
+                    <div class="service_photo">
+                        <figure style="background-image: url(../images/nutrition.jpg)"></figure>
                     </div>
+                    <div class="service_details">
+                        <h2 class="section_header skincolored"><b>Nutrition</b>Programs<small>To eat is a necessity, but to eat intelligently is an art.</small></h2>
+                        <p>Our staff and members strongly believe in this adage. <strong>We serve hot, fresh, home-cooked meals</strong> that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis.  We also help educate participants on choosing the right kind of foods that help prevent & manage diseases like diabetes and hypertension which are common in our culture.
+                            <br />
+                            <strong>Locations: </strong></p>
+                        <ul>
+                            <li>Chicago</li>
+                            <li>Niles</li>
+                            <li>Roselle</li>
+                            <li>Naperville</li>
 
-                    <div class="service_teaser vertical">
-                         <div class="service_photo">
-                              <figure style="background-image:url(../images/immigration.jpg)"></figure>
-                         </div>
-                         <div class="service_details">
-                              <h2 class="section_header skincolored"><b>Research</b>Programs<small>We partner with the leading health and educational institutions to explore and study problems that concern our culture the most.</small></h2>
-                               <p>We have collaborated with Northwestern University’s Feinberg School of Medicine to teach the South Asian community how to make important dietary changes, engage in an active lifestyle, reduce stress, and lose // The first is the Pink Pashmina project which offers free breast cancer screenings and mammograms to South Asian woman.  The second is to provide our community with free screening and testing for Hepatitis B. </p>
-                             <a class="btn btn-success" href="#"><i class="fa fa-info"></i>&nbsp; Learn more</a> </div>
+                        </ul>
+                        <br />
+                        <a class="btn btn-success" href="#"><i class="fa fa-info"></i>&nbsp; Learn more</a>
                     </div>
-               </div><!-- End Col -->
-
-            <div class="col-sm-4 col-md-4">
-                    <div class="service_teaser vertical">
-                         <div class="service_photo">
-                              <figure style="background-image:url(../images/research.jpg)"></figure>
-                         </div>
-                         <div class="service_details">
-                              <h2 class="section_header skincolored"><b>Research</b>Programs<small>We partner with the leading health and educational institutions to explore and study problems that concern our culture the most.</small></h2>
-                               <p>We have collaborated with Northwestern University’s Feinberg School of Medicine to teach the South Asian community how to make important dietary changes, engage in an active lifestyle, reduce stress, and lose weight to reduce or prevent their chances of stroke and/or heart attacks  We also partner with the Asian Health Coalition on two projects.  The first is the Pink Pashmina project which offers free breast cancer screenings and mammograms to South Asian woman.  The second is to provide our community with free screening and testing for Hepatitis B. </p>
-                             <a class="btn btn-success" href="#"><i class="fa fa-info"></i>&nbsp; Learn more</a> </div>
-                    </div>
+                </div>
 
                 <div class="service_teaser vertical">
-                         <div class="service_photo">
-                              <figure style="background-image:url(../images/serv_6.jpg)"></figure>
-                         </div>
-                         <div class="service_details">
-                              <h2 class="section_header skincolored"><b>Research</b>Programs<small>We partner with the leading health and educational institutions to explore and study problems that concern our culture the most.</small></h2>
-                               <p>We have collaborated with Northwestern University’s Feinberg School of Medicine to teach the South Asian community how to make important dietary changes, engage in an active lifestyle, reduce stress, and lose weight to reduce or prevent their chances of stroke and/or heart attacks  We also partner with the Asian Health Coalition on two projects.  </p>
-                             <a class="btn btn-success" href="#"><i class="fa fa-info"></i>&nbsp; Learn more</a> </div>
+                    <div class="service_photo">
+                        <figure style="background-image: url(../images/ceda.jpg)"></figure>
                     </div>
-               </div><!-- End Col -->
+                    <div class="service_details">
+                        <h2 class="section_header skincolored"><b>Public Benefit</b>Programs<small>Have you ever wondered what benefits you qualify for?</small></h2>
+                        <p>
+                            Many people do not know what is available to them.  MAFS can help you understand and apply for <strong>benefits like:</strong>
+                            <ul>
+                                <li><a href="#">Medicare</a></li>
+                                <li>Medicaid</li>
+                                <li>Social Security</li>
+                                <li>Access to Care</li>
+                                <li>Citizenship Transportation</li>
+                                <li>Kids Care</li>
+                                <li>SSI Prescription Drug Assistance</li>
+                                <li>Food Stamps</li>
+                                <li>LIHEAP</li>
+
+                            </ul>
+                            <strong>and many others. </strong>Come in and talk to our friendly staff about your needs and we will try our utmost to help!
+                        </p>
+                        <a class="btn btn-success" href="#"><i class="fa fa-info"></i>&nbsp; Learn more</a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- End Col -->
+
+            <div class="col-sm-4 col-md-4">
+                <div class="service_teaser vertical">
+                    <div class="service_photo">
+                        <figure style="background-image: url(../images/education.jpg)"></figure>
+                    </div>
+                    <div class="service_details">
+                        <h2 class="section_header skincolored"><b>Education</b>Programs<small>At MAFS we believe in education.</small></h2>
+                        <p>
+                            Education and knowledge help you better understand yourself and the world around you. It also helps you obtain a higher paying job.  
+                                   To help educate and train our community we offer educational and technical programs <strong>including:  </strong>
+                        </p>
+                        <ul>
+                            <li><a href="#">English as a Second Language (ESL)</a></li>
+                            <li><a href="#">Bright Ideas</a></li>
+                            <li><a href="#">CPR training</a></li>
+                            <li><a href="#">Computer training</a></li>
+                        </ul>
+                        <br />
+                        <a class="btn btn-success" href="#"><i class="fa fa-info"></i>&nbsp; Learn more</a>
+                    </div>
+                </div>
+
+                <div class="service_teaser vertical">
+                    <div class="service_photo">
+                        <figure style="background-image: url(../images/immigration.jpg)"></figure>
+                    </div>
+                    <div class="service_details">
+                        <h2 class="section_header skincolored"><b>Citizenship&</b> Immigration Assistance<small>We partner with the leading health and educational institutions to explore and study problems that concern our culture the most.</small></h2>
+                        <p>We have collaborated with Northwestern University’s Feinberg School of Medicine to teach the South Asian community how to make important dietary changes, engage in an active lifestyle, reduce stress, and lose // The first is the Pink Pashmina project which offers free breast cancer screenings and mammograms to South Asian woman.  The second is to provide our community with free screening and testing for Hepatitis B. </p>
+                        <a class="btn btn-success" href="#"><i class="fa fa-info"></i>&nbsp; Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- End Col -->
+
+            <div class="col-sm-4 col-md-4">
+                <div class="service_teaser vertical">
+                    <div class="service_photo">
+                        <figure style="background-image: url(../images/research.jpg)"></figure>
+                    </div>
+                    <div class="service_details">
+                        <h2 class="section_header skincolored"><b>Research</b>Programs<small>We partner with the leading health and educational institutions to explore and study problems that concern our culture the most.</small></h2>
+                        <p>We have collaborated with Northwestern University’s Feinberg School of Medicine to teach the South Asian community how to make important dietary changes, engage in an active lifestyle, reduce stress, and lose weight to reduce or prevent their chances of stroke and/or heart attacks  We also partner with the Asian Health Coalition on two projects.  The first is the Pink Pashmina project which offers free breast cancer screenings and mammograms to South Asian woman.  The second is to provide our community with free screening and testing for Hepatitis B. </p>
+                        <ul>
+                            <li><a href="#">SAHELI</a></li>
+                            <li><a href="#">Pink Pashmina</a></li>
+                            <li><a href="#">Healthy Lifestyle</a></li>
+                            <li><a href="#">Depression</a></li>
+                        </ul>
+                        <br />
+                        <a class="btn btn-success" href="#"><i class="fa fa-info"></i>&nbsp; Learn more</a>
+                    </div>
+                </div>
+
+                <div class="service_teaser vertical">
+                    <div class="service_photo">
+                        <figure style="background-image: url(../images/obamacare.jpg)"></figure>
+                    </div>
+                    <div class="service_details">
+                        <h2 class="section_header skincolored"><b>Health</b>Insurance Assistance<small>We partner with the leading health and educational institutions to explore and study problems that concern our culture the most.</small></h2>
+                        <p>We have collaborated with Northwestern University’s Feinberg School of Medicine to teach the South Asian community how to make important dietary changes, engage in an active lifestyle, reduce stress, and lose weight to reduce or prevent their chances of stroke and/or heart attacks  We also partner with the Asian Health Coalition on two projects.  </p>
+                        <ul>
+                            <li><a href="#">Obamacare</a></li>
+                            <li><a href="#">Senior Health Insurance Program (SHIP)</a></li>
+                        </ul>
+                        <br />
+                        <a class="btn btn-success" href="#"><i class="fa fa-info"></i>&nbsp; Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- End Col -->
 
 
-            </div><!-- End Row -->
+        </div>
+        <!-- End Row -->
 
-            
-    </div> <!-- End Container -->
+
+    </div>
+    <!-- End Container -->

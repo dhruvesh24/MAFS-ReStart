@@ -38,8 +38,9 @@
                         @using (Html.BeginForm())
                         {
                             @Html.AntiForgeryToken()
-
-                            if(Html.ValidationMessage("Name") != null)
+                            
+                            
+                            if (Html.ValidationSummary() == null)
                             {
                                 <div class="alert alert-danger fade in">
                                     <button type="button" class="close" data-dismiss="alert">&times;</button>
