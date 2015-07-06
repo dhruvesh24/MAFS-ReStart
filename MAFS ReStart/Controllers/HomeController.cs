@@ -135,6 +135,24 @@ namespace MAFS_ReStart.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        public ActionResult Contact2()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Contact(EmailResponse Response)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("Thanks", Response);
+            }
+            else
+            {
+                return View();
+            }
+        }
         public ActionResult Error(string aspxerrorpath)
         {
             ViewBag.Page = aspxerrorpath;

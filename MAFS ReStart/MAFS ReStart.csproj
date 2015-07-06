@@ -195,6 +195,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\EmailResponse.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\Fundraiser.cs" />
     <Compile Include="Models\MafsDb.cs" />
@@ -436,6 +437,7 @@
     <Content Include="Views\Fundraiser\Delete.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\Home\Services2.cshtml" />
+    <Content Include="Views\Home\Contact2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
