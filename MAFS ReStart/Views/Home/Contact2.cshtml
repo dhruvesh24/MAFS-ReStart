@@ -4,7 +4,7 @@
 }
 
 <style type="text/css">
-    .validation-summary-errors {
+    .validation-summary-errors, .field-validation-valid {
         color: red;
     }
     .input-validation-error {
@@ -54,7 +54,7 @@
                                     
                               <div class="row">
                                    <div class="col-sm-6 col-md-6">
-                                        <label>Name</label>
+                                        <label>Name </label>@Html.ValidationMessageFor(x => x.Name)
                                         @*<input name="Name" id="Name" class="form-control" type="text" value="@Request["Name"]">*@
                                         @Html.TextBoxFor(x => x.Name, null, new { @class = "form-control", @placeholder = "John Smith" } )
                                    </div>
