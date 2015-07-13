@@ -1,0 +1,79 @@
+﻿@model MAFS_ReStart.Models.EmailResponse
+
+@{
+    ViewBag.Title = "Thanks!";
+}
+
+<div class="full_page_photo">
+    <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2964.14438525393!2d-87.6898215!3d42.018634899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd02db1977f7f%3A0xe422c0b61d364c29!2sMetropolitan+Asian+Family+Services!5e0!3m2!1sen!2sus!4v1436212228630"></iframe>
+
+     <div class="container">
+          <section class="call_to_action">
+               <h4 class="animated bounceInDown skincolored">Thanks <strong>@Model.Name</strong> for your message!</h4>
+          </section>
+     </div>
+</div>
+<div class="main">
+     <div class="container">
+          <section class="hgroup">
+               @*<h1>About us</h1>
+               <h2>To provide comprehensive & integrated Social Services to the Immigrant population of India, Pakistan, Bangladesh, the Middle East & European countries. These services include but are not limited to <strong>educate, counsel, assist & empower 
+individuals & families</strong> to become productive members in their new home.
+</h2>*@
+               <ul class="breadcrumb pull-right">
+                    <li><a href="/">Home</a> </li>
+                   <li><a href="/Home/Contact">Contact</a> </li>
+                    <li class="active">Thanks @Model.Name!</li>
+               </ul>
+          </section>
+         <div class="row-fluid">
+             <div id="leftcol" class="col-sm-8 col-md-8">
+                  <div class="alert alert-success fade-in">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <h4 class="alert-heading">Your message was sent!</h4>
+                <p>Sent on @Model.Date</p>
+            </div>
+            <br />
+            
+                        <p>Thank you for your submission, <b>@Model.Name</b>.  Your message is very important to us.  All messages well be read in the order they were received.  We will try and get back to you as soon as possible but it may take up to one week to hear back from us.</p>
+                        <br />
+                        <h3>Review of your message:</h3>
+                 <br />
+
+                 <div class="row">
+                     <div class="col-sm-6 col-md-6">
+                         <p><b>Name:</b> @Model.Name</p>
+
+                     </div>
+                     <div class="col-sm-6 col-md-6">
+                         <p><b>Email:</b> @Model.Email</p>
+
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-sm-12 col-md-12">
+                         <p><b>Subject:</b> </p>
+                         <p>@Model.Subject</p>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-sm-12 col-md-12">
+                         <p><b>Message:</b> </p>
+                         <p>@Model.Message</p>
+                     </div>
+                 </div>
+
+             </div>
+             <div id="sidebar" class="col-sm-4 col-md-4">
+                 <h4>Like us on Facebook</h4>
+                 <hr>
+                 <!-- Facebook -->
+                 <div class="fb-like-box" data-href="http://www.facebook.com/mafsinc" data-width="340px" data-show-faces="true" data-stream="true" data-border-color="#FFFFFF" data-header="false"></div>
+                 <!-- /Facebook -->
+             </div>
+         </div>
+ 
+
+
+
+</div> @*end div*@

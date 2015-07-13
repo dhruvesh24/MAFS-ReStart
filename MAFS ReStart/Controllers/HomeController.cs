@@ -142,10 +142,11 @@ namespace MAFS_ReStart.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Contact(EmailResponse Response)
+        public ActionResult Contact2(EmailResponse Response)
         {
             if (ModelState.IsValid)
             {
+                Response.Date = DateTime.Now;
                 return View("Thanks", Response);
             }
             else
