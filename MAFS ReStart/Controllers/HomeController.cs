@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -126,27 +127,10 @@ namespace MAFS_ReStart.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Contact(string Name)
-        {
-            if (string.IsNullOrEmpty(Name))
-            {
-                ModelState.AddModelError("Name", "How would I know who you are?");
-            }
-
-            return View();
-        }
-
-        [HttpGet]
-        public ActionResult Contact2()
-        {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult Contact2(EmailResponse Response)
+        public ActionResult Contact(EmailResponse Response)
         {
             if (ModelState.IsValid)
             {
-                Response.Date = DateTime.Now;
                 return View("Thanks", Response);
             }
             else
