@@ -18,14 +18,10 @@ namespace MAFS_ReStart.Models
         
 
 
-        public LinkedList<string> getImageURLs(){
+        public void getImageURLs(){
             string name = FirstName + "-" + LastName;
             Image = name + ".png";
             Image2 = name + "2.png";
-            LinkedList<string> ImageURLs = new LinkedList<string>();
-            ImageURLs.AddLast(Image);
-            ImageURLs.AddLast(Image2);
-            return ImageURLs;
         }
         
 
