@@ -7,8 +7,13 @@ wow = new WOW(
 
 jQuery(document).ready(function() {
 						   
-//Flickr feed snippet by css-tricks.com			   
-    jQuery.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=37321137@N03&format=json&jsoncallback=?", function(data) {
+    //Flickr feed snippet by css-tricks.com		
+    var URL = "http://api.flickr.com/services/feeds/photos_public.gne";
+    // change this ID to another flickr ID (like your own if you have one)
+    var ID = "131639671@N06"; // ID for the Smithsonian Institution
+    var jsonFormat = "&tags=2015,Fundraiser&format=json&jsoncallback=?";
+    var ajaxURL = URL + "?id=" + ID + jsonFormat;
+    jQuery.getJSON(ajaxURL, function(data) {
                var target = "#latest-flickr-images ul"; // Where is it going?
                for (i = 0; i <= 9; i = i + 1) { // Loop through the 10 most recent, [0-9]
                        var pic = data.items[i];
