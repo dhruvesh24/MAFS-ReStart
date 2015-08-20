@@ -11,9 +11,12 @@ namespace MAFS_ReStart.Models
         public string Title { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndTime { get; set; }
-        public string FundingAgency { get; set; }
         public string Description { get; set; }
+        public string ShortDescription { get; set; }
         public string Tagline { get; set; }
+        public string BannerImg { get; set; }
+        
+        public string FundingAgency { get; set; }
     //        • Title :: string
     //• Start Date :: DateTime
     //• End Date :: DateTime

@@ -13,6 +13,11 @@ namespace MAFS_ReStart
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute(
+                name: "Program",
+                url: "Programs/{programName}",
+                defaults: new { controller = "Programs", action = "Index", programName = UrlParameter.Optional }
+            );
 
             routes.MapRoute(
                 name: "Default",
