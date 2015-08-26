@@ -12,13 +12,13 @@ namespace MAFS_ReStart.Controllers
         //
         // GET: /Programs/
         private MafsDb _db = new MafsDb();
-        public ActionResult Index(string programName = null)
+        public ActionResult Index(string ProgramName = null)
         {
-            if (programName == null)
+            if (ProgramName == null)
             {
                 return View("All");
             }
-            ViewBag.Messsage = programName;
+            ViewBag.Messsage = ProgramName;
             return View();
         }
         public ActionResult All()
