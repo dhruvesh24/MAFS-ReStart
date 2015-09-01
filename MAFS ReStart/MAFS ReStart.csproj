@@ -197,6 +197,8 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\EmailResponse.cs" />
+    <Compile Include="Models\FundingAgency.cs" />
+    <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\Fundraiser.cs" />
     <Compile Include="Models\MafsDb.cs" />

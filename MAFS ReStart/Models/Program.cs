@@ -7,7 +7,7 @@ namespace MAFS_ReStart.Models
 {
     public class Program
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Title { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndTime { get; set; }
@@ -16,7 +16,7 @@ namespace MAFS_ReStart.Models
         public string Tagline { get; set; }
         public string BannerImg { get; set; }
         
-        public string FundingAgency { get; set; }
+        public int FundingAgencyID { get; set; }
     //        • Title :: string
     //• Start Date :: DateTime
     //• End Date :: DateTime
