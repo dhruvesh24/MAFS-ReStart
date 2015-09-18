@@ -1,21 +1,23 @@
 ﻿@model MAFS_ReStart.Models.Program
 
 @{
-    ViewBag.Title = "" + ViewBag.Message + "";
+    ViewBag.Title = ViewBag.Name + " Program";
 }
 <div class="main">
     <div class="container">
         <section class="hgroup">
             <h1>
                 <!--Title-->
-                @ViewBag.Message</h1>
+                @ViewBag.Title</h1>
             <h2>
                 <!--ShortDescription or Tagline-->
-                Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. </h2>
+                <strong>To eat is a necessity, but to eat intelligently is an art.</strong>
+
+Our staff and members strongly believe in this adage. We serve hot, fresh, home-cooked meals that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis. </h2>
             <ul class="breadcrumb pull-right">
-                <li><a href="index.html">Home</a> </li>
-                <li><a href="index.html">Programs</a> </li>
-                <li class="active">Pink Pashmina</li>
+                <li><a href="/Home">Home</a> </li>
+                <li><a href="/Programs">Programs</a> </li>
+                <li class="active">@ViewBag.Name</li>
             </ul>
         </section>
         <section>
@@ -28,12 +30,11 @@
                                   </div>-->
                         <div class="post_content">
                             <figure><a href="single_post.html">
-                                <img alt="0" src="~/images/portfolio/p4.jpg"></a></figure>
-                            <p>Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. Since the 1980s breast cancer rates have risen 4.5% each year. In 2008, 226,510 women in the United States were diagnosed with breast cancer and an estimated 40,580 women died of breast cancer (ACS, 2008). All women are at risk for breast cancer and the risk increase as women get older, especially after age 40. Breast affects the Asian subpopulations disproportionately. The rate of breast cancer among some Asian subpopulations is almost double the rate of their Caucasian counter parts leading to higher morbidity and mortality. Moreover, screening rates among the population is also much lower adding to the increased disparity between Asian American women and their Caucasian counterparts. The Breast and Cervical Cancer Education Project was initiated in 2008 to educate, increase awareness and link women to care among the South East</p>
-                            <p>
+                                <img alt="0" src="~/images/nutrition3.jpg"></a></figure>
+                            <p class="columns_2">Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. Since the 1980s breast cancer rates have risen 4.5% each year. In 2008, 226,510 women in the United States were diagnosed with breast cancer and an estimated 40,580 women died of breast cancer (ACS, 2008). All women are at risk for breast cancer and the risk increase as women get older, especially after age 40. Breast affects the Asian subpopulations disproportionately. The rate of breast cancer among some Asian subpopulations is almost double the rate of their Caucasian counter parts leading to higher morbidity and mortality. Moreover, screening rates among the population is also much lower adding to the increased disparity between Asian American women and their Caucasian counterparts. The Breast and Cervical Cancer Education Project was initiated in 2008 to educate, increase awareness and link women to care among the South East
+                            
                                 Asian community (Cambodian, Vietnamese and Chinese). Based on the success of this project, AHC was able to expand and reach out to Muslim and South Asian women with funding from the Illinois Department of Public Health as well as most recently a Susan G. Komen grant to initiate the Pink Pashmina Project.
-                            </p>
-                            <p>
+                        
                                 The PINK PASHMINA PROJECT program targets highly vulnerable  Muslim American and South Asian immigrant women residing in ethnic enclave in greater Chicagoland to reduce disparities and increase awareness and screening rates. The program aims to raise their awareness in a culturally competent fashion about breast and cervical cancer risks and prevention as well as providing them with linkages to care to guide them through the health care system for screenings and proper timely care.
 	    The Pink Pashmina Project is funded in 2014-2015 by the Susan G. Komen Foundation, Chicago Foundation for Women, Lesser Franklin Charitable Trust and Crown Family Philanthropies.
                             </p>

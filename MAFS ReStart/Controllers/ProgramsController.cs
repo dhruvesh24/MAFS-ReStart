@@ -18,7 +18,7 @@ namespace MAFS_ReStart.Controllers
             {
                 return View("All");
             }
-            ViewBag.Messsage = ProgramName;
+            ViewBag.Name = RouteData.Values["ProgramName"];
             return View();
         }
         public ActionResult All()

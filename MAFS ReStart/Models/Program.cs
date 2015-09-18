@@ -15,17 +15,8 @@ namespace MAFS_ReStart.Models
         public string ShortDescription { get; set; }
         public string Tagline { get; set; }
         public string BannerImg { get; set; }
-        
-        public int FundingAgencyID { get; set; }
-    //        • Title :: string
-    //• Start Date :: DateTime
-    //• End Date :: DateTime
-    //• Recurs? :: Boolean
-    //• Eligibility Requirements :: LinkedList<string>
-    //• Founding Date :: DateTime
-    //• Funding Agency :: LinkedList<string>
-    //• Description :: string
-    //• Tagline :: string
+        public ICollection<FundingAgency> Funders { get; set; }
+        public ICollection<Location> Locations { get; set; }
 
     }
 }
