@@ -17,5 +17,6 @@ namespace MAFS_ReStart.Models
         public DbSet<Member> Members { get; set; }
         public DbSet<Fundraiser> Fundraisers { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
+        //public DbSet<Program> Programs { get; set; }
     }
 }

@@ -47,6 +47,7 @@ namespace MAFS_ReStart.Migrations
                 IsStaff = false,
             });
             //Naren Patel
+            /*
             context.Members.AddOrUpdate(r => r.FirstName, new Member { 
                 FirstName = "Naren", 
                 LastName = "Patel",
@@ -55,7 +56,7 @@ namespace MAFS_ReStart.Migrations
                 Image = "Naren-Patel.png",
                 Image2 = "Naren-Patel2.png",
                 IsStaff = false,
-            });
+            });*/
             //Pramod Kumar
             context.Members.AddOrUpdate(r => r.FirstName, new Member
             {
@@ -100,6 +101,18 @@ namespace MAFS_ReStart.Migrations
                 Image2 = "Rakesh-Asthana2.png",
                 IsStaff = false,
             }); 
+             //Sumitra Patel
+            context.Members.AddOrUpdate(r => r.FirstName, new Member
+            {
+                FirstName = "Sumitra",
+                LastName = "Patel",
+                Position = "Board Member",
+                Bio = "  Born in Ahmedabad, India, Sumitra grew up in Sabarmati, where Mahatma Gandhi lived in the later part of his life.  Sumitra now resides in Schaumburg, Illinois, with her sister Hansa.  She has two sons, Neal and Raj.  Neal, is married to Sonal, and they have two children, Nishal (19) and Shriya (12).  Raj is married to Nisha, and they have two sons, Ronak (12) and Raveen (9). Sumitra graduated with a degree in phycology from Gujarat College in 1969.  Her move to the US in January of 1970 marked the beginning of her family life in Chicago.  Sumitra’s first professional position in the Little Fuse Company was as the Quality Control Supervisor.  She retired after 35 years in May 2006, and now spending time with her 4 Grandchildren. She has received numerous awards. Jesse Jackson’s Rainbow Push Organizations awarded her as the Best Mother in 2010 and New Millennium Women of Dorothy Brown’s Organization presented her “Woman of the New Millennium Award” in 2011. Sumitra  is a staunch supporter of Metropolitan Asian Family Services and joined MAFS in January 2015. A devoted Hindu, Sumitra is a strong believer of his Holiness Pujya Pramukhswami Maharaj of BAPS.",
+                Image = "Sumitra-Patel.png",
+                Image2 = "Sumitra-Patel2.png",
+                IsStaff = false,
+            }); 
+          
              
             //Seed Fundraiser
             //2013
@@ -142,8 +155,15 @@ namespace MAFS_ReStart.Migrations
                 IssuuLink = "9480861/6999087",
                 FlickrGallery = ""
             }); 
-
-
+            //Nutrition Program
+            /*context.Programs.AddOrUpdate(r => r.Title, new Program
+            {
+                Title = "Nutrition",
+                ShortDescription = "<strong>To eat is a necessity, but to eat intelligently is an art.</strong> Our staff and members strongly believe in this adage. We serve hot, fresh, home-cooked meals that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis.",
+                Description = "Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. Since the 1980s breast cancer rates have risen 4.5% each year. In 2008, 226,510 women in the United States were diagnosed with breast cancer and an estimated 40,580 women died of breast cancer (ACS, 2008). All women are at risk for breast cancer and the risk increase as women get older, especially after age 40. Breast affects the Asian subpopulations disproportionately. The rate of breast cancer among some Asian subpopulations is almost double the rate of their Caucasian counter parts leading to higher morbidity and mortality. Moreover, screening rates among the population is also much lower adding to the increased disparity between Asian American women and their Caucasian counterparts. The Breast and Cervical Cancer Education Project was initiated in 2008 to educate, increase awareness and link women to care among the South East Asian community (Cambodian, Vietnamese and Chinese). Based on the success of this project, AHC was able to expand and reach out to Muslim and South Asian women with funding from the Illinois Department of Public Health as well as most recently a Susan G. Komen grant to initiate the Pink Pashmina Project. The PINK PASHMINA PROJECT program targets highly vulnerable  Muslim American and South Asian immigrant women residing in ethnic enclave in greater Chicagoland to reduce disparities and increase awareness and screening rates. The program aims to raise their awareness in a culturally competent fashion about breast and cervical cancer risks and prevention as well as providing them with linkages to care to guide them through the health care system for screenings and proper timely care. The Pink Pashmina Project is funded in 2014-2015 by the Susan G. Komen Foundation, Chicago Foundation for Women, Lesser Franklin Charitable Trust and Crown Family Philanthropies.",
+                BannerImg = "nutrition3.jpg",
+                
+            });*/
 
         }
     }
