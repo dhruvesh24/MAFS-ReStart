@@ -27,6 +27,40 @@ namespace MAFS_ReStart.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            //LOCATIONS
+            //Chicago Location
+            Location Chicago = new Location();
+            Chicago.CityName = "Chicago";
+            Chicago.Phone = "773-465-3105";
+            Chicago.Fax = "773-465-0158";
+            Chicago.AddressLine1 = "7541 N Western Ave.";
+            Chicago.AddressLine2 = "Chicago, IL 60645";
+            Chicago.Zipcode = "60645";
+
+            context.Locations.AddOrUpdate(Chicago);
+
+
+            //Niles Location
+            Location Niles = new Location();
+            Niles.CityName = "Niles";
+            Niles.Phone = "847-824-9414";
+            Niles.Fax = "847-824-9415";
+            Niles.AddressLine1 = "9015 N Milwaukee Ave.";
+            Niles.AddressLine2 = "Niles, IL 60714";
+            Niles.Zipcode = "60714";
+
+            context.Locations.AddOrUpdate(Niles);
+
+            //FUNDING AGENCY
+            //AgeOptions
+            FundingAgency AgeOptions = new FundingAgency();
+            AgeOptions.Name = "AgeOptions";
+            AgeOptions.URL = "http://www.ageoptions.org/";
+            AgeOptions.ImageURL = "images/funders/ageoptions.png";
+            AgeOptions.ShortBio = "AgeOptions is a nonprofit organization connecting older adults and those who care for them with resources and service options so they can live their lives to the fullest. Since 1974, our mission has been to sustain and promote independence for older persons in their own homes and communities. As the Area Agency on Aging of suburban Cook County, Illinois, we advocate, plan, coordinate and fund services for older adults. Together with a network of community-based senior service organizations, we connect residents with vital services such as information and assistance, community dining programs and home-delivered meals, housekeeping help, employment services, access to benefits and support for family caregivers.";
+            context.Funders.AddOrUpdate(AgeOptions);
+             
             context.Restaurants.AddOrUpdate(r => r.Name,new Restaurant {Name = "Public House", City = "Chicago", Country = "USA" });
 
             //for (int i = 0; i < 1000; i++ )

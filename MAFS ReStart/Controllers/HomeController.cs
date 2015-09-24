@@ -144,6 +144,16 @@ namespace MAFS_ReStart.Controllers
             return View("~Shared/Error");
         }
 
+        public ActionResult Locations()
+        {
+            var model = _db.Locations.ToList();
+            return View(model);
+        }
+        public ActionResult Funders()
+        {
+            var model = _db.Funders.ToList();
+            return View(model);
+        }
 
         protected override void Dispose(bool disposing)
         {
