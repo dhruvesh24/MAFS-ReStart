@@ -422,7 +422,7 @@
     <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\Fundraiser\Index.cshtml" />
-    <Content Include="Views\Home\About2.cshtml" />
+    <Content Include="Views\Home\Board.cshtml" />
     <Content Include="Views\Restaurant\Index.cshtml" />
     <Content Include="Views\Restaurant\Details.cshtml" />
     <Content Include="Views\Restaurant\Create.cshtml" />

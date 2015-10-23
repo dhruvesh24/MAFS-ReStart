@@ -18,8 +18,22 @@ namespace MAFS_ReStart.Controllers
             {
                 return View("All");
             }
+            Program model = null;
+            foreach (Program program in _db.Programs)
+            {
+                if (program.Title == ProgramName)
+                {
+                    model = program;
+                    break;
+                }
+            }
+            if (model == null)
+            {
+                return View("All");
+            }
+
             ViewBag.Name = RouteData.Values["ProgramName"];
-            return View();
+            return View(model);
         }
         public ActionResult All()
         {

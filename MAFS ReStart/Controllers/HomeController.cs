@@ -102,7 +102,7 @@ namespace MAFS_ReStart.Controllers
             return View();
         }
 
-        public ActionResult About2()
+        public ActionResult Board()
         {
             ViewBag.Message = "Your app description page.";
             var model = _db.Members.ToList();

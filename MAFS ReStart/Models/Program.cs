@@ -9,14 +9,14 @@ namespace MAFS_ReStart.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndTime { get; set; }
+        //public DateTime StartDate { get; set; }
+        //public DateTime EndTime { get; set; }
         public string Description { get; set; }
         public string ShortDescription { get; set; }
-        public string Tagline { get; set; }
+        //public string Tagline { get; set; }
         public string BannerImg { get; set; }
-        public ICollection<FundingAgency> Funders { get; set; }
-        public ICollection<Location> Locations { get; set; }
+        //public ICollection<FundingAgency> Funders { get; set; }
+        //public ICollection<Location> Locations { get; set; }
 
     }
 }

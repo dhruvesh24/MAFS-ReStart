@@ -1,7 +1,7 @@
 ﻿@model MAFS_ReStart.Models.Program
 
 @{
-    ViewBag.Title = ViewBag.Name + " Program";
+    ViewBag.Title = Model.Title + " Program";
 }
 <div class="main">
     <div class="container">
@@ -11,13 +11,14 @@
                 @ViewBag.Title</h1>
             <h2>
                 <!--ShortDescription or Tagline-->
-                <strong>To eat is a necessity, but to eat intelligently is an art.</strong>
-
-Our staff and members strongly believe in this adage. We serve hot, fresh, home-cooked meals that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis. </h2>
+                <strong>
+                    @Model.ShortDescription
+                </strong>
+            </h2>
             <ul class="breadcrumb pull-right">
                 <li><a href="/Home">Home</a> </li>
                 <li><a href="/Programs">Programs</a> </li>
-                <li class="active">@ViewBag.Name</li>
+                <li class="active">@Model.Title</li>
             </ul>
         </section>
         <section>
@@ -31,26 +32,29 @@ Our staff and members strongly believe in this adage. We serve hot, fresh, home-
                         <div class="post_content">
                             <figure><a href="single_post.html">
                                 <img alt="0" src="~/images/nutrition3.jpg"></a></figure>
-                            <p class="columns_2">Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. Since the 1980s breast cancer rates have risen 4.5% each year. In 2008, 226,510 women in the United States were diagnosed with breast cancer and an estimated 40,580 women died of breast cancer (ACS, 2008). All women are at risk for breast cancer and the risk increase as women get older, especially after age 40. Breast affects the Asian subpopulations disproportionately. The rate of breast cancer among some Asian subpopulations is almost double the rate of their Caucasian counter parts leading to higher morbidity and mortality. Moreover, screening rates among the population is also much lower adding to the increased disparity between Asian American women and their Caucasian counterparts. The Breast and Cervical Cancer Education Project was initiated in 2008 to educate, increase awareness and link women to care among the South East
-                            
-                                Asian community (Cambodian, Vietnamese and Chinese). Based on the success of this project, AHC was able to expand and reach out to Muslim and South Asian women with funding from the Illinois Department of Public Health as well as most recently a Susan G. Komen grant to initiate the Pink Pashmina Project.
-                        
-                                The PINK PASHMINA PROJECT program targets highly vulnerable  Muslim American and South Asian immigrant women residing in ethnic enclave in greater Chicagoland to reduce disparities and increase awareness and screening rates. The program aims to raise their awareness in a culturally competent fashion about breast and cervical cancer risks and prevention as well as providing them with linkages to care to guide them through the health care system for screenings and proper timely care.
-	    The Pink Pashmina Project is funded in 2014-2015 by the Susan G. Komen Foundation, Chicago Foundation for Women, Lesser Franklin Charitable Trust and Crown Family Philanthropies.
+                            <p class="columns_2">
+                                @Model.Description
                             </p>
+                                @*<p class="columns_2">Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. Since the 1980s breast cancer rates have risen 4.5% each year. In 2008, 226,510 women in the United States were diagnosed with breast cancer and an estimated 40,580 women died of breast cancer (ACS, 2008). All women are at risk for breast cancer and the risk increase as women get older, especially after age 40. Breast affects the Asian subpopulations disproportionately. The rate of breast cancer among some Asian subpopulations is almost double the rate of their Caucasian counter parts leading to higher morbidity and mortality. Moreover, screening rates among the population is also much lower adding to the increased disparity between Asian American women and their Caucasian counterparts. The Breast and Cervical Cancer Education Project was initiated in 2008 to educate, increase awareness and link women to care among the South East
 
-                        <h4>Program Goals:</h4>
-                        <p>The vision of the Breast and Cervical Cancer Education and Prevention Program aims to reduce health disparities among Asian American women in the Chicago metropolitan area through:</p>
-                        <ul>
-                            <strong>
-                                <li>Enhancing community awareness and knowledge about breast and cervical cancer risks and prevention strategies</li>
-                                <li>Increasing breast and cervical cancer screening rates among Asian American women through strengthened linkage to care network development.</li>
-                                <li>Building the capacity of community health advocates and lay health educators to provide culturally and linguistically tailored support and referral for their community members.</li>
-                            </strong>
-                        </ul>
+                                    Asian community (Cambodian, Vietnamese and Chinese). Based on the success of this project, AHC was able to expand and reach out to Muslim and South Asian women with funding from the Illinois Department of Public Health as well as most recently a Susan G. Komen grant to initiate the Pink Pashmina Project.
 
-                            <!--<a href="single_post.html" class="btn btn-primary">Read More</a>-->
-                        </div>
+                                    The PINK PASHMINA PROJECT program targets highly vulnerable  Muslim American and South Asian immigrant women residing in ethnic enclave in greater Chicagoland to reduce disparities and increase awareness and screening rates. The program aims to raise their awareness in a culturally competent fashion about breast and cervical cancer risks and prevention as well as providing them with linkages to care to guide them through the health care system for screenings and proper timely care.
+            The Pink Pashmina Project is funded in 2014-2015 by the Susan G. Komen Foundation, Chicago Foundation for Women, Lesser Franklin Charitable Trust and Crown Family Philanthropies.
+                                </p>
+
+                            <h4>Program Goals:</h4>
+                            <p>The vision of the Breast and Cervical Cancer Education and Prevention Program aims to reduce health disparities among Asian American women in the Chicago metropolitan area through:</p>
+                            <ul>
+                                <strong>
+                                    <li>Enhancing community awareness and knowledge about breast and cervical cancer risks and prevention strategies</li>
+                                    <li>Increasing breast and cervical cancer screening rates among Asian American women through strengthened linkage to care network development.</li>
+                                    <li>Building the capacity of community health advocates and lay health educators to provide culturally and linguistically tailored support and referral for their community members.</li>
+                                </strong>
+                            </ul>*@
+
+                                <!--<a href="single_post.html" class="btn btn-primary">Read More</a>-->
+</div>
                     </article>
                     <article class="post">
                         <div class="post_header">
@@ -109,6 +113,13 @@ Our staff and members strongly believe in this adage. We serve hot, fresh, home-
                             <img src="http://placehold.it/110" alt=""></a> <a href="#">
                             <img src="http://placehold.it/110" alt=""></a>
                     </aside>
+
+                    <div class="fb-page" data-href="https://www.facebook.com/mafsinc" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/mafsinc"><a href="https://www.facebook.com/mafsinc">Metropolitan Asian Family Services, Inc.</a></blockquote></div></div>
+
+                    <a class="twitter-timeline" href="https://twitter.com/mafsinc" data-widget-id="647150978064621568">Tweets by @@mafsinc</a>
+                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+
+
                     <aside class="widget">
                         <h4>Program Goals:</h4>
                         <p>The vision of the Breast and Cervical Cancer Education and Prevention Program aims to reduce health disparities among Asian American women in the Chicago metropolitan area through:</p>
