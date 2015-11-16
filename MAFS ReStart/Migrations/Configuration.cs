@@ -60,6 +60,24 @@ namespace MAFS_ReStart.Migrations
             AgeOptions.ImageURL = "images/funders/ageoptions.png";
             AgeOptions.ShortBio = "AgeOptions is a nonprofit organization connecting older adults and those who care for them with resources and service options so they can live their lives to the fullest. Since 1974, our mission has been to sustain and promote independence for older persons in their own homes and communities. As the Area Agency on Aging of suburban Cook County, Illinois, we advocate, plan, coordinate and fund services for older adults. Together with a network of community-based senior service organizations, we connect residents with vital services such as information and assistance, community dining programs and home-delivered meals, housekeeping help, employment services, access to benefits and support for family caregivers.";
             context.Funders.AddOrUpdate(r => r.Name, AgeOptions);
+
+            //Northwestern
+            FundingAgency Northwestern = new FundingAgency();
+            Northwestern.Name = "Northwestern University Fienberg School of Medicine";
+            Northwestern.URL = "http://www.feinberg.northwestern.edu/sites/cch/funding/seed-grants/arcc/partner-award-recipient.html";
+            Northwestern.ImageURL = "images/funders/NW_Feinberg.jpg";
+            Northwestern.ShortBio = "The seed grant program offered through the Alliance for Research in Chicagoland Communities (ARCC) is one of several sponsored by NUCATS and the IPHAM Center for Community Health. This seed grant program seeks to: Increase the number and build the capacity of community-engaged research partnerships and projects between Chicagoland communities and Northwestern University academic teams"
++ " Foster the development of community-engaged research proposals for external funding"
++ " Support the dissemination and implementation of research findings in communities that contribute to community health";
+            context.Funders.AddOrUpdate(r => r.Name, Northwestern);
+
+            //CLESE
+
+            //Ceda
+
+            //CityOfChicago
+
+
              
             context.Restaurants.AddOrUpdate(r => r.Name,new Restaurant {Name = "Public House", City = "Chicago", Country = "USA" });
 
@@ -190,22 +208,23 @@ namespace MAFS_ReStart.Migrations
                 FlickrGallery = ""
             }); 
             //Nutrition Program
-            context.Programs.AddOrUpdate(r => r.Title, new Program
-            {
-                Title = "Nutrition",
-                ShortDescription = "<strong>To eat is a necessity, but to eat intelligently is an art.</strong> Our staff and members strongly believe in this adage. We serve hot, fresh, home-cooked meals that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis.",
-                Description = "Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. Since the 1980s breast cancer rates have risen 4.5% each year. In 2008, 226,510 women in the United States were diagnosed with breast cancer and an estimated 40,580 women died of breast cancer (ACS, 2008). All women are at risk for breast cancer and the risk increase as women get older, especially after age 40. Breast affects the Asian subpopulations disproportionately. The rate of breast cancer among some Asian subpopulations is almost double the rate of their Caucasian counter parts leading to higher morbidity and mortality. Moreover, screening rates among the population is also much lower adding to the increased disparity between Asian American women and their Caucasian counterparts. The Breast and Cervical Cancer Education Project was initiated in 2008 to educate, increase awareness and link women to care among the South East Asian community (Cambodian, Vietnamese and Chinese). Based on the success of this project, AHC was able to expand and reach out to Muslim and South Asian women with funding from the Illinois Department of Public Health as well as most recently a Susan G. Komen grant to initiate the Pink Pashmina Project. The PINK PASHMINA PROJECT program targets highly vulnerable  Muslim American and South Asian immigrant women residing in ethnic enclave in greater Chicagoland to reduce disparities and increase awareness and screening rates. The program aims to raise their awareness in a culturally competent fashion about breast and cervical cancer risks and prevention as well as providing them with linkages to care to guide them through the health care system for screenings and proper timely care. The Pink Pashmina Project is funded in 2014-2015 by the Susan G. Komen Foundation, Chicago Foundation for Women, Lesser Franklin Charitable Trust and Crown Family Philanthropies.",
-                BannerImg = "nutrition3.jpg",
-                
-            });
-            context.Programs.AddOrUpdate(r => r.Title, new Program
-            {
-                Title = "Public Benifits",
-                ShortDescription = "<strong>To eat is a necessity, but to eat intelligently is an art.</strong> Our staff and members strongly believe in this adage. We serve hot, fresh, home-cooked meals that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis.",
-                Description = "Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. Since the 1980s breast cancer rates have risen 4.5% each year. In 2008, 226,510 women in the United States were diagnosed with breast cancer and an estimated 40,580 women died of breast cancer (ACS, 2008). All women are at risk for breast cancer and the risk increase as women get older, especially after age 40. Breast affects the Asian subpopulations disproportionately. The rate of breast cancer among some Asian subpopulations is almost double the rate of their Caucasian counter parts leading to higher morbidity and mortality. Moreover, screening rates among the population is also much lower adding to the increased disparity between Asian American women and their Caucasian counterparts. The Breast and Cervical Cancer Education Project was initiated in 2008 to educate, increase awareness and link women to care among the South East Asian community (Cambodian, Vietnamese and Chinese). Based on the success of this project, AHC was able to expand and reach out to Muslim and South Asian women with funding from the Illinois Department of Public Health as well as most recently a Susan G. Komen grant to initiate the Pink Pashmina Project. The PINK PASHMINA PROJECT program targets highly vulnerable  Muslim American and South Asian immigrant women residing in ethnic enclave in greater Chicagoland to reduce disparities and increase awareness and screening rates. The program aims to raise their awareness in a culturally competent fashion about breast and cervical cancer risks and prevention as well as providing them with linkages to care to guide them through the health care system for screenings and proper timely care. The Pink Pashmina Project is funded in 2014-2015 by the Susan G. Komen Foundation, Chicago Foundation for Women, Lesser Franklin Charitable Trust and Crown Family Philanthropies.",
-                BannerImg = "nutrition3.jpg",
+            Program Nutrition = new Program();
+            Nutrition.Title = "Nutrition";
+            Nutrition.ShortDescription = "<strong>To eat is a necessity, but to eat intelligently is an art.</strong> Our staff and members strongly believe in this adage. We serve hot, fresh, home-cooked meals that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis.";
+            Nutrition.Description = "Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. Since the 1980s breast cancer rates have risen 4.5% each year. In 2008, 226,510 women in the United States were diagnosed with breast cancer and an estimated 40,580 women died of breast cancer (ACS, 2008). All women are at risk for breast cancer and the risk increase as women get older, especially after age 40. Breast affects the Asian subpopulations disproportionately. The rate of breast cancer among some Asian subpopulations is almost double the rate of their Caucasian counter parts leading to higher morbidity and mortality. Moreover, screening rates among the population is also much lower adding to the increased disparity between Asian American women and their Caucasian counterparts. The Breast and Cervical Cancer Education Project was initiated in 2008 to educate, increase awareness and link women to care among the South East Asian community (Cambodian, Vietnamese and Chinese). Based on the success of this project, AHC was able to expand and reach out to Muslim and South Asian women with funding from the Illinois Department of Public Health as well as most recently a Susan G. Komen grant to initiate the Pink Pashmina Project. The PINK PASHMINA PROJECT program targets highly vulnerable  Muslim American and South Asian immigrant women residing in ethnic enclave in greater Chicagoland to reduce disparities and increase awareness and screening rates. The program aims to raise their awareness in a culturally competent fashion about breast and cervical cancer risks and prevention as well as providing them with linkages to care to guide them through the health care system for screenings and proper timely care. The Pink Pashmina Project is funded in 2014-2015 by the Susan G. Komen Foundation, Chicago Foundation for Women, Lesser Franklin Charitable Trust and Crown Family Philanthropies.";
+            Nutrition.BannerImg = "nutrition3.jpg";
+            context.Programs.AddOrUpdate(r => r.Title, Nutrition);
 
-            });
+            //Public Benefits
+            Program PublicBeneifits = new Program();
+            PublicBeneifits.Title = "PublicBenefits";
+            PublicBeneifits.ShortDescription = "<small>Have you ever wondered what benefits you qualify for?</small>Many people do not know what is available to them.  MAFS can help you understand and apply for <strong>benefits</strong> you qualify for.";
+            PublicBeneifits.Description = "Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. Since the 1980s breast cancer rates have risen 4.5% each year. In 2008, 226,510 women in the United States were diagnosed with breast cancer and an estimated 40,580 women died of breast cancer (ACS, 2008). All women are at risk for breast cancer and the risk increase as women get older, especially after age 40. Breast affects the Asian subpopulations disproportionately. The rate of breast cancer among some Asian subpopulations is almost double the rate of their Caucasian counter parts leading to higher morbidity and mortality. Moreover, screening rates among the population is also much lower adding to the increased disparity between Asian American women and their Caucasian counterparts. The Breast and Cervical Cancer Education Project was initiated in 2008 to educate, increase awareness and link women to care among the South East Asian community (Cambodian, Vietnamese and Chinese). Based on the success of this project, AHC was able to expand and reach out to Muslim and South Asian women with funding from the Illinois Department of Public Health as well as most recently a Susan G. Komen grant to initiate the Pink Pashmina Project. The PINK PASHMINA PROJECT program targets highly vulnerable  Muslim American and South Asian immigrant women residing in ethnic enclave in greater Chicagoland to reduce disparities and increase awareness and screening rates. The program aims to raise their awareness in a culturally competent fashion about breast and cervical cancer risks and prevention as well as providing them with linkages to care to guide them through the health care system for screenings and proper timely care. The Pink Pashmina Project is funded in 2014-2015 by the Susan G. Komen Foundation, Chicago Foundation for Women, Lesser Franklin Charitable Trust and Crown Family Philanthropies.";
+            PublicBeneifits.BannerImg = "ceda.jpg";
+            context.Programs.AddOrUpdate(r => r.Title, PublicBeneifits);
+
+
+
         }
     }
 }

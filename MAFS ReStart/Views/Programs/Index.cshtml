@@ -12,7 +12,7 @@
             <h2>
                 <!--ShortDescription or Tagline-->
                 <strong>
-                    @Model.ShortDescription
+                    @Html.Raw(Model.ShortDescription)
                 </strong>
             </h2>
             <ul class="breadcrumb pull-right">
@@ -31,9 +31,9 @@
                                   </div>-->
                         <div class="post_content">
                             <figure><a href="single_post.html">
-                                <img alt="0" src="~/images/nutrition3.jpg"></a></figure>
+                                <img alt="0" src="~/images/@Model.BannerImg"></a></figure>
                             <p class="columns_2">
-                                @Model.Description
+                               <img src="~/images/icons/nutrition_icon.png" width="25"/> @Model.Description
                             </p>
                                 @*<p class="columns_2">Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. Since the 1980s breast cancer rates have risen 4.5% each year. In 2008, 226,510 women in the United States were diagnosed with breast cancer and an estimated 40,580 women died of breast cancer (ACS, 2008). All women are at risk for breast cancer and the risk increase as women get older, especially after age 40. Breast affects the Asian subpopulations disproportionately. The rate of breast cancer among some Asian subpopulations is almost double the rate of their Caucasian counter parts leading to higher morbidity and mortality. Moreover, screening rates among the population is also much lower adding to the increased disparity between Asian American women and their Caucasian counterparts. The Breast and Cervical Cancer Education Project was initiated in 2008 to educate, increase awareness and link women to care among the South East
 
