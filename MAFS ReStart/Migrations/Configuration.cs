@@ -95,7 +95,7 @@ namespace MAFS_ReStart.Migrations
                 Position = "President",
                 Bio = "is an accomplished dentist with her own practice in Carol Stream, IL. She is currently the President of MAFS. She also serves as a member of the Research Committee of American Academy of Implant Dentistry, International Congress of Oral Implantologists and the American Dental Association. Her passion for humanitarian efforts, especially for Indian Americans, is manifested through her dedication to multiple organizations in order to help them achieve their goals. Dr. Jafri has brought many active members to MAFS since she joined, which has enriched MAFS with great advocacy, leadership, and insight into the problems that face immigrants." ,
                 Image = "Firdaus-Jafri.png",
-                Image2 = "Firdaus-Jafri2.png",
+                Image2 = "Firdaus-Jafri2.gif",
                 IsStaff = false,
             });
             //Naren Patel
@@ -105,8 +105,8 @@ namespace MAFS_ReStart.Migrations
                 LastName = "Patel",
                 Position = "Vice President",
                 Bio = "is the owner, CEO and President of MedStar Laboratory, Inc., located in Hillside, IL. Naren graduated as a Pharmacist from Gujarat State University in 1969. Since coming to the US, he has acquired and opened medical centers in the Greater Chicagoland area. Mr. Patel is the founder and President of Vishwa Gujarati Samaj-USA, also serves as the President of Care & Share USA International and also served as the past President of Six Gam Patidar Samaj and AIA. Through his leadership, Care & Share was able to build 25 homes for displaced Tsunami Victims in India. He is the National Vice President of the Association of Indian American Medical Association Charitable Foundation and serves as a Director on the MAFS board. Naren Patel is a well-known personality and believes in giving back to the community. This year, under his leadership, VGS-USA is celebrating Honorable Prime Minister Narendra Modi's Victory Party with many Indian Organizations in Chicgoland area." ,
-                Image = "Naren-Patel.png",
-                Image2 = "Naren-Patel2.png",
+                Image = "Naren-Patel.gif",
+                Image2 = "Naren-Patel2.gif",
                 IsStaff = false,
             });*/
             //Pramod Kumar
@@ -128,7 +128,7 @@ namespace MAFS_ReStart.Migrations
                 Position = "Secretary",
                 Bio = "was born and raised in Gujarat, India. She earned her master's degree in Commerce. She began her career in India with the Gujarat Electricity Board as an intern and then full time employment with Dena Bank and State Bank of India. Mrs. Patel married Dixit Patel 30 years ago and moved to the US to start their new adventure and life. Upon her arrival to the US, she began her career as the Clerk of the Circuit Court of Cook County Traffic Division in 1987 and at present working as the Associate Clerk of the First Municipal Bureau. In 2000, Mrs. Patel and another co-worker formed the \"Clerk of the Circuit Court of Cook County Asian American Employees Social Club.\" Mrs. Patel is a dedicated and avid community organizer. She belongs to many political, cultural and social organizations.   Her memberships are as follows:  Board Member of the Indian American Medical Association Charitable Foundation \"IAMACF\"; Metropolitan Asian Family Services; Vice President of the Association of Indians in America “AIA” Board Member of the Vishwa Gujarati Samaj USA; Brand Ambassador to India Abroad \"Save the Child Girl\" Member of the Desi Divas Book Club; and the Hindi Lovers Club.",
                 Image = "Beena-Patel.png",
-                Image2 = "Beena-Patel2.png",
+                Image2 = "Beena-Patel2.gif",
                 IsStaff = false,
             });
             //Nikunj Baxi
@@ -139,7 +139,7 @@ namespace MAFS_ReStart.Migrations
                 Position = "Board Member",
                 Bio = "has a bachelors degree in Chemistry and currently holds a managerial position at a pharmaceutical company in Chicago. His passion is social work and helping the community. Nick is a young, energetic community activist. He served as the President of Gujarati Samaj of Chicago, one of the oldest and very reputable organizations to date. He has also served as the Director for FIA and the Ribbon Foundation. Nick remains connected with the Gujarati community and continues to serve the Indian American community in various ways.",
                 Image = "Nikunj-Baxi.png",
-                Image2 = "Nikunj-Baxi2.png",
+                Image2 = "Nikunj-Baxi2.gif",
                 IsStaff = false,
             });
             //Rakesh Asthana
@@ -150,7 +150,7 @@ namespace MAFS_ReStart.Migrations
                 Position = "Board Member",
                 Bio = "is a veterinarian by education and is a retired Major of the Indian army. After having practiced for nearly eighteen years as a veterinarian with the Indian Army, he was seconded to the Kuwaiti Army for two years. After having migrated to the US in 1993, Dr. Asthana has worked as a Cardiovascular Specialist, with various pharmaceutical companies like Parke-Davis, Pfizer, Glaxo, Novartis, and Astra Zeneca. He currently works as a \"Senior Cardiovascular Specialist\" with the Japanese Pharmaceutical company Daiichi-Sankyo US.  He tirelessly volunteers in various not-for-profit organizations. He sits on the Board of Directors of Black Feet Volunteer Medical Corps (BVMC). Rakesh also volunteers his time with \"Young Hearts 4 Life\", a stellar organization, screening young high school children in the US to avoid \"Sudden Cardiac Death\" syndrome. Rakesh firmly believes that the elderly and senior citizens in the US need our help and that MAFS is doing commendable work, which should be whole-heartedly supported.",
                 Image = "Rakesh-Asthana.png",
-                Image2 = "Rakesh-Asthana2.png",
+                Image2 = "Rakesh-Asthana2.gif",
                 IsStaff = false,
             }); 
              //Sumitra Patel
@@ -161,10 +161,9 @@ namespace MAFS_ReStart.Migrations
                 Position = "Board Member",
                 Bio = "  Born in Ahmedabad, India, Sumitra grew up in Sabarmati, where Mahatma Gandhi lived in the later part of his life.  Sumitra now resides in Schaumburg, Illinois, with her sister Hansa.  She has two sons, Neal and Raj.  Neal, is married to Sonal, and they have two children, Nishal (19) and Shriya (12).  Raj is married to Nisha, and they have two sons, Ronak (12) and Raveen (9). Sumitra graduated with a degree in phycology from Gujarat College in 1969.  Her move to the US in January of 1970 marked the beginning of her family life in Chicago.  Sumitra’s first professional position in the Little Fuse Company was as the Quality Control Supervisor.  She retired after 35 years in May 2006, and now spending time with her 4 Grandchildren. She has received numerous awards. Jesse Jackson’s Rainbow Push Organizations awarded her as the Best Mother in 2010 and New Millennium Women of Dorothy Brown’s Organization presented her “Woman of the New Millennium Award” in 2011. Sumitra  is a staunch supporter of Metropolitan Asian Family Services and joined MAFS in January 2015. A devoted Hindu, Sumitra is a strong believer of his Holiness Pujya Pramukhswami Maharaj of BAPS.",
                 Image = "Sumitra-Patel.png",
-                Image2 = "Sumitra-Patel2.png",
+                Image2 = "Sumitra-Patel2.gif",
                 IsStaff = false,
-            }); 
-          
+            });
              
             //Seed Fundraiser
             //2013
@@ -218,7 +217,7 @@ namespace MAFS_ReStart.Migrations
             //Public Benefits
             Program PublicBeneifits = new Program();
             PublicBeneifits.Title = "PublicBenefits";
-            PublicBeneifits.ShortDescription = "<small>Have you ever wondered what benefits you qualify for?</small>Many people do not know what is available to them.  MAFS can help you understand and apply for <strong>benefits</strong> you qualify for.";
+            PublicBeneifits.ShortDescription = "Have you ever wondered what benefits you qualify for? Many people do not know what is available to them.  MAFS can help you understand and apply for benefits you qualify for.";
             PublicBeneifits.Description = "Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. Since the 1980s breast cancer rates have risen 4.5% each year. In 2008, 226,510 women in the United States were diagnosed with breast cancer and an estimated 40,580 women died of breast cancer (ACS, 2008). All women are at risk for breast cancer and the risk increase as women get older, especially after age 40. Breast affects the Asian subpopulations disproportionately. The rate of breast cancer among some Asian subpopulations is almost double the rate of their Caucasian counter parts leading to higher morbidity and mortality. Moreover, screening rates among the population is also much lower adding to the increased disparity between Asian American women and their Caucasian counterparts. The Breast and Cervical Cancer Education Project was initiated in 2008 to educate, increase awareness and link women to care among the South East Asian community (Cambodian, Vietnamese and Chinese). Based on the success of this project, AHC was able to expand and reach out to Muslim and South Asian women with funding from the Illinois Department of Public Health as well as most recently a Susan G. Komen grant to initiate the Pink Pashmina Project. The PINK PASHMINA PROJECT program targets highly vulnerable  Muslim American and South Asian immigrant women residing in ethnic enclave in greater Chicagoland to reduce disparities and increase awareness and screening rates. The program aims to raise their awareness in a culturally competent fashion about breast and cervical cancer risks and prevention as well as providing them with linkages to care to guide them through the health care system for screenings and proper timely care. The Pink Pashmina Project is funded in 2014-2015 by the Susan G. Komen Foundation, Chicago Foundation for Women, Lesser Franklin Charitable Trust and Crown Family Philanthropies.";
             PublicBeneifits.BannerImg = "ceda.jpg";
             context.Programs.AddOrUpdate(r => r.Title, PublicBeneifits);

@@ -15,8 +15,8 @@ namespace MAFS_ReStart
 
             routes.MapRoute(
                 name: "Program",
-                url: "Programs/{ProgramName}",
-                defaults: new { controller = "Programs", action = "Index", ProgramName = UrlParameter.Optional }
+                url: "Program/{ProgramName}",
+                defaults: new { controller = "Program", action = "Index", ProgramName = UrlParameter.Optional }
             );
 
             routes.MapRoute(

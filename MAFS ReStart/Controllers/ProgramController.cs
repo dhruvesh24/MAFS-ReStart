@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace MAFS_ReStart.Controllers
 {
-    public class ProgramsController : Controller
+    public class ProgramController : Controller
     {
         //
         // GET: /Programs/
@@ -29,16 +29,26 @@ namespace MAFS_ReStart.Controllers
             }
             if (model == null)
             {
-                return View("All");
+                return View("Overview");
             }
 
             ViewBag.Name = RouteData.Values["ProgramName"];
             return View(model);
         }
-        public ActionResult All()
+        public ActionResult Overview()
         {
             return View();
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            if (_db != null)
+            {
+                _db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
     }
+
 }

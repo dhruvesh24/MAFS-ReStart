@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MAFS_ReStart.Models.Program>
+
+@{
+    ViewBag.Title = "Programs";
+}
+
+
+<div class="main">
+    <div class="container">
+        <section class="hgroup centered">
+            <h1>Programs</h1>
+            <h2>MAFS offers a breadth of services that are targeted to support our community. We can help you and you family with immigration, translation, nutrition, computer training,
+                paying your light or heat bills, or if you’re just in need of a fresh home-cooked meal.</h2>
+            <ul class="breadcrumb pull-right">
+                <li>@Html.ActionLink("Home", "Index", "Home") </li>
+                <li class="active">Programs</li>
+            </ul>
+        </section>
+
+        <br />
+        @foreach(var program in Model){
+            <p>@program.Title</p>
+        }
+
+
+
+
+    </div> @*end div*@
+

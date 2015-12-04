@@ -155,6 +155,19 @@ namespace MAFS_ReStart.Controllers
             return View(model);
         }
 
+        //Partial menu views
+        public ActionResult getProgramMenu()
+        {
+            var model = _db.Programs.ToList();
+            return PartialView("_ProgramMenu", model);
+        }
+        //Partial fundraiser views
+        public ActionResult getFundraiserMenu()
+        {
+            var model = _db.Fundraisers.ToList();
+            return PartialView("_FundraiserMenu", model);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if(_db != null){
