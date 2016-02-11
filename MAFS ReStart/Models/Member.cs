@@ -15,7 +15,7 @@ namespace MAFS_ReStart.Models
         public string Image { get; set; }
         public string Image2 { get; set; }
         public bool IsStaff { get; set; }
-        
+        public bool IsActive { get; set; }
 
 
         public void getImageURLs(){

@@ -117,15 +117,7 @@
                     </div>
                 </div>
 
-              <section class="clients_section wow animated fadeInUp">
-               <h2 class="section_header elegant centered">Our Funder & Partner Agencies <small>@Html.ActionLink("Full List »", "Funders")</small></h2>
-               <div class="clients_list"> 
-                   <a href="http://www.ageoptions.org/index.html" target="_blank"><img src="~/images/funders/ageoptions.png" alt="AgeOptions"></a> 
-                   <a href="http://www.cedaorg.net/www2/EnergyAssistance.html" target="_blank"><img src="~/images/funders/ceda.png" alt="CEDA"></a> 
-                   <a href="http://www.asianhealth.org/the-issues/cancer/breast-and-cervical-cancer/" target="_blank"><img src="~/images/funders/asian-health-coalition.png" alt="Asian Health Coalition"></a> 
-                   <a href="http://www.feinberg.northwestern.edu/sites/cch/funding/seed-grants/arcc/partner-award-recipient.html" target="_blank"><img src="http://www.feinberg.northwestern.edu/sites/cch/images/arcc_200.png" alt="Northwestern University"></a>
-               </div>
-          </section>
+                @Html.Action("getRandomFunder", "Home", new {id = 4 })
 
           </div>
 

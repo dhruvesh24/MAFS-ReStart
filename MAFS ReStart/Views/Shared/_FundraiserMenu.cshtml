@@ -5,7 +5,14 @@
         <li>@Html.ActionLink("Overview", "Index", "Fundraiser")</li>
         @foreach (var fundraiser in Model)
         {
-            <li>@Html.ActionLink(fundraiser.Date.Year + " Annual", "Details", "Fundraiser", new { id = fundraiser.Id }, null)</li>
+            if (!fundraiser.IsMini){
+               <li>@Html.ActionLink(fundraiser.Date.Year + " Annual", "Details", "Fundraiser", new { id = fundraiser.Id }, null)</li> 
+            }
+            else
+            {
+                <li>@Html.ActionLink(fundraiser.Date.Year + " Mini", "Details", "Fundraiser", new { id = fundraiser.Id }, null)</li> 
+            }
+            
         }
 
         @*<li><a href="gallery.html">Public Benefits</a></li>

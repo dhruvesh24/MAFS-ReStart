@@ -3,10 +3,10 @@
 <li class="dropdown">
     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Programs<span class="caret"></span></a>
     <ul class="dropdown-menu">
-        <li>@Html.ActionLink("Overview" , "Overview", "Program")</li>
+        <li>@Html.ActionLink("Overview" , "Index", "Program")</li>
 
         @foreach(var program in Model){
-            <li>@Html.ActionLink( program.Title, "Index", "Program", new { ProgramName = program.Title }, null)</li>
+            <li>@Html.ActionLink( program.Title.Replace("-", " "), "Info", "Program", new { id = program.Title }, null)</li>
         }
     </ul>
 </li>

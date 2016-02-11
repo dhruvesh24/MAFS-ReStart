@@ -1,0 +1,9 @@
+﻿@model MAFS_ReStart.Models.Fundraiser
+
+@if(Model == null){
+    <li class="next disabled"><a href="#">Next Fundraiser →</a></li>
+}
+else
+{
+    <li class="next"><a href="~/Fundraiser/Details/@Model.Id">Next Fundraiser →</a></li>
+}

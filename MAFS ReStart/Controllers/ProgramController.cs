@@ -12,11 +12,17 @@ namespace MAFS_ReStart.Controllers
         //
         // GET: /Programs/
         private MafsDb _db = new MafsDb();
-        public ActionResult Index(string ProgramName = null)
+        public ActionResult Index()
+        {
+            var model = _db.Programs.ToList();
+           // ViewBag.Name = RouteData.Values["ProgramName"];
+            return View(model);
+        }
+        public ActionResult Info([Bind(Prefix="Id")]string ProgramName)
         {
             if (ProgramName == null)
             {
-                return View("All");
+                return RedirectToAction("Index");
             }
             Program model = null;
             foreach (Program program in _db.Programs)
@@ -24,20 +30,11 @@ namespace MAFS_ReStart.Controllers
                 if (program.Title == ProgramName)
                 {
                     model = program;
-                    break;
+                    return View(model);
                 }
             }
-            if (model == null)
-            {
-                return View("Overview");
-            }
 
-            ViewBag.Name = RouteData.Values["ProgramName"];
-            return View(model);
-        }
-        public ActionResult Overview()
-        {
-            return View();
+            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)

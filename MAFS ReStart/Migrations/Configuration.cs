@@ -68,14 +68,43 @@ namespace MAFS_ReStart.Migrations
             Northwestern.ImageURL = "images/funders/NW_Feinberg.jpg";
             Northwestern.ShortBio = "The seed grant program offered through the Alliance for Research in Chicagoland Communities (ARCC) is one of several sponsored by NUCATS and the IPHAM Center for Community Health. This seed grant program seeks to: Increase the number and build the capacity of community-engaged research partnerships and projects between Chicagoland communities and Northwestern University academic teams"
 + " Foster the development of community-engaged research proposals for external funding"
-+ " Support the dissemination and implementation of research findings in communities that contribute to community health";
++ " Support the dissemination and implementation of research findings in communities that contribute to community health.";
             context.Funders.AddOrUpdate(r => r.Name, Northwestern);
 
             //CLESE
+            FundingAgency Clese = new FundingAgency();
+            Clese.Name = "CLESE";
+            Clese.URL = "http://clese.org/";
+            Clese.ImageURL = "images/funders/Clese.png";
+            Clese.ShortBio = "CLESE is committed to a vision of equal access to services for all elderly, regardless of ethnicity or language. As a coalition, CLESE works to increase awareness of the needs, rights, and unique contributions of limited-English-speaking elderly and the community-based organizations that serve them. CLESE promotes understanding, sensitivity, and insight into culturally diverse communities. CLESE is a resource to ethnic agencies by providing assistance and information. Fifty four community-based ethnic organizations can be reached by contacting CLESE.";
+            context.Funders.AddOrUpdate(r => r.Name, Clese);
 
             //Ceda
+            FundingAgency Ceda = new FundingAgency();
+            Ceda.Name = "CEDA";
+            Ceda.URL = "http://www.cedaorg.net/www2/EnergyAssistance.html";
+            Ceda.ImageURL = "images/funders/ceda.png";
+            Ceda.ShortBio = "Low Income Home Energy Assistance Program (LIHEAP) is designed to assist income-eligible households with energy services, in the form of a one-time benefit payment to the utility companies that is applied directly to the household’s energy bills. The amount of the payment is determined by income, household size, and fuel type. Please call the Energy Services Hotline for more information.";
+            context.Funders.AddOrUpdate(r => r.Name, Ceda);
 
             //CityOfChicago
+
+            //Jesse White
+
+            FundingAgency Jesse = new FundingAgency();
+            Jesse.Name = "Jesse White, Secretary of State";
+            Jesse.URL = "https://www.cyberdriveillinois.com/departments/library/literacy/home.html";
+            Jesse.ImageURL = "images/funders/SecOfStateJesseWhite.png";
+            Jesse.ShortBio = "The Illinois State Library and Secretary of State and State Librarian Jesse White are committed to providing adult literacy program services that will enable Illinois citizens to fully participate in their family, work and community roles. To this end, the State Library's Literacy Office administers the Adult Literacy grant programs that provide basic adult literacy instruction to enhance reading, writing, math or English proficiency for the targeted program participants.";
+            context.Funders.AddOrUpdate(r => r.Name, Jesse);
+
+            //Asian Health Coalation
+            FundingAgency AHC = new FundingAgency();
+            AHC.Name = "Asian Health Coalation";
+            AHC.URL = "http://www.asianhealth.org/the-issues/cancer/breast-and-cervical-cancer/";
+            AHC.ImageURL = "images/funders/asian-health-coalition.png";
+            AHC.ShortBio = "The PINK PASHMINA PROJECT program targets highly vulnerable Muslim American and South Asian immigrant women residing in ethnic enclave in greater Chicagoland to reduce disparities and increase awareness and screening rates. The program aims to raise their awareness in a culturally competent fashion about breast and cervical cancer risks and prevention as well as providing them with linkages to care to guide them through the health care system for screenings and proper timely care. The Pink Pashmina Project is funded in 2014-2015 by the Susan G. Komen Foundation, Chicago Foundation for Women, Lesser Franklin Charitable Trust and Crown Family Philanthropies.";
+            context.Funders.AddOrUpdate(r => r.Name, AHC);
 
 
              
@@ -97,18 +126,20 @@ namespace MAFS_ReStart.Migrations
                 Image = "Firdaus-Jafri.png",
                 Image2 = "Firdaus-Jafri2.gif",
                 IsStaff = false,
+                IsActive = true
             });
             //Naren Patel
-            /*
+            
             context.Members.AddOrUpdate(r => r.FirstName, new Member { 
                 FirstName = "Naren", 
                 LastName = "Patel",
                 Position = "Vice President",
                 Bio = "is the owner, CEO and President of MedStar Laboratory, Inc., located in Hillside, IL. Naren graduated as a Pharmacist from Gujarat State University in 1969. Since coming to the US, he has acquired and opened medical centers in the Greater Chicagoland area. Mr. Patel is the founder and President of Vishwa Gujarati Samaj-USA, also serves as the President of Care & Share USA International and also served as the past President of Six Gam Patidar Samaj and AIA. Through his leadership, Care & Share was able to build 25 homes for displaced Tsunami Victims in India. He is the National Vice President of the Association of Indian American Medical Association Charitable Foundation and serves as a Director on the MAFS board. Naren Patel is a well-known personality and believes in giving back to the community. This year, under his leadership, VGS-USA is celebrating Honorable Prime Minister Narendra Modi's Victory Party with many Indian Organizations in Chicgoland area." ,
-                Image = "Naren-Patel.gif",
-                Image2 = "Naren-Patel2.gif",
+                Image = "Naren-Patel.png",
+                Image2 = "Naren-Patel2.png",
                 IsStaff = false,
-            });*/
+                IsActive = false
+            });
             //Pramod Kumar
             context.Members.AddOrUpdate(r => r.FirstName, new Member
             {
@@ -119,6 +150,7 @@ namespace MAFS_ReStart.Migrations
                 Image = "Pramod-Kumar.png",
                 Image2 = "Pramod-Kumar2.png",
                 IsStaff = false,
+                IsActive = true
             });
             //Beena Patel
             context.Members.AddOrUpdate(r => r.FirstName, new Member
@@ -130,6 +162,7 @@ namespace MAFS_ReStart.Migrations
                 Image = "Beena-Patel.png",
                 Image2 = "Beena-Patel2.gif",
                 IsStaff = false,
+                IsActive = true
             });
             //Nikunj Baxi
             context.Members.AddOrUpdate(r => r.FirstName, new Member
@@ -141,6 +174,7 @@ namespace MAFS_ReStart.Migrations
                 Image = "Nikunj-Baxi.png",
                 Image2 = "Nikunj-Baxi2.gif",
                 IsStaff = false,
+                IsActive = true
             });
             //Rakesh Asthana
             context.Members.AddOrUpdate(r => r.FirstName, new Member
@@ -152,6 +186,7 @@ namespace MAFS_ReStart.Migrations
                 Image = "Rakesh-Asthana.png",
                 Image2 = "Rakesh-Asthana2.gif",
                 IsStaff = false,
+                IsActive = true
             }); 
              //Sumitra Patel
             context.Members.AddOrUpdate(r => r.FirstName, new Member
@@ -159,13 +194,48 @@ namespace MAFS_ReStart.Migrations
                 FirstName = "Sumitra",
                 LastName = "Patel",
                 Position = "Board Member",
-                Bio = "  Born in Ahmedabad, India, Sumitra grew up in Sabarmati, where Mahatma Gandhi lived in the later part of his life.  Sumitra now resides in Schaumburg, Illinois, with her sister Hansa.  She has two sons, Neal and Raj.  Neal, is married to Sonal, and they have two children, Nishal (19) and Shriya (12).  Raj is married to Nisha, and they have two sons, Ronak (12) and Raveen (9). Sumitra graduated with a degree in phycology from Gujarat College in 1969.  Her move to the US in January of 1970 marked the beginning of her family life in Chicago.  Sumitra’s first professional position in the Little Fuse Company was as the Quality Control Supervisor.  She retired after 35 years in May 2006, and now spending time with her 4 Grandchildren. She has received numerous awards. Jesse Jackson’s Rainbow Push Organizations awarded her as the Best Mother in 2010 and New Millennium Women of Dorothy Brown’s Organization presented her “Woman of the New Millennium Award” in 2011. Sumitra  is a staunch supporter of Metropolitan Asian Family Services and joined MAFS in January 2015. A devoted Hindu, Sumitra is a strong believer of his Holiness Pujya Pramukhswami Maharaj of BAPS.",
+                Bio = "Born in Ahmedabad, India, Sumitra grew up in Sabarmati, where Mahatma Gandhi lived in the later part of his life.  Sumitra now resides in Schaumburg, Illinois, with her sister Hansa.  She has two sons, Neal and Raj.  Neal, is married to Sonal, and they have two children, Nishal (19) and Shriya (12).  Raj is married to Nisha, and they have two sons, Ronak (12) and Raveen (9). Sumitra graduated with a degree in phycology from Gujarat College in 1969.  Her move to the US in January of 1970 marked the beginning of her family life in Chicago.  Sumitra’s first professional position in the Little Fuse Company was as the Quality Control Supervisor.  She retired after 35 years in May 2006, and now spending time with her 4 Grandchildren. She has received numerous awards. Jesse Jackson’s Rainbow Push Organizations awarded her as the Best Mother in 2010 and New Millennium Women of Dorothy Brown’s Organization presented her “Woman of the New Millennium Award” in 2011. Sumitra  is a staunch supporter of Metropolitan Asian Family Services and joined MAFS in January 2015. A devoted Hindu, Sumitra is a strong believer of his Holiness Pujya Pramukhswami Maharaj of BAPS.",
                 Image = "Sumitra-Patel.png",
                 Image2 = "Sumitra-Patel2.gif",
                 IsStaff = false,
+                IsActive = true
+            });
+
+            //Shweta Singh
+            context.Members.AddOrUpdate(r => r.FirstName, new Member
+            {
+                FirstName = "Shweta",
+                LastName = "Singh",
+                Position = "Board Member",
+                Bio = "is an Associate Professor at the School of Social Work at Loyola University Chicago. Her M.S.W. is from the Tata Institute of Social Sciences at Mumbai, India and her Doctorate is from the University of North Carolina at Chapel Hill, USA. Singh is the instructor for courses on research and evaluation, global feminism, and nonprofit management. Her previous research work includes consultancies assisting field offices based in India of international development agencies such as, UNICEF, OXFAM, and local NGOs on evaluation research projects. Her research is on empowerment for women and girls using a holistic identity context. Her work includes audio-video documentary for clinical intervention and policy advocacy. Her edited book is called Social Work and Social Development: Perspectives from India and the United Sates published by Lyceum Chicago. She has also produced a documentary titled Urban Indian Womanhood. She also hosts a radio show on WLUW called ‘Global desi World and Women’ that caters to immigrant South Asian women.",
+                Image = "Shweta-Singh.png",
+                Image2 = "Shweta-Singh.gif",
+                IsStaff = false,
+                IsActive = true
             });
              
             //Seed Fundraiser
+            //2014
+            context.Fundraisers.AddOrUpdate(r => r.Date, new Fundraiser
+            {
+                Date = new DateTime(2014, 9, 13),
+                IsMini = false,
+                Location = "Schaumburg, IL",
+                Venue = "India House",
+                Intro = "Metropolitan Asian Family Services' celebrated its 22nd annual fundraising dinner with excitement, entertainment and an award ceremony on September 13, 2014 at India House, Schaumburg, Illinois.",
+                WriteUp = "The celebration started with a traditional deep lightning ceremony performed by  Pt. Choodaman Pathak of Radhey Shyam Temple and was followed by a Ganesh Vandana dance performance by students of the Mudra Dance Academy. Prominent dignitaries in attendance were Toni Preckwinkle, Cook County Board President, Paul Vallas, Democratic Lt. Governor Candidate, Dr. Ausaf Sayeed, Consul General of India, Chicago, Rep. Michelle Mussman, Gayle A. Smolinski, Roselle Mayor, Rodney S. Craig, Hanover Park Mayor, Dr. Hemlata Bakane, President of IAMA, Sonia Bhagwakar from IDOA, Sher Mohammad Rajput, Indo American Center Board Member, Nand Kapoor, former President Association of Indian in America, Anees Chaudhary, Treasurer of the AMU Alumni Association of Greater Chicago, and other community leaders and business supporters including seniors  and their families. Dr. Ausaf Sayeed, Consul General of India, commended the MAFS team for doing an extraordinary job in serving and caring for the elderly and other immigrant populations in Chicagoland. ",
+                CoverPhoto = "Fundraiser/2014.jpg",
+                IssuuLink = "9480861/11710604",
+                FlickrGallery = ""
+            });
+            /*  2015 Mini WriteUp = "The celebration started with the diya ceremony which was performed by Swami Purnatmanandaji of Bharat Sevashram of Chicago. Prominent leaders in attendance were Gopal Lalmalani, Village President Oak Brook, Mayor George Pradel, Ex- Naperville Mayor, Nakul Singh Chand, Regional Manager, Air India, Nimish Jani, Villlage Trustee Schaumburg, Krishna Bansal, Outreach Coordinator Naperville Village, and MAFS board members. In his opening remarks our keynote speaker, Mayor Lalmalani, commended the MAFS team for serving the community on all fronts for over 3 decades. He congratulated the MAFS team for opening new location at Schaumburg and expressed his concern on recent budget cut. Similar remarks of concern were presented by Mr. Bansal, he urged community to come forward and join in MAFS mission of serving and caring. "
++ "Mrs. Kumar presented a detailed annual report. She said that the requirement for all our Nutrition, Public Benefit and Health Research and education related programs are to raise matching funds from our community and urged all those in attendance to understand the facts and come forward to support these programs. " 
++ "Ms. Beena Patel, MAFS Secretary expressed her concern on recent budget cut. Ms. Patel read out all our lobbying efforts to save Community Care and Adult Day Care Services. Our guest speaker Mayor George Pradel boosted everyone spirit with his vigor and energy. "
++ "The program started with Ganesh Vandana by Radhika Akolkar of the Radhika Dance Academy. Our Carol Stream seniors presented a very fascinating and well-balanced Tippani Dance performance. "
++ "Our Naperville staff and seniors presented a historical dance performance from the city of Gujarat called RAAS but it was our Chicago seniors under the guidance of Pankaj Patel, ADS Coordinator, that stole the show with their superb performance. "
++ "Mandi Theater of Chicago presented a hilarious drama called as Udan Khatola performed by Jagmohan Rawat, Rohit Sharma and Alka Sharma. "
++ "The celebration also had an award ceremony. Gopal Lalmalani was given the Community Service Award; Mayor George Pradel was given the Support Service Award. Appreciation Awards were given to Nimish Jani, Krishna Bansal and Nakul Singh Chand. "
++ "Our emcees Neelam Desai, Naperville Manager and Jahnavi Bavisi, Niles Manager successfully managed the entire program and the event was concluded with vegetarian dinner which prepared by our kitchen. Beena Patel has presented vote of thanks. ",*/
             //2013
             context.Fundraisers.AddOrUpdate(r => r.Date, new Fundraiser
             {
@@ -180,8 +250,8 @@ namespace MAFS_ReStart.Migrations
 + "Mary Killough, Deputy Director, IDOA, remarks, that it is her 4th year to attend the function and every time she amazed with number of people, and programs MAFS serve and growing to meet the increased needs of its community, despite shrinking of state and federal funding for social services."
 + "Other prominent dignitaries present is Mr. Michael Gelder-Health  Policy Advisor to the Governor Pat Quinn, Marta Pereyra, Executive Director CLESE, William D McLead –Mayor Hoffman Estates, Michelle Mussman – State Rep. 56th district, Jonathan Levin – CEO, AgeOptions, Billie Roth, Mayor of Streamwood,  Sajid Desai, businessman, Balvinder Singh – Community leader and social activist, Ms. Gurubachan Kaur, president Hindi Lover Club, Ram Saini, President of Rajasthan Association, Nand Kapoor, past president Association of Indian in America, Sher Rajput, Board member Indo-American Center, A. Anees, Board member of Aligargh Muslim University, Sadruddin Noorani, Jamat Khana. "
 + "This year the “Making a Difference in the world award,” was given to Dr. Joseph Marek, MD, for his cardiac screening program designed to identify high school and college students at risk for sudden cardiac death. Public Service Award was conferred on Husain Dalwai, Indian Member of Parliament (MP), for being an engine of social, political, industrial progress, and his work with tribal, Dalit, and minority communities. The Best Employee of the Year Award given to Afaan Muhammad, IT Manager and Jahnavi Bavisi, Manager Niles branch. Best Supervisor award was given to Smitesh Shah, supervisor and Public Benefit Award was given to Shree Gurusamy, SOS specialist.",
-                CoverPhoto = "fundraiser.jpg",
-                IssuuLink = "9480861/11710604",
+                CoverPhoto = "Fundraiser/2013.jpg",
+                IssuuLink = "9480861/30275437",
                 FlickrGallery = ""
             }); 
             //2012
@@ -202,28 +272,129 @@ namespace MAFS_ReStart.Migrations
 + "The much anticipated main entertainment of the night was Amit and Smeet Kumar's tribute to their legendary father Kishore Kumar.  Kishore Kumar was a humorous actor and singer. This performance was enjoyed by guests of all ages as the singers performed old classics with new favorites. "
 + "The audience was treated to some humorous clippings from movies of the legendary star. This was followed by the entrance of the two Kishores, Amit & Sumeet Kumar, who staged a remarkable performance. "
 + "The evening was emceed by Masala T and over $100,350 was raised for the cause!",
-                CoverPhoto = "2012.jpg",
-                IssuuLink = "9480861/6999087",
+                CoverPhoto = "Fundraiser/2012.jpg",
+                IssuuLink = "9480861/32475518",
+                FlickrGallery = ""
+            });
+            //2014 Mini
+            context.Fundraisers.AddOrUpdate(r => r.Date, new Fundraiser
+            {
+                Date = new DateTime(2014, 5, 31),
+                IsMini = true,
+                Location = "Naperville, IL",
+                Venue = "MAFS Naperville",
+                Intro = "It was cross-border love and harmony that marked Metropolitan Asian Family Services’ Asian Heritage Month and Mini Fundraising Gala dinner on May 31st, 2014 at our Naperville Senior Center located at 1032 E Ogden Ave.",
+                WriteUp = "Keynote speaker, Ms. Dorothy Miaso, Executive Director of Literacy Volunteers of America, IL informed the crowd how Mrs. Santosh Kumar’s philanthropic nature helped Literacy Volunteers of America with her time, skills and resources 25 years ago as a Vista Volunteer even though she newly immigrated to the United Stated at that time. She also gave her legal skills to shape an after school program for women inmate in Dwight Women Prison to meet and help their children while they are waiting for trial or acquittal. "+
+
+"Chief Guest, the Honorable Ausaf Sayeed, Consul General of India in Chicago graced the occasion with his wife and states that he is very impressed with the plethora of social services provided by MAFS to the immigrant population of India and its neighboring countries.  He extended his blessing and support to the MAFS and Mr. &Mrs. Kumar in serving the community on all fronts. George Pradel, Napverille Mayor congratulated the MAFS team for doing great work for the immigrant population in Naperville. "+
+
+"Krishna Bansal, Chairman for the Indian Community Outreach Mayor’s Office City of Naperville, congratulated MAFS team for providing much needed services to the community. "+
+
+"Other prominent dignitaries that attended were Stephanie Kifowit State Rep, 84th District, George Pradel, Naperville Mayor, Laurie Nowak, Du Page  – Distrcit 5, Bob Peickert- Chair, Democratic Party of Du Page County, Nasir Jahangir- 2nd Chair Democratic Party of Du Page County, Paul Fessenbecker DPDC 3rd chair, Sarbani Chowdhury- Co chair of DPDC women and minority committee, Jean  Kaczmarek Candidate for Du Page County Clerk, Mike Quiroz- Candidate for Du Page County Clerk and MAFS board members. "+
+
+"Pooja and Radha Thakrar, mesmerized everyone with their Bollywood dance performances. The seniors of Chicago performed a very entertaining and engaging skit named Atut Shraddha. Seniors from the Niles location presented “Kahani Ghar Ghar Ki”. Naperville seniors fascinated everyone with “Medley Dance”. Chalte Chalte, another classical Bollywood dance, was performed by the Naperville and Carol Stream seniors. Bipinchandra Sanghavi, a Carol Stream senior, left few eyes dry with his songs. "+
+
+"The greatest attraction of the evening was Shyam E Bahaar – A Musical Show by Swar Sarita, music group from Bombay, India. The singers were Samsuddin Vaghela, Madhuri Goswami, and Kunal Mahant who were accompanied by musicians, Jayesh Raval and Pankaj Raval. They enthralled everyone with pulsating Bollywood numbers and also mesmerized all with a variety of nostalgic, old songs.",
+                CoverPhoto = "Fundraiser/2014-mini.jpg",
                 FlickrGallery = ""
             }); 
+
+            //2015 Mini
+            context.Fundraisers.AddOrUpdate(r => r.Date, new Fundraiser
+            {
+                Date = new DateTime(2015, 6, 13),
+                IsMini = true,
+                Location = "Naperville, IL",
+                Venue = "MAFS Naperville",
+                Intro = "300 seniors and prominent community members attended Metropolitan Asian Family Service’s Mini Fundraising dinner on June 13, 2015 at 1032 E Ogden Ave, Naperville, IL.",
+                WriteUp = "In his opening remarks our keynote speaker, Mayor Lalmalani, commended the MAFS team for serving the community on all fronts for over 3 decades. He congratulated the MAFS team for opening new location at Schaumburg and expressed his concern on recent budget cut. Similar remarks of concern were presented by Mr. Bansal, he urged community to come forward and join in MAFS mission of serving and caring. "+
+" Mrs. Kumar presented a detailed annual report. She said that the requirement for all our Nutrition, Public Benefit and Health Research and education related programs are to raise matching funds from our community and urged all those in attendance to understand the facts and come forward to support these programs. "+
+" Ms. Beena Patel, MAFS Secretary expressed her concern on recent budget cut. Ms. Patel read out all our lobbying efforts to save Community Care and Adult Day Care Services. Our guest speaker Mayor George Pradel boosted everyone spirit with his vigor and energy. " + 
+" The program started with Ganesh Vandana by Radhika Akolkar of the Radhika Dance Academy. Our Carol Stream seniors presented a very fascinating and well-balanced Tippani Dance performance.  "+
+" Our Naperville staff and seniors presented a historical dance performance from the city of Gujarat called RAAS but it was our Chicago seniors under the guidance of Pankaj Patel, ADS Coordinator, that stole the show with their superb performance. "+
+" Mandi Theater of Chicago presented a hilarious drama called as Udan Khatola performed by Jagmohan Rawat, Rohit Sharma and Alka Sharma. "+
+" The celebration also had an award ceremony. Gopal Lalmalani was given the Community Service Award; Mayor George Pradel was given the Support Service Award. Appreciation Awards were given to Nimish Jani, Krishna Bansal and Nakul Singh Chand. "+
+" Our emcees Neelam Desai, Naperville Manager and Jahnavi Bavisi, Niles Manager successfully managed the entire program and the event was concluded with vegetarian dinner which prepared by our kitchen. Beena Patel has presented vote of thanks. ",
+                CoverPhoto = "Fundraiser/2015-mini.jpg",
+                FlickrGallery = ""
+            }); 
+            
+
             //Nutrition Program
             Program Nutrition = new Program();
             Nutrition.Title = "Nutrition";
             Nutrition.ShortDescription = "<strong>To eat is a necessity, but to eat intelligently is an art.</strong> Our staff and members strongly believe in this adage. We serve hot, fresh, home-cooked meals that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis.";
-            Nutrition.Description = "Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. Since the 1980s breast cancer rates have risen 4.5% each year. In 2008, 226,510 women in the United States were diagnosed with breast cancer and an estimated 40,580 women died of breast cancer (ACS, 2008). All women are at risk for breast cancer and the risk increase as women get older, especially after age 40. Breast affects the Asian subpopulations disproportionately. The rate of breast cancer among some Asian subpopulations is almost double the rate of their Caucasian counter parts leading to higher morbidity and mortality. Moreover, screening rates among the population is also much lower adding to the increased disparity between Asian American women and their Caucasian counterparts. The Breast and Cervical Cancer Education Project was initiated in 2008 to educate, increase awareness and link women to care among the South East Asian community (Cambodian, Vietnamese and Chinese). Based on the success of this project, AHC was able to expand and reach out to Muslim and South Asian women with funding from the Illinois Department of Public Health as well as most recently a Susan G. Komen grant to initiate the Pink Pashmina Project. The PINK PASHMINA PROJECT program targets highly vulnerable  Muslim American and South Asian immigrant women residing in ethnic enclave in greater Chicagoland to reduce disparities and increase awareness and screening rates. The program aims to raise their awareness in a culturally competent fashion about breast and cervical cancer risks and prevention as well as providing them with linkages to care to guide them through the health care system for screenings and proper timely care. The Pink Pashmina Project is funded in 2014-2015 by the Susan G. Komen Foundation, Chicago Foundation for Women, Lesser Franklin Charitable Trust and Crown Family Philanthropies.";
+            Nutrition.Description = " We also help educate participants on choosing the right kind of foods that help prevent & manage diseases like diabetes and hypertension which are common in our culture.    The smell of masala in the kitchen does not only entice one’s appetite, it also brings people together.  Sharing a meal with a group can be the cure seniors need against feelings of social isolation.  So come join us for a meal and tell that joke you know!  MAFS is in its 15th year of serving hot lunches to the senior citizen population. These lunches are nutritionally balanced but more importantly they provide an opportunity for seniors to make friends and socialize to break free from isolation. These meals are freshly prepared by trained cooks under strict hygienic conditions. We provided 33,905 hot meals to the community this year from our Chicago, Niles and Roselle facilities. ";
             Nutrition.BannerImg = "nutrition3.jpg";
             context.Programs.AddOrUpdate(r => r.Title, Nutrition);
 
             //Public Benefits
             Program PublicBeneifits = new Program();
-            PublicBeneifits.Title = "PublicBenefits";
+            PublicBeneifits.Title = "Public-Benefits";
             PublicBeneifits.ShortDescription = "Have you ever wondered what benefits you qualify for? Many people do not know what is available to them.  MAFS can help you understand and apply for benefits you qualify for.";
-            PublicBeneifits.Description = "Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. Since the 1980s breast cancer rates have risen 4.5% each year. In 2008, 226,510 women in the United States were diagnosed with breast cancer and an estimated 40,580 women died of breast cancer (ACS, 2008). All women are at risk for breast cancer and the risk increase as women get older, especially after age 40. Breast affects the Asian subpopulations disproportionately. The rate of breast cancer among some Asian subpopulations is almost double the rate of their Caucasian counter parts leading to higher morbidity and mortality. Moreover, screening rates among the population is also much lower adding to the increased disparity between Asian American women and their Caucasian counterparts. The Breast and Cervical Cancer Education Project was initiated in 2008 to educate, increase awareness and link women to care among the South East Asian community (Cambodian, Vietnamese and Chinese). Based on the success of this project, AHC was able to expand and reach out to Muslim and South Asian women with funding from the Illinois Department of Public Health as well as most recently a Susan G. Komen grant to initiate the Pink Pashmina Project. The PINK PASHMINA PROJECT program targets highly vulnerable  Muslim American and South Asian immigrant women residing in ethnic enclave in greater Chicagoland to reduce disparities and increase awareness and screening rates. The program aims to raise their awareness in a culturally competent fashion about breast and cervical cancer risks and prevention as well as providing them with linkages to care to guide them through the health care system for screenings and proper timely care. The Pink Pashmina Project is funded in 2014-2015 by the Susan G. Komen Foundation, Chicago Foundation for Women, Lesser Franklin Charitable Trust and Crown Family Philanthropies.";
+            PublicBeneifits.Description = "MAFS is a pioneer in providing social services to low-income and underserved populations. The demand for these kinds of services is increasing due to the slow recovery of our economy. MAFS staff assists clients in accessing public benefits available to fit their individual needs. Our staff helps fill-out applications for these services and escorts them to the appropriate public benefit offices such as Department of Human Services or Social Security Administration, Immigration and Naturalization to submit the application and serve as their interpreter. We also translate official forms in Hindi, Urdu, Gujarati, Spanish and Bosnian languages to facilitate the process of applying for benefits. Our staff acts as liaisons between the client and public officials to help our community members get the help and support they require. This year we had the privilege of helping complete 6,225 cases in Cook, Suburban Cook County, DuPage and Lake County.  MAFS can help you understand and apply for benefits like:  + Medicare + Medicaid + Social Security + Access to Care + Citizenship/Immigration + Transportation + Kids Care + SSI Prescription Drug Assistance + Food Stamps  + LIHEAP  + SHIP and many others.  Come in and talk to our friendly staff about your needs and we will try our utmost to help!";
             PublicBeneifits.BannerImg = "ceda.jpg";
             context.Programs.AddOrUpdate(r => r.Title, PublicBeneifits);
 
+            //Education
+            Program Education = new Program();
+            Education.Title = "Education";
+            Education.ShortDescription = "At MAFS we believe in education.";
+            Education.Description = "Education and knowledge help you better understand yourself and the world around you. It also helps you obtain a higher paying job. To help educate and train our community we offer educational and technical programs including, English as a Second Language (ESL), Bright Ideas, CPR training, and Computer training";
+            Education.BannerImg = "education.jpg";
+            context.Programs.AddOrUpdate(r => r.Title, Education);
 
+            //Research
+            Program Research = new Program();
+            Research.Title = "Research";
+            Research.ShortDescription = "We partner with the leading health and educational institutions to explore and study problems that concern our culture the most.";
+            Research.Description = "We have collaborated with Northwestern University’s Feinberg School of Medicine to teach the South Asian community how to make important dietary changes, engage in an active lifestyle, reduce stress, and lose weight to reduce or prevent their chances of stroke and/or heart attacks We also partner with the Asian Health Coalition on two projects. The first is the Pink Pashmina project which offers free breast cancer screenings and mammograms to South Asian woman. The second is to provide our community with free screening and testing for Hepatitis B.";
+            Research.BannerImg = "research.jpg";
+            context.Programs.AddOrUpdate(r => r.Title, Research);
 
+            //Citizenship
+            Program Citizenship = new Program();
+            Citizenship.Title = "Citizenship-and-Immigration-Assistance";
+            //change
+            Citizenship.ShortDescription = "We partner with the leading health and educational institutions to explore and study problems that concern our culture the most.";
+            //change
+            Citizenship.Description = "We have collaborated with Northwestern University’s Feinberg School of Medicine to teach the South Asian community how to make important dietary changes, engage in an active lifestyle, reduce stress, and lose weight to reduce or prevent their chances of stroke and/or heart attacks We also partner with the Asian Health Coalition on two projects. The first is the Pink Pashmina project which offers free breast cancer screenings and mammograms to South Asian woman. The second is to provide our community with free screening and testing for Hepatitis B.";
+            Citizenship.BannerImg = "immigration.jpg";
+            context.Programs.AddOrUpdate(r => r.Title, Citizenship);
+
+            //HealthInsurance
+            Program HealthInsurance = new Program();
+            HealthInsurance.Title = "Health-Insurance-Assistance";
+            //change
+            HealthInsurance.ShortDescription = "We partner with the leading health and educational institutions to explore and study problems that concern our culture the most.";
+            //change
+            HealthInsurance.Description = "We have collaborated with Northwestern University’s Feinberg School of Medicine to teach the South Asian community how to make important dietary changes, engage in an active lifestyle, reduce stress, and lose weight to reduce or prevent their chances of stroke and/or heart attacks We also partner with the Asian Health Coalition on two projects. The first is the Pink Pashmina project which offers free breast cancer screenings and mammograms to South Asian woman. The second is to provide our community with free screening and testing for Hepatitis B.";
+            HealthInsurance.BannerImg = "obamacare.jpg";
+            context.Programs.AddOrUpdate(r => r.Title, HealthInsurance);
+
+            //Blog Posts
+            
+            context.BlogPosts.AddOrUpdate(r => r.Date, new BlogPost
+            {
+                Title = "MAFS/UMAS opens senior center with array of services",
+                Date = new DateTime(2014, 3, 10),
+                Author = "Nazneen Begum",
+                Content = "ORLAND PARK: Growing old is not easy, but can be even more difficult for those in need who lack the resources necessary for aging gracefully. Recognizing this growing need of elderly immigrant population in Chicagoland and now in South Suburb, Ms. Santosh Kumar, Executive Director of Metropolitan Asian Family Services (MAFS), decided to launch a new facility in Orland Park and finally had the doors opened on Friday, March 3, at a glittering ceremony.",
+                ImgUrl = "http://indiapost.com/wp-content/uploads/2014/03/mafs-2-web.jpg",
+                SourceURL = "http://indiapost.com/mafsumas-opens-senior-center-with-array-of-services/"
+            });
+
+            context.BlogPosts.AddOrUpdate(r => r.Date, new BlogPost
+            {
+                Title = "Mrs. Santosh Kumar bestowed the award of “Jewel of Rajasthan”",
+                Date = new DateTime(2016, 1, 19),
+                Author = "Nazneen Begum",
+                Content = "What a proud moment for MAFS family that its founder and Executive Director Mrs. Santosh Kumar was bestowed an award of “Jewel of Rajasthan” leading Indian American personalities. " +
+"<p>The official celebration was on 18th Nov, 2015 at Hotel Clarks Amer, Jaipur, sponsored and supported by Manish Media and business fraternity along with Home Minister of Rajasthan Mr. Kataria. A beautiful plaque and coffee table book was offered to Mrs. Kumar for her exemplary accomplishments and for making her motherland proud in the United States. " +
+"<p>This award was presented to Mrs. Kumar for her hard work, dedication and determination. Mrs. Kumar through her courageous and smart steps during hardship phase has proved to the world that when there is hardship all that needed is patience, perseverance and focus on goals.",
+                ImgUrl = "~/Images/news/jewel-of-india.jpg",
+                SourceURL = null,
+            });
         }
     }
 }

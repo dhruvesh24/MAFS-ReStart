@@ -18,5 +18,12 @@ namespace MAFS_ReStart.Models
         //public ICollection<FundingAgency> Funders { get; set; }
         //public ICollection<Location> Locations { get; set; }
 
+        public string RemoveSpaces(string name)
+        {
+            string temp = name;
+            name.IndexOf('-');
+            return temp;
+        }
+
     }
 }

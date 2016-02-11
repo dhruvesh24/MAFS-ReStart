@@ -184,6 +184,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FundraiserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\ProgramController.cs" />
     <Compile Include="Controllers\RestaurantController.cs" />
     <Compile Include="Controllers\ReviewController.cs" />
@@ -196,6 +197,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\BlogPost.cs" />
     <Compile Include="Models\EmailResponse.cs" />
     <Compile Include="Models\FundingAgency.cs" />
     <Compile Include="Models\Location.cs" />
@@ -420,7 +422,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_Layout2.cshtml" />
-    <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\Fundraiser\Index.cshtml" />
     <Content Include="Views\Home\Board.cshtml" />
     <Content Include="Views\Restaurant\Index.cshtml" />
@@ -434,15 +435,15 @@
     <Content Include="Views\Review\Edit.cshtml" />
     <Content Include="Views\Program\Services.cshtml" />
     <Content Include="Views\Home\_Restaurants.cshtml" />
-    <Content Include="Views\Fundraiser\Details.cshtml" />
+    <Content Include="Views\Fundraiser\Details2.cshtml" />
     <Content Include="Views\Fundraiser\Create.cshtml" />
     <Content Include="Views\Fundraiser\Edit.cshtml" />
     <Content Include="Views\Fundraiser\Delete.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
-    <Content Include="Views\Program\Overview.cshtml" />
+    <Content Include="Views\Program\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Thanks.cshtml" />
-    <Content Include="Views\Program\Index.cshtml" />
+    <Content Include="Views\Program\Info.cshtml" />
     <Content Include="Views\Home\Locations.cshtml" />
     <Content Include="Views\Home\Funders.cshtml" />
     <Content Include="Views\Shared\_ProgramMenu.cshtml" />
@@ -452,6 +453,18 @@
     <Content Include="Views\Shared\_Twitter.cshtml" />
     <Content Include="Views\Shared\_FundraiserMenu.cshtml" />
     <Content Include="Views\Program\Overview2.cshtml" />
+    <Content Include="Views\Shared\_FooterFlickr.cshtml" />
+    <Content Include="Views\Fundraiser\Index2.cshtml" />
+    <Content Include="Views\Fundraiser\Details.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\News\Details.cshtml" />
+    <Content Include="Views\News\Create.cshtml" />
+    <Content Include="Views\News\Edit.cshtml" />
+    <Content Include="Views\News\Delete.cshtml" />
+    <Content Include="Views\Fundraiser\_OtherFundraisers.cshtml" />
+    <Content Include="Views\Fundraiser\_PrevFundraiserButton.cshtml" />
+    <Content Include="Views\Fundraiser\_NextFundraiserButton.cshtml" />
+    <Content Include="Views\Shared\_RandomFunder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

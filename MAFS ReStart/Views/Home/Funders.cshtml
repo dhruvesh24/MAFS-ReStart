@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<MAFS_ReStart.Models.FundingAgency>
 
 @{
-    ViewBag.Title = "Our Funders";
+    ViewBag.Title = "Funders";
 }
 
 <div class="main">
     <div class="container">
         <section class="hgroup">
-            @*<h1>About us</h1>*@
+            <h1>@ViewBag.Title</h1>
             <h2>
                 To provide comprehensive & integrated Social Services to the Immigrant population of India, Pakistan, Bangladesh, the Middle East & European countries. These services include but are not limited to <strong>
                     educate, counsel, assist & empower
@@ -16,8 +16,7 @@
             </h2>
             <ul class="breadcrumb pull-right">
                 <li><a href="/">Home</a> </li>
-                <li><a href="/Home/About2">About Us</a> </li>
-                <li class="active">Board of Directors</li>
+                <li class="active">@ViewBag.Title</li>
             </ul>
         </section>
 
@@ -25,17 +24,19 @@
 
         @foreach (var funder in Model)
         {
-            <div class="service_teaser inverted">
+            <div class="service_teaser">
                 <div class="row">
                     <div class="service_photo col-sm-4 col-md-4">
-                        <figure style="background-image:url(../@funder.ImageURL)"></figure>
+                        <a href="@funder.URL" target="_blank"><img src="~/@funder.ImageURL" width="250" /></a>
+                        @*<figure style="background-image:url(../@funder.ImageURL)"></figure>*@
                     </div>
                     <div class="service_details col-sm-8 col-md-8">
-                        <h2 class="section_header skincolored"><b>@funder.Name</b><small>where the service_teaser is .inverted if you like it dark</small></h2>
+                        <h2 class="section_header"><b>@funder.Name</b><small> <a href="@funder.URL" target="_blank">@funder.URL</a></small></h2>
                         <p>@funder.ShortBio </p>
                     </div>
                 </div>
             </div>
+            <hr />
         }
 
 

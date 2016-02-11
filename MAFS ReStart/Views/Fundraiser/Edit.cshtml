@@ -1,99 +1,125 @@
 ﻿@model MAFS_ReStart.Models.Fundraiser
 
 @{
-    ViewBag.Title = "Edit";
+    string FundraiserType = "Mini";
+    if (!Model.IsMini)
+    {
+        FundraiserType = "Annual";
+    }
+    ViewBag.Title = "Edit " + Model.Date.Year + " " + FundraiserType + " Fundraiser";
 }
 
-<h2>Edit</h2>
+<div class="main">
+    <div class="container">
+        <section class="hgroup">
+            <h1>@ViewBag.Title</h1>
+            <h2></h2>
+            <ul class="breadcrumb pull-right">
+                <li><a href="/">Home</a> </li>
+                <li><a href="/Fundraiser">Fundraiser</a> </li>
+                <li class="active">@ViewBag.Title</li>
+            </ul>
+        </section>
 
-@using (Html.BeginForm()) {
+        <br />
+
+       @using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Fundraiser</legend>
+      
 
         @Html.HiddenFor(model => model.Id)
+        @*<div class="form-group">*@
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Date)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Date)
+                @Html.ValidationMessageFor(model => model.Date)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Date)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Date)
-            @Html.ValidationMessageFor(model => model.Date)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.IsMini)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.IsMini)
+                @Html.ValidationMessageFor(model => model.IsMini)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.IsMini)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.IsMini)
-            @Html.ValidationMessageFor(model => model.IsMini)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Location)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Location)
+                @Html.ValidationMessageFor(model => model.Location)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Location)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Location)
-            @Html.ValidationMessageFor(model => model.Location)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Venue)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Venue)
+                @Html.ValidationMessageFor(model => model.Venue)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Venue)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Venue)
-            @Html.ValidationMessageFor(model => model.Venue)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Intro)
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(model => model.Intro, 5, 100, null)
+                @Html.ValidationMessageFor(model => model.Intro)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Intro)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Intro)
-            @Html.ValidationMessageFor(model => model.Intro)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.WriteUp)
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(model => model.WriteUp, 20, 100, null)
+                @Html.ValidationMessageFor(model => model.WriteUp)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.WriteUp)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.WriteUp)
-            @Html.ValidationMessageFor(model => model.WriteUp)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.CoverPhoto)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.CoverPhoto)
+                @Html.ValidationMessageFor(model => model.CoverPhoto)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.CoverPhoto)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.CoverPhoto)
-            @Html.ValidationMessageFor(model => model.CoverPhoto)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.IssuuLink)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.IssuuLink)
+                @Html.ValidationMessageFor(model => model.IssuuLink)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.IssuuLink)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.IssuuLink)
-            @Html.ValidationMessageFor(model => model.IssuuLink)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.FlickrGallery)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.FlickrGallery)
+                @Html.ValidationMessageFor(model => model.FlickrGallery)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.FlickrGallery)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.FlickrGallery)
-            @Html.ValidationMessageFor(model => model.FlickrGallery)
-        </div>
-
-        <p>
-            <input type="submit" value="Save" />
-        </p>
-    </fieldset>
+            <p>
+                <input type="submit" value="Save" />
+            </p>
+</fieldset>
 }
 
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+
+
+
+    </div> @*end div*@
+
+
+    
 

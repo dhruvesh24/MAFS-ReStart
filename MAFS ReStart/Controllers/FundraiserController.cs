@@ -21,10 +21,26 @@ namespace MAFS_ReStart.Controllers
             return View(db.Fundraisers.ToList().OrderByDescending(r => r.Date.Year));
         }
 
+        public ActionResult Index2()
+        {
+            return View(db.Fundraisers.ToList().OrderByDescending(r => r.Date.Year));
+        }
+
         //
         // GET: /Fundraiser/Details/5
 
         public ActionResult Details(int id = 0)
+        {
+            ViewBag.First = db.Fundraisers.Max(r => r.Date.Year);
+            ViewBag.Last = db.Fundraisers.Min(r => r.Date.Year);
+            Fundraiser fundraiser = db.Fundraisers.Find(id);
+            if (fundraiser == null)
+            {
+                return HttpNotFound();
+            }
+            return View(fundraiser);
+        }
+        public ActionResult Details2(int id = 0)
         {
             ViewBag.First = db.Fundraisers.Max(r => r.Date.Year);
             ViewBag.Last = db.Fundraisers.Min(r => r.Date.Year);
@@ -103,6 +119,7 @@ namespace MAFS_ReStart.Controllers
             return View(fundraiser);
         }
 
+
         //
         // POST: /Fundraiser/Delete/5
 
@@ -116,10 +133,68 @@ namespace MAFS_ReStart.Controllers
             return RedirectToAction("Index");
         }
 
+        //Partial menu views
+        public ActionResult getOtherFundraisers(int id)
+        {
+            var model = db.Fundraisers.OrderByDescending(r => r.Date)
+                                      .Where(r => r.Id != id)
+                                      .Take(3);
+            return PartialView("_OtherFundraisers", model);
+        }
+
+        public ActionResult getPrev(int id)
+        {   
+            Fundraiser model = null;
+            
+            var fundraisers = db.Fundraisers.OrderBy(r => r.Date);
+            
+            DateTime Date = db.Fundraisers.Find(id).Date;
+            
+            if(Date == fundraisers.First().Date){
+                model = null;
+                return PartialView("_PrevFundraiserButton", model);
+            }
+
+            fundraisers = db.Fundraisers.OrderByDescending(r => r.Date);
+            foreach(var fundraiser in fundraisers){
+                if (fundraiser.Date < Date){
+                    model = fundraiser;
+                    break;
+                }
+            }
+            return PartialView("_PrevFundraiserButton", model);
+        }
+        public ActionResult getNext(int id)
+        {
+            Fundraiser model = null;
+
+            var fundraisers = db.Fundraisers.OrderByDescending(r => r.Date);
+
+            DateTime Date = db.Fundraisers.Find(id).Date;
+
+            if (Date == fundraisers.First().Date)
+            {
+                model = null;
+                return PartialView("_NextFundraiserButton", model);
+            }
+
+            fundraisers = db.Fundraisers.OrderBy(r => r.Date);
+            foreach (var fundraiser in fundraisers)
+            {
+                if (fundraiser.Date > Date)
+                {
+                    model = fundraiser;
+                    break;
+                }
+            }
+            return PartialView("_NextFundraiserButton", model);
+        }
         protected override void Dispose(bool disposing)
         {
             db.Dispose();
             base.Dispose(disposing);
         }
+
+        
     }
 }

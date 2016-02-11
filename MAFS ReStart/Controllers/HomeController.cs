@@ -59,53 +59,55 @@ namespace MAFS_ReStart.Controllers
             return View();
         }
 
-        public ActionResult Index2()
-        {
-            var controller = RouteData.Values["controller"];
-            var action = RouteData.Values["action"];
-            var id = RouteData.Values["id"];
-            var message = String.Format("{0}::{1}  {2}", controller, action, id);
-            ViewBag.Message = message;
+        //public ActionResult Index2()
+        //{
+        //    var controller = RouteData.Values["controller"];
+        //    var action = RouteData.Values["action"];
+        //    var id = RouteData.Values["id"];
+        //    var message = String.Format("{0}::{1}  {2}", controller, action, id);
+        //    ViewBag.Message = message;
 
-            //var products = new System.Data.DataTable("teste");
-            //products.Columns.Add("col1", typeof(int));
-            //products.Columns.Add("col2", typeof(string));
+        //    //var products = new System.Data.DataTable("teste");
+        //    //products.Columns.Add("col1", typeof(int));
+        //    //products.Columns.Add("col2", typeof(string));
 
-            //products.Rows.Add(1, "product 1");
-            //products.Rows.Add(2, "product 2");
-            //products.Rows.Add(3, "product 3");
-            //products.Rows.Add(4, "product 4");
-            //products.Rows.Add(5, "product 5");
-            //products.Rows.Add(6, "product 6");
-            //products.Rows.Add(7, "product 7");
+        //    //products.Rows.Add(1, "product 1");
+        //    //products.Rows.Add(2, "product 2");
+        //    //products.Rows.Add(3, "product 3");
+        //    //products.Rows.Add(4, "product 4");
+        //    //products.Rows.Add(5, "product 5");
+        //    //products.Rows.Add(6, "product 6");
+        //    //products.Rows.Add(7, "product 7");
 
 
-            //var grid = new GridView();
-            //grid.DataSource = products;
-            //grid.DataBind();
+        //    //var grid = new GridView();
+        //    //grid.DataSource = products;
+        //    //grid.DataBind();
 
-            //Response.ClearContent();
-            //Response.Buffer = true;
-            //Response.AddHeader("content-disposition", "attachment; filename=MyExcelFile.xls");
-            //Response.ContentType = "application/ms-excel";
+        //    //Response.ClearContent();
+        //    //Response.Buffer = true;
+        //    //Response.AddHeader("content-disposition", "attachment; filename=MyExcelFile.xls");
+        //    //Response.ContentType = "application/ms-excel";
 
-            //Response.Charset = "";
-            //StringWriter sw = new StringWriter();
-            //HtmlTextWriter htw = new HtmlTextWriter(sw);
+        //    //Response.Charset = "";
+        //    //StringWriter sw = new StringWriter();
+        //    //HtmlTextWriter htw = new HtmlTextWriter(sw);
 
-            //grid.RenderControl(htw);
+        //    //grid.RenderControl(htw);
 
-            //Response.Output.Write(sw.ToString());
-            //Response.Flush();
-            //Response.End();
+        //    //Response.Output.Write(sw.ToString());
+        //    //Response.Flush();
+        //    //Response.End();
 
-            return View();
-        }
+        //    return View();
+        //}
 
         public ActionResult Board()
         {
             ViewBag.Message = "Your app description page.";
-            var model = _db.Members.ToList();
+            //var model = _db.Members.ToList();
+            var model = _db.Members.Where(r => r.IsActive == true && r.IsStaff == false);
+
             return View(model);
         }
 
@@ -151,7 +153,7 @@ namespace MAFS_ReStart.Controllers
         }
         public ActionResult Funders()
         {
-            var model = _db.Funders.ToList();
+            var model = _db.Funders.OrderBy(r => r.Name);
             return View(model);
         }
 
@@ -164,8 +166,24 @@ namespace MAFS_ReStart.Controllers
         //Partial fundraiser views
         public ActionResult getFundraiserMenu()
         {
-            var model = _db.Fundraisers.ToList();
+            var model = _db.Fundraisers.OrderByDescending(r => r.Date);
+
             return PartialView("_FundraiserMenu", model);
+        }
+        public ActionResult getRandomFunder()
+        {
+            
+            var funders = _db.Funders.OrderBy(r => r.Name);
+            var model = new LinkedList<FundingAgency>();
+            Random random = new Random();
+            for (int i = 0; i < 4; i++)
+            {
+                int index = random.Next(0, funders.Count());
+                //model.AddLast(funders.ElementAt(index));
+                //TO DO
+            }
+
+            return PartialView("_RandomFunder", model);
         }
 
         protected override void Dispose(bool disposing)
