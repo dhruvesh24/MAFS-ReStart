@@ -355,20 +355,19 @@ namespace MAFS_ReStart.Migrations
             //Citizenship
             Program Citizenship = new Program();
             Citizenship.Title = "Citizenship-and-Immigration-Assistance";
-            //change
-            Citizenship.ShortDescription = "We partner with the leading health and educational institutions to explore and study problems that concern our culture the most.";
-            //change
-            Citizenship.Description = "We have collaborated with Northwestern University’s Feinberg School of Medicine to teach the South Asian community how to make important dietary changes, engage in an active lifestyle, reduce stress, and lose weight to reduce or prevent their chances of stroke and/or heart attacks We also partner with the Asian Health Coalition on two projects. The first is the Pink Pashmina project which offers free breast cancer screenings and mammograms to South Asian woman. The second is to provide our community with free screening and testing for Hepatitis B.";
+            Citizenship.ShortDescription = "Since its establishment, MAFS has, and continues to provide help with the immigration and naturalization process for community members.";
+            //more
+            Citizenship.Description = "MAFS also helps applicable members of the community in acquiring their Overseas Citizen of India (OCI) card. This year we have helped 160 seniors to fill N.400 for citizenship and I-130 for family petition. This service is provided without outside funding, however, we continue this service to benefit immigrant families. ";
             Citizenship.BannerImg = "immigration.jpg";
             context.Programs.AddOrUpdate(r => r.Title, Citizenship);
 
             //HealthInsurance
             Program HealthInsurance = new Program();
             HealthInsurance.Title = "Health-Insurance-Assistance";
-            //change
-            HealthInsurance.ShortDescription = "We partner with the leading health and educational institutions to explore and study problems that concern our culture the most.";
-            //change
-            HealthInsurance.Description = "We have collaborated with Northwestern University’s Feinberg School of Medicine to teach the South Asian community how to make important dietary changes, engage in an active lifestyle, reduce stress, and lose weight to reduce or prevent their chances of stroke and/or heart attacks We also partner with the Asian Health Coalition on two projects. The first is the Pink Pashmina project which offers free breast cancer screenings and mammograms to South Asian woman. The second is to provide our community with free screening and testing for Hepatitis B.";
+            //Not the greatest
+            HealthInsurance.ShortDescription = " We collaborate with the Asian Health Coalition to assist our community with the Affordable Care Act (Obamacare).";
+            //Not the greatest
+            HealthInsurance.Description = "Metropolitan Asian Family Services has collaborated with the Asian Health Coalition for assisting our community with the Affordable Care Act also known as Obamacare. It was the state-run outreach and education program offered to all legal residents of Illinois to enroll into Medicaid or Marketplace health insurance. This year our Navigators, Ms. Nazneen Begum and Meenu Jethi, have enrolled over 500 individuals into Medicaid or Marketplace health insurance and reached out to over 1500 people through outreach at temples, mosques, churches and Gurudwaras.";
             HealthInsurance.BannerImg = "obamacare.jpg";
             context.Programs.AddOrUpdate(r => r.Title, HealthInsurance);
 

@@ -60,8 +60,8 @@
                          <!-- NAV About -->
                         <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="#">About Us<span class="caret"></span></a>
                              <ul class="dropdown-menu">
-                                    <li>@Html.ActionLink("Our Story", "Index", "Restaurant")</li>
-                                    <li @if(ViewBag.Title == "About Us" || ViewBag.Title == "Restaurants")
+                                    <li>@Html.ActionLink("Our Story", "About", "Home")</li>
+                                    <li @if (ViewBag.Title == "Board of Directors")
                                     { 
                                         @:class="active" 
                                     } >@Html.ActionLink("Board of Directors", "Board", "Home")</li>
