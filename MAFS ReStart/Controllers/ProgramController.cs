@@ -37,6 +37,12 @@ namespace MAFS_ReStart.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult getProgramTile()
+        {
+            var model = _db.Programs.Take(3);
+            return PartialView("_ProgramTile", model);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (_db != null)

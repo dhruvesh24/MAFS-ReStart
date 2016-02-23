@@ -465,6 +465,7 @@
     <Content Include="Views\Fundraiser\_PrevFundraiserButton.cshtml" />
     <Content Include="Views\Fundraiser\_NextFundraiserButton.cshtml" />
     <Content Include="Views\Shared\_RandomFunder.cshtml" />
+    <Content Include="Views\Program\_ProgramTile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

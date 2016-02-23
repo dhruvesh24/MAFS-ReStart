@@ -37,6 +37,7 @@ namespace MAFS_ReStart.Migrations
             Chicago.AddressLine1 = "7541 N Western Ave.";
             Chicago.AddressLine2 = "Chicago, IL 60645";
             Chicago.Zipcode = "60645";
+            Chicago.GoogleMap = @"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2964.14438525393!2d-87.6898215!3d42.018634899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd02db1977f7f%3A0xe422c0b61d364c29!2sMetropolitan+Asian+Family+Services!5e0!3m2!1sen!2sus!4v1436212228630"; 
 
             context.Locations.AddOrUpdate(r => r.CityName, Chicago);
 
@@ -49,8 +50,93 @@ namespace MAFS_ReStart.Migrations
             Niles.AddressLine1 = "9015 N Milwaukee Ave.";
             Niles.AddressLine2 = "Niles, IL 60714";
             Niles.Zipcode = "60714";
+            Niles.GoogleMap = @"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11851.661605083538!2d-87.8295208!3d42.0449944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3db3ac4b293c396e!2sMetropolitan+Asian+Family+Services!5e0!3m2!1sen!2sus!4v1456172323587";
 
             context.Locations.AddOrUpdate(r => r.CityName, Niles);
+
+            //Naperville Location
+            Location Naperville = new Location();
+            Naperville.CityName = "Naperville";
+            Naperville.Phone = "630-705-1208";
+            Naperville.Fax = "630-470-6038";    //check
+            Naperville.AddressLine1 = "1032 E Ogden Ave.";
+            Naperville.AddressLine2 = "Naperville, IL. 60563";
+            Naperville.Zipcode = "60563";
+            Naperville.GoogleMap = @"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2974.7235398463877!2d-88.13146788456163!3d41.79117137922919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e56561e7fcdcf%3A0x53c50b4a6daaef74!2s1032+E+Ogden+Ave%2C+Naperville%2C+IL+60563!5e0!3m2!1sen!2sus!4v1456172668691";
+
+            context.Locations.AddOrUpdate(r => r.CityName, Naperville);
+
+            //Roselle Location
+            Location Roselle = new Location();
+            Roselle.CityName = "Roselle";
+            Roselle.Phone = "630-307-6277";
+            Roselle.Fax = "630-307-6477";
+            Roselle.AddressLine1 = "127 E Main Street";
+            Roselle.AddressLine2 = "Roselle, IL. 60172";
+            Roselle.Zipcode = "60172";
+            Roselle.GoogleMap = @"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11863.185928210572!2d-88.07624263806179!3d41.98317916619724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc8f91e3dcae034f8!2sMetropolitan+Asian+Family+Services!5e0!3m2!1sen!2sus!4v1456172798900";
+
+            context.Locations.AddOrUpdate(r => r.CityName, Roselle);
+
+            //CAROL STREAM Location
+            Location CarolStream = new Location();
+            CarolStream.CityName = "Carol Stream";
+            CarolStream.Phone = "224-208-1130";
+            CarolStream.Fax = "224-208-1131";
+            CarolStream.AddressLine1 = "954 W Army Trail Road";
+            CarolStream.AddressLine2 = "Carol Stream, IL. 60188";
+            CarolStream.Zipcode = "60188";
+            CarolStream.GoogleMap = @"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11871.097892132117!2d-88.15198115331714!3d41.94069730229506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x869c0a0f32d6057a!2sUniversal+Metro+Asian+Services!5e0!3m2!1sen!2sus!4v1456175632059";
+
+            context.Locations.AddOrUpdate(r => r.CityName, CarolStream);
+
+            //Vernon Hills Location
+            Location VernonHills = new Location();
+            VernonHills.CityName = "Vernon Hills";
+            VernonHills.Phone = "224-333-3200";
+            VernonHills.Fax = "224-333-3303";
+            VernonHills.AddressLine1 = "2779 W Algonquin Rd, Unit # 2713";
+            VernonHills.AddressLine2 = "Algonquin, IL. 60102";
+            VernonHills.Zipcode = "60102";
+            VernonHills.GoogleMap = @"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2956.8147592370565!2d-88.34376348454953!3d42.17564377919978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f1267ce7ba37f%3A0xe9abcb173ea1ab9f!2s2779+W+Algonquin+Rd%2C+Lake+in+the+Hills%2C+IL+60102!5e0!3m2!1sen!2sus!4v1456175772857";
+
+            context.Locations.AddOrUpdate(r => r.CityName, VernonHills);
+
+            //Orland Park Location
+            Location OrlandPark = new Location();
+            OrlandPark.CityName = "Orland Park";
+            OrlandPark.Phone = "708-675-1980";
+            OrlandPark.Fax = "708-675-1988";
+            OrlandPark.AddressLine1 = "11225 W 159th Street";
+            OrlandPark.AddressLine2 = "Orland Park, IL. 60467";
+            OrlandPark.Zipcode = "60467";
+            OrlandPark.GoogleMap = @"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11934.49087816408!2d-87.892459!3d41.599044!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa20f0693fd9c6ace!2sMetropolitan+Asian+Family+Services!5e0!3m2!1sen!2sus!4v1456175859890";
+
+            context.Locations.AddOrUpdate(r => r.CityName, OrlandPark);
+
+            //Elgin Location
+            Location Elgin = new Location();
+            Elgin.CityName = "Elgin";
+            Elgin.Phone = "224-333-3200";   //change
+            Elgin.Fax = "224-333-3303";     //change
+            Elgin.AddressLine1 = "700 W Bowes Rd";  //add suite?
+            Elgin.AddressLine2 = "Elgin, IL. 60177";
+            Elgin.Zipcode = "60177";
+            Elgin.GoogleMap = @"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2964.689335894357!2d-88.31728038455489!3d42.006942379212155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f1b0a5b602759%3A0x9bf79a3995f3cd66!2sBowes+Rd%2C+Elgin+Township%2C+IL!5e0!3m2!1sen!2sus!4v1456175972926";
+
+            context.Locations.AddOrUpdate(r => r.CityName, Elgin);
+
+            //Northlake Location
+            Location Northlake = new Location();
+            Northlake.CityName = "Northlake";
+            Northlake.Phone = "224-817-2590";
+            Northlake.Fax = "224-333-3303"; //change
+            Northlake.AddressLine1 = "50 E North Ave";
+            Northlake.AddressLine2 = "Northlake, IL 60164";
+            Northlake.Zipcode = "60164";
+            Northlake.GoogleMap = @"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.31731620674!2d-87.90299818455799!3d41.90753687921988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fb4d11baf0adb%3A0x97d0703d556e112e!2s50+E+North+Ave%2C+Northlake%2C+IL+60164!5e0!3m2!1sen!2sus!4v1456176068103";
+
+            context.Locations.AddOrUpdate(r => r.CityName, Northlake);
 
             //FUNDING AGENCY
             //AgeOptions

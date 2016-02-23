@@ -1,5 +1,4 @@
-﻿@model IEnumerable<MAFS_ReStart.Models.RestaurantListViewModel>
-@{
+﻿@{
     ViewBag.Title = "Home";
 }
 
@@ -43,84 +42,18 @@
 </section>
 
 <div class="main">
-     <div class="container">
-         <h2 class="section_header elegant centered">Elegant section header<small>can also be .fancy, .skincolored and centered</small></h2>
+    <div class="container">
+        <h2 class="section_header elegant centered"><small>Welcome to the new </small> Metropolitan Asian Family Services!</h2>
 
-          <div class="row">
-               <div class="col-sm-4 col-md-4">
-                    <div class="service_teaser vertical">
-                         <div class="service_photo">
-                              <figure style="background-image:url(images/serv_6.jpg)"></figure>
-                         </div>
-                         <div class="service_details">
-                              <h2 class="section_header skincolored"><b>Service</b>Element<small>has many styles!</small></h2>
-                              <p>This is where you put the description of the service. The element has a default styling that can be altered just by adding the appropriate class to the <code>&lt;div class=&quot;service_teaser&quot;&gt;</code>. The available classes are <code>right</code>, <code>elegant</code>, <code>vertical</code> and <code>inverted</code>. See some examples at the <a href="services.html">services</a> page.</p>
-                              <a class="btn btn-primary" href="#"><i class="fa fa-info"></i>&nbsp; Optional button</a> </div>
-                    </div>
+        <div class="row">
+            <section>
+                @Html.Action("getProgramTile", "Program", null)
+            </section>
+            <section>
+                @Html.Action("getRandomFunder", "Home", new { id = 4 })
+            </section>
+        </div>
 
-                </div>
-              
-              <div class="col-sm-4 col-md-4">
-                    <div class="service_teaser vertical">
-                         <div class="service_photo">
-                              <figure style="background-image:url(images/serv_6.jpg)"></figure>
-                         </div>
-                         <div class="service_details">
-                              <h2 class="section_header skincolored"><b>Service</b>Element<small>has many styles!</small></h2>
-                              <p>This is where you put the description of the service. The element has a default styling that can be altered just by adding the appropriate class to the <code>&lt;div class=&quot;service_teaser&quot;&gt;</code>. The available classes are <code>right</code>, <code>elegant</code>, <code>vertical</code> and <code>inverted</code>. See some examples at the <a href="services.html">services</a> page.</p>
-                              <a class="btn btn-primary" href="#"><i class="fa fa-info"></i>&nbsp; Optional button</a> </div>
-                    </div>
-
-                </div>
-
-              <div class="col-sm-4 col-md-2 col-md-offset-2">
-                        @*<form method="get">
-                            <input type="search" name="searchTerm" />
-                                <input type="submit" value="Search"/>
-
-                                <div class="col-lg-3">*@
-                            @*<div class="input-group">
-                                <input type="search" name="searchTerm" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-primary" type="submit">
-                                       <i class="fa fa-search"></i>
-                                    </button>
-                                </span>
-                            </div>*@
-                            <!-- /input-group -->
-                            @* </div><!-- /.col-lg-6 -->
-                        </form>*@
-
-                  @using (Ajax.BeginForm(
-                    new AjaxOptions
-                    {
-                        HttpMethod = "get",
-                        InsertionMode = InsertionMode.Replace,
-                        UpdateTargetId = "restaurantList"
-                    }))
-                  {
-                      <input type="search" name="searchTerm" />
-                      <input type="submit" value="Search" />
-                  }
-                       @* @Html.Partial("_Restaurants", Model)*@
-                  <div id="restaurantList">
-                    @foreach (var item in Model)
-                    {
-                        <div>
-                            <h4>@Html.ActionLink(item.Name, "Index","Review", new { Id = item.Id }, null)</h4>
-                            <div>@item.City, @item.Country</div>
-                            <p>Reviews: @item.CountOfReviews</p>
-                            <hr />
-                        </div>
-                    }
-
-                    </div>
-                </div>
-
-                @Html.Action("getRandomFunder", "Home", new {id = 4 })
-
-          </div>
-
-</div>
+    </div>
 
 
