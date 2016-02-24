@@ -212,7 +212,11 @@ namespace MAFS_ReStart.Migrations
                 Image = "Firdaus-Jafri.png",
                 Image2 = "Firdaus-Jafri2.gif",
                 IsStaff = false,
-                IsActive = true
+                IsActive = true,
+                Facebook = @"https://www.facebook.com/pages/Jafri-Firdaus-DDS-Assoc-DBA-Dupage-Dental-Care/139251229455874",
+                Email = "a2thrx@yahoo.com",
+                LinkedIn = string.Empty
+
             });
             //Naren Patel
             
@@ -236,7 +240,10 @@ namespace MAFS_ReStart.Migrations
                 Image = "Pramod-Kumar.png",
                 Image2 = "Pramod-Kumar2.png",
                 IsStaff = false,
-                IsActive = true
+                IsActive = true,
+                Facebook = @"https://www.facebook.com/pramod.kumar.9862",
+                Email = "pramodk@umasinc.com",
+                LinkedIn = @"https://www.linkedin.com/in/pramod-kumar-24a9a626"
             });
             //Beena Patel
             context.Members.AddOrUpdate(r => r.FirstName, new Member
@@ -248,7 +255,11 @@ namespace MAFS_ReStart.Migrations
                 Image = "Beena-Patel.png",
                 Image2 = "Beena-Patel2.gif",
                 IsStaff = false,
-                IsActive = true
+                IsActive = true,
+                Facebook = string.Empty,
+                Email = "beenapate@gmail.com",
+                LinkedIn = @"https://www.linkedin.com/in/beena-patel-4279145a"
+
             });
             //Nikunj Baxi
             context.Members.AddOrUpdate(r => r.FirstName, new Member
@@ -260,7 +271,10 @@ namespace MAFS_ReStart.Migrations
                 Image = "Nikunj-Baxi.png",
                 Image2 = "Nikunj-Baxi2.gif",
                 IsStaff = false,
-                IsActive = true
+                IsActive = true,
+                Facebook = string.Empty,
+                Email = "nbaxi00@hotmail.com",
+                LinkedIn = string.Empty
             });
             //Rakesh Asthana
             context.Members.AddOrUpdate(r => r.FirstName, new Member
@@ -272,7 +286,10 @@ namespace MAFS_ReStart.Migrations
                 Image = "Rakesh-Asthana.png",
                 Image2 = "Rakesh-Asthana2.gif",
                 IsStaff = false,
-                IsActive = true
+                IsActive = true,
+                Facebook = @"https://www.facebook.com/rakesh.asthana.98",
+                Email = "rocky9550@yahoo.com",
+                LinkedIn = @"https://www.linkedin.com/in/rakesh-asthana-76353a10"
             }); 
              //Sumitra Patel
             context.Members.AddOrUpdate(r => r.FirstName, new Member
@@ -284,7 +301,10 @@ namespace MAFS_ReStart.Migrations
                 Image = "Sumitra-Patel.png",
                 Image2 = "Sumitra-Patel2.gif",
                 IsStaff = false,
-                IsActive = true
+                IsActive = true,
+                Facebook = string.Empty,
+                Email = string.Empty,
+                LinkedIn = string.Empty
             });
 
             //Shweta Singh
@@ -297,7 +317,10 @@ namespace MAFS_ReStart.Migrations
                 Image = "Shweta-Singh.png",
                 Image2 = "Shweta-Singh.gif",
                 IsStaff = false,
-                IsActive = true
+                IsActive = true,
+                Facebook = @"https://www.facebook.com/1ShwetaSingh",
+                Email = string.Empty,
+                LinkedIn = @"https://www.linkedin.com/in/shweta-singh-a7004714"
             });
              
             //Seed Fundraiser

@@ -16,6 +16,9 @@ namespace MAFS_ReStart.Models
         public string Image2 { get; set; }
         public bool IsStaff { get; set; }
         public bool IsActive { get; set; }
+        public string Facebook { get; set; }
+        public string LinkedIn { get; set; }
+        public string Email { get; set; }
 
 
         public void getImageURLs(){

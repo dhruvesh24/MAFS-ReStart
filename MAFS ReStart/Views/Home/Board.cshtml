@@ -69,7 +69,20 @@ individuals & families</strong> to become productive members in their new home.
                                   <h5>@member.FirstName @member.LastName</h5>
                                   <small>@member.Position</small>
                                   <hr>
-                                  <div class="team_social"> <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a> <a href="https://twitter.com/leonartgr"><i class="fa fa-twitter"></i></a> <a href="#pinterest"><i class="fa fa-linkedin"></i></a> <a href="https://github.com/PlethoraThemes"><i class="fa fa-envelope"></i></a> </div>
+                                 <div class="team_social">
+                                     @if (member.Facebook != string.Empty)
+                                     {
+                                         <a href="@member.Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                     }
+                                     @if (member.LinkedIn != string.Empty)
+                                     {
+                                         <a href="@member.LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                     }
+                                     @if (member.Email != string.Empty)
+                                     {
+                                         <a href="mailto: @member.Email" target="_blank"><i class="fa fa-envelope"></i></a>
+                                     }
+                                 </div>
                                   @*<p class="short_bio">@member.FirstName @member.LastName</p>*@
                                  <br />
                                  <a class="btn btn-primary" href="#">Full Bio &raquo;</a>
