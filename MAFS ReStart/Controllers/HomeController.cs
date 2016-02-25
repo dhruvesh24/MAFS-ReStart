@@ -12,7 +12,7 @@ using System.Web.UI.WebControls;
 namespace MAFS_ReStart.Controllers
 {
     public class HomeController : Controller
-    {
+    { 
         private MafsDb _db = new MafsDb();
 
         public ActionResult Index(string searchTerm = null)
@@ -148,7 +148,7 @@ namespace MAFS_ReStart.Controllers
 
         public ActionResult Locations()
         {
-            var model = _db.Locations.ToList();
+            var model = _db.Locations.OrderBy(r => r.CityName);
             return View(model);
         }
         public ActionResult Funders()
@@ -172,15 +172,24 @@ namespace MAFS_ReStart.Controllers
         }
         public ActionResult getRandomFunder()
         {
+
+            var funders = _db.Funders.OrderBy(r => r.Name); //get the funders
             
-            var funders = _db.Funders.OrderBy(r => r.Name);
-            var model = new LinkedList<FundingAgency>();
+            var temp = new LinkedList<FundingAgency>();     //add to a linkedlist
+            foreach(var funder in funders){                 //add to a linkedlist
+                temp.AddLast(funder);
+            }
+
+            var model = new LinkedList<FundingAgency>();    //the final model
+
             Random random = new Random();
             for (int i = 0; i < 4; i++)
             {
-                int index = random.Next(0, funders.Count());
+                int index = random.Next(0, temp.Count());
                 //model.AddLast(funders.ElementAt(index));
                 //TO DO
+                model.AddLast(temp.ElementAt(index));
+                temp.Remove(temp.ElementAt(index));
             }
 
             return PartialView("_RandomFunder", model);
