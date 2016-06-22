@@ -198,6 +198,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\BlogPost.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\EmailResponse.cs" />
     <Compile Include="Models\FundingAgency.cs" />
     <Compile Include="Models\Location.cs" />
@@ -466,6 +467,9 @@
     <Content Include="Views\Fundraiser\_NextFundraiserButton.cshtml" />
     <Content Include="Views\Shared\_RandomFunder.cshtml" />
     <Content Include="Views\Program\_ProgramTile.cshtml" />
+    <Content Include="Views\Program\_Nutrition.cshtml" />
+    <Content Include="Views\Program\_Public.cshtml" />
+    <Content Include="Views\Program\_Research.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

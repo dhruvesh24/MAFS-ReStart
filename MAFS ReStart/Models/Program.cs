@@ -17,6 +17,7 @@ namespace MAFS_ReStart.Models
         public string BannerImg { get; set; }
         //public ICollection<FundingAgency> Funders { get; set; }
         //public ICollection<Location> Locations { get; set; }
+        public string PartialView { get; set; }
 
         public string RemoveSpaces(string name)
         {

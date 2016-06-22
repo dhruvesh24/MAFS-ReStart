@@ -45,7 +45,7 @@
                                 @Html.Raw(Model.Content)
                             </p>
                            
-                            <div class="fb-comments" data-href="http://mafsinc.com" data-numposts="5"></div>
+                            <div class="fb-comments" data-href="@HttpContext.Current.Request.Url.AbsoluteUri" data-numposts="5"></div>
                         </div>
                     </article>
                     @*<article class="post">

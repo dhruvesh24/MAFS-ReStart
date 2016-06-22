@@ -21,5 +21,6 @@ namespace MAFS_ReStart.Models
         public DbSet<Location> Locations { get; set; }
         public DbSet<FundingAgency> Funders { get; set; }
         public DbSet<BlogPost> BlogPosts { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

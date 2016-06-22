@@ -143,6 +143,7 @@
                     <p class="columns_2">
                         @Html.Raw(Model.WriteUp)
                     </p>
+                   
                 </div>
                 <div class="col-sm-4 col-md-4">
                     <aside class="widget">
@@ -152,7 +153,7 @@
                             <p><strong>Location:</strong> @Model.Location</p>
                         </div>
                     </aside>
-                    <aside class="widget ads clearfix">
+                    @*<aside class="widget ads clearfix">
                         <h4>Pictures</h4>
                         <a href="#">
                             <img src="http://placehold.it/110" alt="">
@@ -163,7 +164,7 @@
                         </a><a href="#">
                             <img src="http://placehold.it/110" alt="">
                         </a>
-                    </aside>
+                    </aside>*@
                     @if (Model.IsMini == false)
                     {
                         <aside class="widget">

@@ -30,10 +30,11 @@
                                        <div class="post_sub"><i class="fa-time"></i> March 1, 2013 <a href="single_post.html#post_comments"><i class="fa-comments-alt"></i> 6 comments</a> </div>
                                   </div>-->
                         <div class="post_content">
-                            <figure><a href="single_post.html">
-                                <img alt="0" src="~/images/@Model.BannerImg"></a></figure>
+                            <figure>
+                                <img alt="0" src="~/images/@Model.BannerImg">
+                            </figure>
                             <p class="columns_2">
-                               @Model.Description
+                               @Html.Raw(Model.Description)
                             </p>
                                 @*<p class="columns_2">Breast cancer is the most commonly diagnosed form of cancer in women (American Cancer Society (ACS 2008) and the second leading cause of cancer deaths among Asian and Pacific Islander women in the United States. Since the 1980s breast cancer rates have risen 4.5% each year. In 2008, 226,510 women in the United States were diagnosed with breast cancer and an estimated 40,580 women died of breast cancer (ACS, 2008). All women are at risk for breast cancer and the risk increase as women get older, especially after age 40. Breast affects the Asian subpopulations disproportionately. The rate of breast cancer among some Asian subpopulations is almost double the rate of their Caucasian counter parts leading to higher morbidity and mortality. Moreover, screening rates among the population is also much lower adding to the increased disparity between Asian American women and their Caucasian counterparts. The Breast and Cervical Cancer Education Project was initiated in 2008 to educate, increase awareness and link women to care among the South East
 
@@ -56,7 +57,7 @@
                                 <!--<a href="single_post.html" class="btn btn-primary">Read More</a>-->
 </div>
                     </article>
-                    <article class="post">
+                    @*<article class="post">
                         <div class="post_header">
                             <h3 class="post_title"><a href="single_post.html">Community-Engaged Research Parthership Award recipeint is South Asian Healthy Lifestyle Initiative</a></h3>
                             <div class="post_sub"><i class="fa-time"></i>April 5, 2013 <a href="single_post.html#post_comments"><i class="fa-comments-alt"></i>6 comments</a> </div>
@@ -91,7 +92,17 @@
                             <li><a href="#">5</a></li>
                             <li><a href="#">»</a></li>
                         </ul>
-                    </div>
+                    </div>*@
+
+                    @*
+                        Render partial view
+                    *@
+                @if (Model.PartialView != string.Empty)
+                {
+                    @Html.Partial(Model.PartialView)
+                }
+                    
+
                 </div>
                 <div id="sidebar" class="col-sm-4 col-md-4">
                     <!--<aside class="widget">
@@ -103,7 +114,7 @@
                                   </ul>
                              </aside>-->
 
-                    <aside class="widget ads clearfix">
+                    @*<aside class="widget ads clearfix">
                         <h4>Gallery</h4>
                         <a href="#">
                             <img src="http://placehold.it/110" alt=""></a> <a href="#">
@@ -112,14 +123,14 @@
                             <img src="http://placehold.it/110" alt=""></a> <a href="#">
                             <img src="http://placehold.it/110" alt=""></a> <a href="#">
                             <img src="http://placehold.it/110" alt=""></a>
-                    </aside>
+                    </aside>*@
 
                     @Html.Partial("_Facebook")
                     <br />
                     @Html.Partial("_Twitter")
 
 
-                    <aside class="widget">
+                    @*<aside class="widget">
                         <h4>Program Goals:</h4>
                         <p>The vision of the Breast and Cervical Cancer Education and Prevention Program aims to reduce health disparities among Asian American women in the Chicago metropolitan area through:</p>
                         <ul>
@@ -160,7 +171,7 @@
                             </div>
                             <div id="tags" class="tab-pane fade"><a class="label label-default">Default</a> <a class="label label-primary">Primary</a> <a class="label label-success">Success</a> <a class="label label-warning">Warning</a> <a class="label label-danger">Danger</a> <a class="label label-info">Info</a> <a class="label label-default">Default</a> <a class="label label-success">Success</a> <a class="label label-danger">Danger</a> <a class="label label-info">Info</a> <a class="label label-default">Default</a> <a class="label label-success">Success</a> <a class="label label-success">Success</a> <a class="label label-warning">Warning</a> <a class="label label-danger">Danger</a> <a class="label label-warning">Warning</a> <a class="label label-warning">Warning</a> <a class="label label-danger">Danger</a> <a class="label label-info">Info</a> <a class="label label-inverse">Inverse</a> </div>
                         </div>
-                    </aside>
+                    </aside>*@
                 </div>
             </div>
         </section>

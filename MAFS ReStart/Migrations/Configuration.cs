@@ -93,12 +93,12 @@ namespace MAFS_ReStart.Migrations
             //Vernon Hills Location
             Location VernonHills = new Location();
             VernonHills.CityName = "Vernon Hills";
-            VernonHills.Phone = "224-333-3200";
-            VernonHills.Fax = "224-333-3303";
-            VernonHills.AddressLine1 = "2779 W Algonquin Rd, Unit # 2713";
-            VernonHills.AddressLine2 = "Algonquin, IL. 60102";
-            VernonHills.Zipcode = "60102";
-            VernonHills.GoogleMap = @"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2956.8147592370565!2d-88.34376348454953!3d42.17564377919978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f1267ce7ba37f%3A0xe9abcb173ea1ab9f!2s2779+W+Algonquin+Rd%2C+Lake+in+the+Hills%2C+IL+60102!5e0!3m2!1sen!2sus!4v1456175772857";
+            VernonHills.Phone = "224-207-5075";
+            VernonHills.Fax = "224-207-5076";
+            VernonHills.AddressLine1 = "266 Hawthorn Village Commons";
+            VernonHills.AddressLine2 = "Vernon Hills, IL. 60061";
+            VernonHills.Zipcode = "60061";
+            VernonHills.GoogleMap = @"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.734440166815!2d-87.96001838454744!3d42.24148607919506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f9641359e2293%3A0x58692a73d30a7ada!2s266+Hawthorn+Village+Commons%2C+Vernon+Hills%2C+IL+60061!5e0!3m2!1sen!2sus!4v1456787598501";
 
             context.Locations.AddOrUpdate(r => r.CityName, VernonHills);
 
@@ -117,12 +117,12 @@ namespace MAFS_ReStart.Migrations
             //Elgin Location
             Location Elgin = new Location();
             Elgin.CityName = "Elgin";
-            Elgin.Phone = "224-333-3200";   //change
-            Elgin.Fax = "224-333-3303";     //change
-            Elgin.AddressLine1 = "700 W Bowes Rd";  //add suite?
-            Elgin.AddressLine2 = "Elgin, IL. 60177";
-            Elgin.Zipcode = "60177";
-            Elgin.GoogleMap = @"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2964.689335894357!2d-88.31728038455489!3d42.006942379212155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f1b0a5b602759%3A0x9bf79a3995f3cd66!2sBowes+Rd%2C+Elgin+Township%2C+IL!5e0!3m2!1sen!2sus!4v1456175972926";
+            Elgin.Phone = "224-242-7006";  
+            Elgin.Fax = "224-224-7008";    
+            Elgin.AddressLine1 = "2375 Bowes Rd. Suite 700-800";  
+            Elgin.AddressLine2 = "Elgin, IL. 60123";
+            Elgin.Zipcode = "60123";
+            Elgin.GoogleMap = @"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2964.704099201615!2d-88.33534568455487!3d42.00662557921225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f1b4802f142dd%3A0x1782e536fb71578d!2s2375+Bowes+Rd%2C+Elgin%2C+IL+60123!5e0!3m2!1sen!2sus!4v1456787258085";
 
             context.Locations.AddOrUpdate(r => r.CityName, Elgin);
 
@@ -130,7 +130,7 @@ namespace MAFS_ReStart.Migrations
             Location Northlake = new Location();
             Northlake.CityName = "Northlake";
             Northlake.Phone = "224-817-2590";
-            Northlake.Fax = "224-333-3303"; //change
+            Northlake.Fax = "708-397-4916";
             Northlake.AddressLine1 = "50 E North Ave";
             Northlake.AddressLine2 = "Northlake, IL 60164";
             Northlake.Zipcode = "60164";
@@ -192,6 +192,30 @@ namespace MAFS_ReStart.Migrations
             AHC.ShortBio = "The agency was founded as the “Asian Health Coalition of Illinois” back in 1996. Up till 1999, it was run by a volunteer Board and gained visibility in the AAPI community for its annual health conferences and health screening fairs targeting low-income, limited-English proficient clients in Chicago. In 1999, the agency was successful in getting a grant from the Illinois Department of Commerce and Cultural Affairs to hire its first full-time Executive Director. Since that time, the agency has shortened its name to the “Asian Health Coalition” or AHC and has streamlined its focus to building strong and innovative health promotion programs in Asian communities throughout the metropolitan Chicago area. Success for AHC in capacity bulding means eventually being able to hand over the programs to the local community organizations once the program reaches a sustainable steady state.";
             context.Funders.AddOrUpdate(r => r.Name, AHC);
 
+            //City of Chicago
+            FundingAgency CoC = new FundingAgency();
+            CoC.Name = "City of Chicago";
+            CoC.URL = "http://www.cityofchicago.org/city/en/ofinterest/res/senior.html";
+            CoC.ImageURL = "images/funders/CityOfChicago.png";
+            CoC.ShortBio = "Chicago Department of Family and Support Services (\"FSS\") provides a variety of social, educational and recreational activities and programs for the senior community throughout Chicago.  In addition to programming provided by FSS, provided below are links to citywide Services, News, Alerts, and other Supporting Information that may be useful for seniors - provided by departments all across the City.";
+            context.Funders.AddOrUpdate(r => r.Name, CoC);
+
+            //DuPage Senior Citizens Council
+            FundingAgency DSCC = new FundingAgency();
+            DSCC.Name = "DuPage Senior Citizens Council";
+            DSCC.URL = "https://www.dupageseniorcouncil.org/";
+            DSCC.ImageURL = "images/funders/DSCS.png";
+            DSCC.ShortBio = "The DuPage Senior Citizens Council (DSCC) is a not-for-profit 501(c)(3), volunteer driven organization.  Since 1975, DSCC has been providing a variety of programs and services to help seniors live safely in their homes and provide them the opportunity to maintain their well being.  As a proud member of the Meals on Wheels Association of America, DSCC is the Meals on Wheels provider for all of DuPage County. Our Mission: The DuPage Senior Citizens Council initiates, delivers, monitors, and coordinates services that promote the ability of older persons to live their lives in dignity.";
+            context.Funders.AddOrUpdate(r => r.Name, DSCC);
+
+            //Medtronic
+            FundingAgency Medtronic = new FundingAgency();
+            Medtronic.Name = "Medtronic";
+            Medtronic.URL = "http://www.medtronic.com/us-en/about/foundation.html";
+            Medtronic.ImageURL = "images/funders/Medtronic.png";
+            Medtronic.ShortBio = "The Medtronic Foundation focuses on expanding access to healthcare for the underserved worldwide and supporting healthy communities where we live and give. Making the world a healthier place is a lofty goal, especially when barriers to accessing affordable, quality healthcare exist everywhere. But it’s a goal Medtronic takes very seriously. Through the Medtronic Foundation, and our partners and programs, we endeavor to address diverse needs in different parts of the world by: Expanding and improving healthcare access, especially in underserved communities. Enabling patients with chronic illnesses to manage their conditions and use their \"extra life\" to advocate for others in need. Encouraging every one of Medtronic’s 85,000 passionate and generous employees to donate time, skills, and resources to our Foundation-sponsored programs in their communities.";
+            context.Funders.AddOrUpdate(r => r.Name, Medtronic);
+
 
              
             context.Restaurants.AddOrUpdate(r => r.Name,new Restaurant {Name = "Public House", City = "Chicago", Country = "USA" });
@@ -210,7 +234,7 @@ namespace MAFS_ReStart.Migrations
                 Position = "President",
                 Bio = "is an accomplished dentist with her own practice in Carol Stream, IL. She is currently the President of MAFS. She also serves as a member of the Research Committee of American Academy of Implant Dentistry, International Congress of Oral Implantologists and the American Dental Association. Her passion for humanitarian efforts, especially for Indian Americans, is manifested through her dedication to multiple organizations in order to help them achieve their goals. Dr. Jafri has brought many active members to MAFS since she joined, which has enriched MAFS with great advocacy, leadership, and insight into the problems that face immigrants." ,
                 Image = "Firdaus-Jafri.png",
-                Image2 = "Firdaus-Jafri2.gif",
+                Image2 = "Firdaus-Jafri2.png",
                 IsStaff = false,
                 IsActive = true,
                 Facebook = @"https://www.facebook.com/pages/Jafri-Firdaus-DDS-Assoc-DBA-Dupage-Dental-Care/139251229455874",
@@ -226,7 +250,7 @@ namespace MAFS_ReStart.Migrations
                 Position = "Vice President",
                 Bio = "is the owner, CEO and President of MedStar Laboratory, Inc., located in Hillside, IL. Naren graduated as a Pharmacist from Gujarat State University in 1969. Since coming to the US, he has acquired and opened medical centers in the Greater Chicagoland area. Mr. Patel is the founder and President of Vishwa Gujarati Samaj-USA, also serves as the President of Care & Share USA International and also served as the past President of Six Gam Patidar Samaj and AIA. Through his leadership, Care & Share was able to build 25 homes for displaced Tsunami Victims in India. He is the National Vice President of the Association of Indian American Medical Association Charitable Foundation and serves as a Director on the MAFS board. Naren Patel is a well-known personality and believes in giving back to the community. This year, under his leadership, VGS-USA is celebrating Honorable Prime Minister Narendra Modi's Victory Party with many Indian Organizations in Chicgoland area." ,
                 Image = "Naren-Patel.png",
-                Image2 = "Naren-Patel2.png",
+                Image2 = "Naren-Patel.png",
                 IsStaff = false,
                 IsActive = false
             });
@@ -253,10 +277,10 @@ namespace MAFS_ReStart.Migrations
                 Position = "Secretary",
                 Bio = "was born and raised in Gujarat, India. She earned her master's degree in Commerce. She began her career in India with the Gujarat Electricity Board as an intern and then full time employment with Dena Bank and State Bank of India. Mrs. Patel married Dixit Patel 30 years ago and moved to the US to start their new adventure and life. Upon her arrival to the US, she began her career as the Clerk of the Circuit Court of Cook County Traffic Division in 1987 and at present working as the Associate Clerk of the First Municipal Bureau. In 2000, Mrs. Patel and another co-worker formed the \"Clerk of the Circuit Court of Cook County Asian American Employees Social Club.\" Mrs. Patel is a dedicated and avid community organizer. She belongs to many political, cultural and social organizations.   Her memberships are as follows:  Board Member of the Indian American Medical Association Charitable Foundation \"IAMACF\"; Metropolitan Asian Family Services; Vice President of the Association of Indians in America “AIA” Board Member of the Vishwa Gujarati Samaj USA; Brand Ambassador to India Abroad \"Save the Child Girl\" Member of the Desi Divas Book Club; and the Hindi Lovers Club.",
                 Image = "Beena-Patel.png",
-                Image2 = "Beena-Patel2.gif",
+                Image2 = "Beena-Patel2.png",
                 IsStaff = false,
                 IsActive = true,
-                Facebook = string.Empty,
+                Facebook = @"https://www.facebook.com/beena.patel.9638",
                 Email = "beenapate@gmail.com",
                 LinkedIn = @"https://www.linkedin.com/in/beena-patel-4279145a"
 
@@ -269,7 +293,7 @@ namespace MAFS_ReStart.Migrations
                 Position = "Board Member",
                 Bio = "has a bachelors degree in Chemistry and currently holds a managerial position at a pharmaceutical company in Chicago. His passion is social work and helping the community. Nick is a young, energetic community activist. He served as the President of Gujarati Samaj of Chicago, one of the oldest and very reputable organizations to date. He has also served as the Director for FIA and the Ribbon Foundation. Nick remains connected with the Gujarati community and continues to serve the Indian American community in various ways.",
                 Image = "Nikunj-Baxi.png",
-                Image2 = "Nikunj-Baxi2.gif",
+                Image2 = "Nikunj-Baxi2.png",
                 IsStaff = false,
                 IsActive = true,
                 Facebook = string.Empty,
@@ -284,7 +308,7 @@ namespace MAFS_ReStart.Migrations
                 Position = "Board Member",
                 Bio = "is a veterinarian by education and is a retired Major of the Indian army. After having practiced for nearly eighteen years as a veterinarian with the Indian Army, he was seconded to the Kuwaiti Army for two years. After having migrated to the US in 1993, Dr. Asthana has worked as a Cardiovascular Specialist, with various pharmaceutical companies like Parke-Davis, Pfizer, Glaxo, Novartis, and Astra Zeneca. He currently works as a \"Senior Cardiovascular Specialist\" with the Japanese Pharmaceutical company Daiichi-Sankyo US.  He tirelessly volunteers in various not-for-profit organizations. He sits on the Board of Directors of Black Feet Volunteer Medical Corps (BVMC). Rakesh also volunteers his time with \"Young Hearts 4 Life\", a stellar organization, screening young high school children in the US to avoid \"Sudden Cardiac Death\" syndrome. Rakesh firmly believes that the elderly and senior citizens in the US need our help and that MAFS is doing commendable work, which should be whole-heartedly supported.",
                 Image = "Rakesh-Asthana.png",
-                Image2 = "Rakesh-Asthana2.gif",
+                Image2 = "Rakesh-Asthana2.png",
                 IsStaff = false,
                 IsActive = true,
                 Facebook = @"https://www.facebook.com/rakesh.asthana.98",
@@ -299,11 +323,11 @@ namespace MAFS_ReStart.Migrations
                 Position = "Board Member",
                 Bio = "Born in Ahmedabad, India, Sumitra grew up in Sabarmati, where Mahatma Gandhi lived in the later part of his life.  Sumitra now resides in Schaumburg, Illinois, with her sister Hansa.  She has two sons, Neal and Raj.  Neal, is married to Sonal, and they have two children, Nishal (19) and Shriya (12).  Raj is married to Nisha, and they have two sons, Ronak (12) and Raveen (9). Sumitra graduated with a degree in phycology from Gujarat College in 1969.  Her move to the US in January of 1970 marked the beginning of her family life in Chicago.  Sumitra’s first professional position in the Little Fuse Company was as the Quality Control Supervisor.  She retired after 35 years in May 2006, and now spending time with her 4 Grandchildren. She has received numerous awards. Jesse Jackson’s Rainbow Push Organizations awarded her as the Best Mother in 2010 and New Millennium Women of Dorothy Brown’s Organization presented her “Woman of the New Millennium Award” in 2011. Sumitra  is a staunch supporter of Metropolitan Asian Family Services and joined MAFS in January 2015. A devoted Hindu, Sumitra is a strong believer of his Holiness Pujya Pramukhswami Maharaj of BAPS.",
                 Image = "Sumitra-Patel.png",
-                Image2 = "Sumitra-Patel2.gif",
+                Image2 = "Sumitra-Patel2.png",
                 IsStaff = false,
                 IsActive = true,
                 Facebook = string.Empty,
-                Email = string.Empty,
+                Email = "Sumitrapatel@hotmail.com",
                 LinkedIn = string.Empty
             });
 
@@ -315,12 +339,29 @@ namespace MAFS_ReStart.Migrations
                 Position = "Board Member",
                 Bio = "is an Associate Professor at the School of Social Work at Loyola University Chicago. Her M.S.W. is from the Tata Institute of Social Sciences at Mumbai, India and her Doctorate is from the University of North Carolina at Chapel Hill, USA. Singh is the instructor for courses on research and evaluation, global feminism, and nonprofit management. Her previous research work includes consultancies assisting field offices based in India of international development agencies such as, UNICEF, OXFAM, and local NGOs on evaluation research projects. Her research is on empowerment for women and girls using a holistic identity context. Her work includes audio-video documentary for clinical intervention and policy advocacy. Her edited book is called Social Work and Social Development: Perspectives from India and the United Sates published by Lyceum Chicago. She has also produced a documentary titled Urban Indian Womanhood. She also hosts a radio show on WLUW called ‘Global desi World and Women’ that caters to immigrant South Asian women.",
                 Image = "Shweta-Singh.png",
-                Image2 = "Shweta-Singh.gif",
+                Image2 = "Shweta-Singh2.png",
                 IsStaff = false,
                 IsActive = true,
                 Facebook = @"https://www.facebook.com/1ShwetaSingh",
-                Email = string.Empty,
+                Email = @"Ssingh9@luc.edu",
                 LinkedIn = @"https://www.linkedin.com/in/shweta-singh-a7004714"
+            });
+
+            //Staff
+            //Santosh Kumar
+            context.Members.AddOrUpdate(r => r.FirstName, new Member
+            {
+                FirstName = "Santosh",
+                LastName = "Kumar",
+                Position = "Executive Director",
+                Bio = "TODO",
+                Image = "Santosh-Kumar.png",
+                Image2 = "Santosh-Kumar.png",
+                IsStaff = true,
+                IsActive = true,
+                Facebook = @"https://facebook.com/santoshk1250",
+                Email = @"santoshk@umasinc.com",
+                LinkedIn = @"https://www.linkedin.com/in/metropolitan-asian-family-services-729b8056"
             });
              
             //Seed Fundraiser
@@ -428,6 +469,15 @@ namespace MAFS_ReStart.Migrations
                 FlickrGallery = ""
             }); 
             
+            //CATEGORY
+            //Nutrition
+            //Nutrition Program
+            Category Nut = new Category();
+            Nut.Title = "Nutrition";
+            Nut.Description = "To eat is a necessity, but to eat intelligently is an art. Our staff and members strongly believe in this adage. We serve hot, fresh, home-cooked meals that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis. We also help educate participants on choosing the right kind of foods that help prevent & manage diseases like diabetes and hypertension which are common in our culture.    The smell of masala in the kitchen does not only entice one’s appetite, it also brings people together.  Sharing a meal with a group can be the cure seniors need against feelings of social isolation.  So come join us for a meal and tell that joke you know!  MAFS is in its 15th year of serving hot lunches to the senior citizen population. These lunches are nutritionally balanced but more importantly they provide an opportunity for seniors to make friends and socialize to break free from isolation. These meals are freshly prepared by trained cooks under strict hygienic conditions. We provided 33,905 hot meals to the community this year from our Chicago, Niles and Roselle facilities. ";
+            Nut.IconUrl = @"~/Images/icons/nutrition_icon.png";
+            Nut.BannerImg = "nutrition3.jpg";
+            context.Categories.AddOrUpdate(r => r.Title, Nut);
 
             //Nutrition Program
             Program Nutrition = new Program();
@@ -435,6 +485,7 @@ namespace MAFS_ReStart.Migrations
             Nutrition.ShortDescription = "<strong>To eat is a necessity, but to eat intelligently is an art.</strong> Our staff and members strongly believe in this adage. We serve hot, fresh, home-cooked meals that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis.";
             Nutrition.Description = " We also help educate participants on choosing the right kind of foods that help prevent & manage diseases like diabetes and hypertension which are common in our culture.    The smell of masala in the kitchen does not only entice one’s appetite, it also brings people together.  Sharing a meal with a group can be the cure seniors need against feelings of social isolation.  So come join us for a meal and tell that joke you know!  MAFS is in its 15th year of serving hot lunches to the senior citizen population. These lunches are nutritionally balanced but more importantly they provide an opportunity for seniors to make friends and socialize to break free from isolation. These meals are freshly prepared by trained cooks under strict hygienic conditions. We provided 33,905 hot meals to the community this year from our Chicago, Niles and Roselle facilities. ";
             Nutrition.BannerImg = "nutrition3.jpg";
+            Nutrition.PartialView = "_Nutrition";
             context.Programs.AddOrUpdate(r => r.Title, Nutrition);
 
             //Public Benefits
@@ -443,6 +494,7 @@ namespace MAFS_ReStart.Migrations
             PublicBeneifits.ShortDescription = "Have you ever wondered what benefits you qualify for? Many people do not know what is available to them.  MAFS can help you understand and apply for benefits you qualify for.";
             PublicBeneifits.Description = "MAFS is a pioneer in providing social services to low-income and underserved populations. The demand for these kinds of services is increasing due to the slow recovery of our economy. MAFS staff assists clients in accessing public benefits available to fit their individual needs. Our staff helps fill-out applications for these services and escorts them to the appropriate public benefit offices such as Department of Human Services or Social Security Administration, Immigration and Naturalization to submit the application and serve as their interpreter. We also translate official forms in Hindi, Urdu, Gujarati, Spanish and Bosnian languages to facilitate the process of applying for benefits. Our staff acts as liaisons between the client and public officials to help our community members get the help and support they require. This year we had the privilege of helping complete 6,225 cases in Cook, Suburban Cook County, DuPage and Lake County.  MAFS can help you understand and apply for benefits like:  + Medicare + Medicaid + Social Security + Access to Care + Citizenship/Immigration + Transportation + Kids Care + SSI Prescription Drug Assistance + Food Stamps  + LIHEAP  + SHIP and many others.  Come in and talk to our friendly staff about your needs and we will try our utmost to help!";
             PublicBeneifits.BannerImg = "ceda.jpg";
+            PublicBeneifits.PartialView = "_Public";
             context.Programs.AddOrUpdate(r => r.Title, PublicBeneifits);
 
             //Education
@@ -459,6 +511,7 @@ namespace MAFS_ReStart.Migrations
             Research.ShortDescription = "We partner with the leading health and educational institutions to explore and study problems that concern our culture the most.";
             Research.Description = "We have collaborated with Northwestern University’s Feinberg School of Medicine to teach the South Asian community how to make important dietary changes, engage in an active lifestyle, reduce stress, and lose weight to reduce or prevent their chances of stroke and/or heart attacks We also partner with the Asian Health Coalition on two projects. The first is the Pink Pashmina project which offers free breast cancer screenings and mammograms to South Asian woman. The second is to provide our community with free screening and testing for Hepatitis B.";
             Research.BannerImg = "research.jpg";
+            Research.PartialView = "_Research";
             context.Programs.AddOrUpdate(r => r.Title, Research);
 
             //Citizenship

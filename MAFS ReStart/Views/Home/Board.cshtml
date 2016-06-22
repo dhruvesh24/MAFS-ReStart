@@ -44,10 +44,10 @@ individuals & families</strong> to become productive members in their new home.
 <div class="main">
      <div class="container">
           <section class="hgroup">
-               @*<h1>About us</h1>*@
-               <h2>To provide comprehensive & integrated Social Services to the Immigrant population of India, Pakistan, Bangladesh, the Middle East & European countries. These services include but are not limited to <strong>educate, counsel, assist & empower 
-individuals & families</strong> to become productive members in their new home.
-</h2>
+               @*<h1>About us</h1>
+                   <h2>To provide comprehensive & integrated Social Services to the Immigrant population of India, Pakistan, Bangladesh, the Middle East & European countries. These services include but are not limited to <strong>educate, counsel, assist & empower
+    individuals & families</strong> to become productive members in their new home.
+    </h2>*@
                <ul class="breadcrumb pull-right">
                     <li><a href="/">Home</a> </li>
                    <li><a href="/Home/About2">About Us</a> </li>
@@ -58,14 +58,31 @@ individuals & families</strong> to become productive members in their new home.
           <section class="team_members">
                
                <div class="row">
+                   <div class="col-sm-6 col-md-3">
+                        <h2>Our Board</h2>
+                       <br />
+                       <p>
+                           To provide comprehensive & integrated Social Services to the Immigrant population of India, Pakistan, Bangladesh, the Middle East & European countries. These services include but are not limited to <strong>
+                               educate, counsel, assist & empower
+                               individuals & families
+                           </strong> to become productive members in their new home.
+                       </p>
+                   </div>
+
+
+
+
+
+
+
                    @{
-                       var counter = 1;
+                       var counter = 2;
                    }
                    @foreach (var member in Model)
                    {
                        <div class="col-sm-6 col-md-3">
                              <div class="team_member">
-                                  <figure style="background-image: url(../../../images/board/@member.Image)"><img src="~/images/board/@member.Image" alt="@member.FirstName @member.LastName"></figure>
+                                  <figure style="background-image: url(../../../images/board/@member.Image2)"><img src="~/images/board/@member.Image" alt="@member.FirstName @member.LastName"></figure>
                                   <h5>@member.FirstName @member.LastName</h5>
                                   <small>@member.Position</small>
                                   <hr>
@@ -85,7 +102,7 @@ individuals & families</strong> to become productive members in their new home.
                                  </div>
                                   @*<p class="short_bio">@member.FirstName @member.LastName</p>*@
                                  <br />
-                                 <a class="btn btn-primary" href="#">Full Bio &raquo;</a>
+                                 @*<a class="btn btn-primary" href="#">Full Bio &raquo;</a>*@
                              </div>
                         </div>
                        
