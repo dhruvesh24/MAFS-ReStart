@@ -179,7 +179,7 @@ namespace MAFS_ReStart.Controllers
             foreach(var funder in funders){                 //add to a linkedlist
                 temp.AddLast(funder);
             }
-
+            temp.Take(4);
             var model = new LinkedList<FundingAgency>();    //the final model
 
             Random random = new Random();

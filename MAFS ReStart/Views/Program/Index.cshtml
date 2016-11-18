@@ -34,7 +34,7 @@
                 </ul>
             </section>
             <section class="service_teasers">
-                @foreach (var program in Model)
+                @*@foreach (var program in Model)
                 {
                     <div class="service_teaser">
                         <div class="row">
@@ -48,11 +48,12 @@
                             </div>
                         </div>
                     </div>
-                }
+                }*@
+                @Html.Action("getProgramTile", "Program", null)
                 
                 </section>
 
-            @*
+            
     <div class="col-sm-4 col-md-4">
         <div class="service_teaser vertical">
             <div class="service_photo">
@@ -177,7 +178,7 @@
         </div>
     </div>
     <!-- End Col -->
-*@
+
 
 </div>
         <!-- End Row -->

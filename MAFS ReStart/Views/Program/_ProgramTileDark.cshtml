@@ -1,0 +1,25 @@
+﻿@model MAFS_ReStart.Models.Program
+
+@{
+        string dots = "...";
+}
+
+<div class="col-sm-3 col-md-3">
+    
+    <div class="team_member">
+        <img src="~/Images/icons/nutrition_icon.png" width="55%" />
+        <h2>@(Model.Title.Replace("-", " ") + " Program")</h2>
+        @*<small>program</small>*@
+        <hr>
+        <br /><br />
+        <p>
+            @Html.Raw(Model.ShortDescription)
+        </p>
+        <div class="team_social">
+
+        </div>
+        @*<p class="short_bio">@member.FirstName @member.LastName</p>
+        <br />
+        <a class="btn btn-primary" href="#"><i class="fa fa-info"></i>&nbsp; Learn More  &raquo;</a>*@
+    </div>
+</div>

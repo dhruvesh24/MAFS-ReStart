@@ -470,6 +470,9 @@
     <Content Include="Views\Program\_Nutrition.cshtml" />
     <Content Include="Views\Program\_Public.cshtml" />
     <Content Include="Views\Program\_Research.cshtml" />
+    <Content Include="Views\Program\_ProgramTileIcon.cshtml" />
+    <Content Include="Views\Program\Nutrition.cshtml" />
+    <Content Include="Views\Program\_ProgramTileDark.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -43,6 +43,12 @@ namespace MAFS_ReStart.Controllers
             return PartialView("_ProgramTile", model);
         }
 
+        public ActionResult Nutrition()
+        {
+            var model = _db.Programs.Find(3);
+            return View(model);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (_db != null)
@@ -51,6 +57,7 @@ namespace MAFS_ReStart.Controllers
             }
             base.Dispose(disposing);
         }
+
 
     }
 
