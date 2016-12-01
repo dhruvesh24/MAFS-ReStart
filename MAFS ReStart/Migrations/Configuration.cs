@@ -467,7 +467,31 @@ namespace MAFS_ReStart.Migrations
 " Our emcees Neelam Desai, Naperville Manager and Jahnavi Bavisi, Niles Manager successfully managed the entire program and the event was concluded with vegetarian dinner which prepared by our kitchen. Beena Patel has presented vote of thanks. ",
                 CoverPhoto = "Fundraiser/2015-mini.jpg",
                 FlickrGallery = ""
+            });
+            //2015 Fundraiser TODO
+            //2016 Mini TODO
+            //2016 Fundraiser
+            context.Fundraisers.AddOrUpdate(r => r.Date, new Fundraiser
+            {
+                Date = new DateTime(2016, 10, 22),
+                IsMini = false,
+                Location = "Downers Grove, IL",
+                Venue = "Ashyana Banquets",
+                Intro = "300 seniors and prominent community members attended Metropolitan Asian Family Service’s Mini Fundraising dinner on June 13, 2015 at 1032 E Ogden Ave, Naperville, IL.",
+                WriteUp = "In his opening remarks our keynote speaker, Mayor Lalmalani, commended the MAFS team for serving the community on all fronts for over 3 decades. He congratulated the MAFS team for opening new location at Schaumburg and expressed his concern on recent budget cut. Similar remarks of concern were presented by Mr. Bansal, he urged community to come forward and join in MAFS mission of serving and caring. " +
+" Mrs. Kumar presented a detailed annual report. She said that the requirement for all our Nutrition, Public Benefit and Health Research and education related programs are to raise matching funds from our community and urged all those in attendance to understand the facts and come forward to support these programs. " +
+" Ms. Beena Patel, MAFS Secretary expressed her concern on recent budget cut. Ms. Patel read out all our lobbying efforts to save Community Care and Adult Day Care Services. Our guest speaker Mayor George Pradel boosted everyone spirit with his vigor and energy. " +
+" The program started with Ganesh Vandana by Radhika Akolkar of the Radhika Dance Academy. Our Carol Stream seniors presented a very fascinating and well-balanced Tippani Dance performance.  " +
+" Our Naperville staff and seniors presented a historical dance performance from the city of Gujarat called RAAS but it was our Chicago seniors under the guidance of Pankaj Patel, ADS Coordinator, that stole the show with their superb performance. " +
+" Mandi Theater of Chicago presented a hilarious drama called as Udan Khatola performed by Jagmohan Rawat, Rohit Sharma and Alka Sharma. " +
+" The celebration also had an award ceremony. Gopal Lalmalani was given the Community Service Award; Mayor George Pradel was given the Support Service Award. Appreciation Awards were given to Nimish Jani, Krishna Bansal and Nakul Singh Chand. " +
+" Our emcees Neelam Desai, Naperville Manager and Jahnavi Bavisi, Niles Manager successfully managed the entire program and the event was concluded with vegetarian dinner which prepared by our kitchen. Beena Patel has presented vote of thanks. ",
+                CoverPhoto = "Fundraiser/2016.jpg",
+                FlickrGallery = "",
+                IssuuLink = "9480861/32475518", //change
             }); 
+
+
             
             //CATEGORY
             //Nutrition
