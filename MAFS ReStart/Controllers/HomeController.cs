@@ -160,7 +160,7 @@ namespace MAFS_ReStart.Controllers
         //Partial menu views
         public ActionResult getProgramMenu()
         {
-            var model = _db.Programs.ToList();
+            var model = _db.Programs.Where(r => r.Icon != null);
             return PartialView("_ProgramMenu", model);
         }
         //Partial fundraiser views

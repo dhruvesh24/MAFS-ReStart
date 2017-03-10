@@ -1,0 +1,225 @@
+﻿@model IEnumerable<MAFS_ReStart.Models.Fundraiser>
+
+@{
+    ViewBag.Title = "Index2";
+}
+<div class="full_page_photo" style="background-image: url(../../../images/@Model.First().CoverPhoto);">
+    <div class="container">
+        <section class="call_to_action">
+            <h3 class="animated bounceInDown skincolored"><strong>@Model.First().Date.ToString("yyyy")</strong> Annual Fundraiser</h3><br />
+            <h4 class="animated bounceInUp">
+                @Model.First().Venue, @Model.First().Location
+            </h4>
+        </section>
+    </div>
+</div>
+<div class="main">
+    @*<div class="container">
+        <section class="call_to_action">
+            <h3>@Model.First().Date.Year Annual Fundraiser</h3>
+            <h4></h4>
+        </section>
+    </div>*@
+        
+        <div class="container">
+            @*<section class="portfolio_slider_wrapper">
+                <div class="flexslider" id="portfolio_slider">
+                    <ul class="slides">
+                        @foreach (var fundraiser in Model)
+                        {
+                            <li class="item" data-thumb="~/images/@fundraiser.CoverPhoto" style="background-image: url(../../images/@fundraiser.CoverPhoto)">
+                                <div class="container">
+                                    <a href="~/images/@fundraiser.CoverPhoto" rel="prettyPhoto[gal]"></a>
+                                    <div class="carousel-caption">
+                                        <p class="lead">@fundraiser.Date.Year Annual Fundraiser</p>
+                                    </div>
+                                </div>
+                            </li>
+                        }*@
+
+                        @*<li class="item" data-thumb="images/portfolio/item/5.jpg" style="background-image: url(images/portfolio/item/5.jpg)">
+                            <div class="container">
+                                <a href="images/portfolio/item/5.jpg" rel="prettyPhoto[gal]"></a>
+                                <div class="carousel-caption">
+                                    <p class="lead">optional description of the photo</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item" data-thumb="images/portfolio/item/7.jpg" style="background-image: url(images/portfolio/item/7.jpg)">
+                            <div class="container">
+                                <a href="images/portfolio/item/7.jpg" rel="prettyPhoto[gal]"></a>
+                                <div class="carousel-caption">
+                                    <p class="lead">optional description of the photo</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item" data-thumb="images/portfolio/item/1.jpg" style="background-image: url(images/portfolio/item/1.jpg)">
+                            <div class="container">
+                                <a href="images/portfolio/item/1.jpg" rel="prettyPhoto[gal]"></a>
+                                <div class="carousel-caption">
+                                    <p class="lead">optional description of the photo</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item" data-thumb="images/portfolio/item/8.jpg" style="background-image: url(images/portfolio/item/8.jpg)">
+                            <div class="container">
+                                <a href="images/portfolio/item/8.jpg" rel="prettyPhoto[gal]"></a>
+                                <div class="carousel-caption">
+                                    <p class="lead">optional description of the photo</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item" data-thumb="images/portfolio/item/9.jpg" style="background-image: url(images/portfolio/item/9.jpg)">
+                            <div class="container">
+                                <a href="images/portfolio/item/9.jpg" rel="prettyPhoto[gal]"></a>
+                                <div class="carousel-caption">
+                                    <p class="lead">optional description of the photo</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item" data-thumb="images/portfolio/item/10.jpg" style="background-image: url(images/portfolio/item/10.jpg)">
+                            <div class="container">
+                                <a href="images/portfolio/item/10.jpg" rel="prettyPhoto[gal]"></a>
+                                <div class="carousel-caption">
+                                    <p class="lead">optional description of the photo</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item" data-thumb="images/portfolio/item/11.jpg" style="background-image: url(images/portfolio/item/11.jpg)">
+                            <div class="container">
+                                <a href="images/portfolio/item/11.jpg" rel="prettyPhoto[gal]"></a>
+                                <div class="carousel-caption">
+                                    <p class="lead">optional description of the photo</p>
+                                </div>
+                            </div>
+                        </li>*@
+                    @*</ul>
+                </div>
+                <div id="carousel" class="flexslider">
+                    <ul class="slides">
+                        @foreach (var fundraiser in Model)
+                        {
+                            <li> <img src="~/Images/@fundraiser.CoverPhoto" alt=""> </li>
+                        }
+                    </ul>
+                </div>
+            </section>*@
+            <section class="hgroup">
+               
+                <ul class="breadcrumb pull-right">
+                    <li><a href="/">Home</a></li>
+                    <li>@Html.ActionLink("Fundraisers", "Index")</li>
+                    <li class="active">@Model.First().Date.ToString("yyyy")</li>
+                </ul>
+            </section>
+            
+            <section>
+                <div class="row">
+                  
+                    <div class="col-sm-8 col-md-8">
+                       @*<h2 class="section_header">A few words about the project</h2>*@ 
+                        <p><strong>@Model.First().Intro</strong> </p>
+                        <p class="columns_2">
+                            @Model.First().WriteUp
+                        </p>
+                    </div>
+                    <div class="col-sm-4 col-md-4">
+                        <aside class="widget">
+                            <div class="well">
+                                <p><strong>Date:</strong> @Model.First().Date.ToLongDateString()</p>
+                                <p><strong>Venue:</strong> @Model.First().Venue</p>
+                                <p><strong>Location:</strong> @Model.First().Location</p>
+                            </div>
+                        </aside>
+                        <aside class="widget ads clearfix">
+                            <h4>Ads</h4>
+                            <a href="#">
+                                <img src="http://placehold.it/110" alt="">
+                            </a><a href="#">
+                                <img src="http://placehold.it/110" alt="">
+                            </a><a href="#">
+                                <img src="http://placehold.it/110" alt="">
+                            </a><a href="#">
+                                <img src="http://placehold.it/110" alt="">
+                            </a>
+                        </aside>
+                        <aside class="widget">
+                            <h4>Souvenir Book</h4>
+                            <!-- issuu embed -->
+                            <div data-configid="9480861/11710604" style="width: 100%; height: 221px;" class="issuuembed"></div>
+                            <script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
+
+                        </aside>
+
+                    </div>
+                </div>
+                <ul class="pager">
+                    <li class="previous disabled"><a href="#">← Older</a></li>
+                    <li class="next"><a href="portfolio_item_2.html">Newer →</a></li>
+                </ul>
+            </section>
+            <section>
+                <section class="portfolio_teasers_wrapper">
+                    <h2 class="fancy section_header">Other Fundraisers</h2>
+                    <div class="portfolio_strict row">
+                        <div class="col-sm-4 col-md-4">
+                            <div class="portfolio_item">
+                                <a href="portfolio_item.html" data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                                    <figure style="background-image:url(../../images/@Model.ElementAt(1).CoverPhoto">
+                                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                            <path d="M 180,0 0,0 0,0 180,0 z" />
+                                        </svg>
+                                        <figcaption>
+                                            <p>@Model.ElementAt(1).Intro</p>
+                                            <div class="view_button">View</div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <div class="portfolio_description">
+                                    <h3><a href="portfolio_item.html">@Model.ElementAt(1).Date.Year</a></h3>
+                                    <p>Annual Fundraiser</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4">
+                            <div class="portfolio_item">
+                                <a href="portfolio_item.html" data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                                    <figure style="background-image:url(images/portfolio/t5.jpg)">
+                                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                            <path d="M 180,0 0,0 0,0 180,0 z" />
+                                        </svg>
+                                        <figcaption>
+                                            <p>Description of the project dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum....</p>
+                                            <div class="view_button">View</div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <div class="portfolio_description">
+                                    <h3><a href="portfolio_item.html">Lorem Ipsum</a></h3>
+                                    <p>poetic</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4">
+                            <div class="portfolio_item">
+                                <a href="portfolio_item.html" data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                                    <figure style="background-image:url(images/portfolio/p3.jpg)">
+                                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                            <path d="M 180,0 0,0 0,0 180,0 z" />
+                                        </svg>
+                                        <figcaption>
+                                            <p>Description of the project dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum....</p>
+                                            <div class="view_button">View</div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <div class="portfolio_description">
+                                    <h3><a href="portfolio_item.html">Lorem Ipsum</a></h3>
+                                    <p>poetic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>

@@ -1,0 +1,193 @@
+﻿@model MAFS_ReStart.Models.Fundraiser
+
+@{
+    if(!Model.IsMini){
+        ViewBag.Title = Model.Date.ToString("yyyy") + " Fundraiser";
+    }
+    else
+    {
+        ViewBag.Title = Model.Date.ToString("yyyy") + " Mini Fundraiser";
+    }
+}
+<div class="full_page_photo" style="background-image: url(../../../images/@Model.CoverPhoto);">
+    <div class="container">
+        <section class="call_to_action">
+            @if(!Model.IsMini)
+            {
+                <h3 class="animated bounceInDown skincolored"><strong>@Model.Date.ToString("yyyy")</strong> Annual Fundraiser</h3><br />
+            }
+            else
+            {
+                <h3 class="animated bounceInDown skincolored"><strong>@Model.Date.ToString("yyyy")</strong> Mini Fundraiser</h3><br />
+            }
+            <h4 class="animated bounceInUp">
+                @Model.Venue, @Model.Location
+            </h4>
+        </section>
+    </div>
+</div>
+<div class="main">
+    @*<div class="container">
+            <section class="call_to_action">
+                <h3>@Model.First().Date.Year Annual Fundraiser</h3>
+                <h4></h4>
+            </section>
+        </div>*@
+
+    <div class="container">
+        @*<section class="portfolio_slider_wrapper">
+            <div class="flexslider" id="portfolio_slider">
+                <ul class="slides">
+                    @foreach (var fundraiser in Model)
+                    {
+                        <li class="item" data-thumb="~/images/@fundraiser.CoverPhoto" style="background-image: url(../../images/@fundraiser.CoverPhoto)">
+                            <div class="container">
+                                <a href="~/images/@fundraiser.CoverPhoto" rel="prettyPhoto[gal]"></a>
+                                <div class="carousel-caption">
+                                    <p class="lead">@fundraiser.Date.Year Annual Fundraiser</p>
+                                </div>
+                            </div>
+                        </li>
+                    }*@
+
+        @*<li class="item" data-thumb="images/portfolio/item/5.jpg" style="background-image: url(images/portfolio/item/5.jpg)">
+                <div class="container">
+                    <a href="images/portfolio/item/5.jpg" rel="prettyPhoto[gal]"></a>
+                    <div class="carousel-caption">
+                        <p class="lead">optional description of the photo</p>
+                    </div>
+                </div>
+            </li>
+            <li class="item" data-thumb="images/portfolio/item/7.jpg" style="background-image: url(images/portfolio/item/7.jpg)">
+                <div class="container">
+                    <a href="images/portfolio/item/7.jpg" rel="prettyPhoto[gal]"></a>
+                    <div class="carousel-caption">
+                        <p class="lead">optional description of the photo</p>
+                    </div>
+                </div>
+            </li>
+            <li class="item" data-thumb="images/portfolio/item/1.jpg" style="background-image: url(images/portfolio/item/1.jpg)">
+                <div class="container">
+                    <a href="images/portfolio/item/1.jpg" rel="prettyPhoto[gal]"></a>
+                    <div class="carousel-caption">
+                        <p class="lead">optional description of the photo</p>
+                    </div>
+                </div>
+            </li>
+            <li class="item" data-thumb="images/portfolio/item/8.jpg" style="background-image: url(images/portfolio/item/8.jpg)">
+                <div class="container">
+                    <a href="images/portfolio/item/8.jpg" rel="prettyPhoto[gal]"></a>
+                    <div class="carousel-caption">
+                        <p class="lead">optional description of the photo</p>
+                    </div>
+                </div>
+            </li>
+            <li class="item" data-thumb="images/portfolio/item/9.jpg" style="background-image: url(images/portfolio/item/9.jpg)">
+                <div class="container">
+                    <a href="images/portfolio/item/9.jpg" rel="prettyPhoto[gal]"></a>
+                    <div class="carousel-caption">
+                        <p class="lead">optional description of the photo</p>
+                    </div>
+                </div>
+            </li>
+            <li class="item" data-thumb="images/portfolio/item/10.jpg" style="background-image: url(images/portfolio/item/10.jpg)">
+                <div class="container">
+                    <a href="images/portfolio/item/10.jpg" rel="prettyPhoto[gal]"></a>
+                    <div class="carousel-caption">
+                        <p class="lead">optional description of the photo</p>
+                    </div>
+                </div>
+            </li>
+            <li class="item" data-thumb="images/portfolio/item/11.jpg" style="background-image: url(images/portfolio/item/11.jpg)">
+                <div class="container">
+                    <a href="images/portfolio/item/11.jpg" rel="prettyPhoto[gal]"></a>
+                    <div class="carousel-caption">
+                        <p class="lead">optional description of the photo</p>
+                    </div>
+                </div>
+            </li>*@
+        @*</ul>
+                </div>
+                <div id="carousel" class="flexslider">
+                    <ul class="slides">
+                        @foreach (var fundraiser in Model)
+                        {
+                            <li> <img src="~/Images/@fundraiser.CoverPhoto" alt=""> </li>
+                        }
+                    </ul>
+                </div>
+            </section>*@
+        <section class="hgroup">
+
+            <ul class="breadcrumb pull-right">
+                <li><a href="/">Home</a></li>
+                <li>@Html.ActionLink("Fundraisers", "Index")</li>
+                @if (!Model.IsMini)
+                {
+                    <li class="active">@Model.Date.ToString("yyyy") Annual</li>
+                }
+                else
+                {
+                    <li class="active">@Model.Date.ToString("yyyy") Mini</li>
+                }
+                
+            </ul>
+        </section>
+
+        <section>
+            <div class="row">
+
+                <div class="col-sm-8 col-md-8">
+                    @*<h2 class="section_header">A few words about the project</h2>*@
+                    <p><strong>@Model.Intro</strong> </p>
+                    <p class="columns_2">
+                        @Html.Raw(Model.WriteUp)
+                    </p>
+                   
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <aside class="widget">
+                        <div class="well">
+                            <p><strong>Date:</strong> @Model.Date.ToLongDateString()</p>
+                            <p><strong>Venue:</strong> @Model.Venue</p>
+                            <p><strong>Location:</strong> @Model.Location</p>
+                        </div>
+                    </aside>
+                    @*<aside class="widget ads clearfix">
+                        <h4>Pictures</h4>
+                        <a href="#">
+                            <img src="http://placehold.it/110" alt="">
+                        </a><a href="#">
+                            <img src="http://placehold.it/110" alt="">
+                        </a><a href="#">
+                            <img src="http://placehold.it/110" alt="">
+                        </a><a href="#">
+                            <img src="http://placehold.it/110" alt="">
+                        </a>
+                    </aside>*@
+                    @if (Model.IsMini == false)
+                    {
+                        <aside class="widget">
+                            <h4>Souvenir Book</h4>
+                            <!-- issuu embed -->
+                            <div data-configid="@Model.IssuuLink" style="width: 100%; height: 221px;" class="issuuembed"></div>
+                            <script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
+
+                        </aside>
+                    }
+                    
+
+                </div>
+            </div>
+            @* Add a partial views *@
+            <ul class="pager">
+                @Html.Action("getPrev", "Fundraiser", new { id = @Model.Id }) @* Render Previous button *@
+                @Html.Action("getNext", "Fundraiser", new { id = @Model.Id }) @* Render Next button *@
+            </ul>
+        </section>
+            
+            @Html.Action("getOtherFundraisers", "Fundraiser", new {id = @Model.Id }) @* Bottom Ttab w/ 3 fundraisers *@
+
+        
+    </div>
+

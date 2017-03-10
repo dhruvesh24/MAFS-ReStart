@@ -1,0 +1,47 @@
+﻿@model MAFS_ReStart.Models.Restaurant
+
+@{
+    ViewBag.Title = Model.Name + " Reviews";
+}
+<div class="full_page_photo" style="background-image: url(../../../images/board-of-directors.jpg);">
+
+
+    <div class="container">
+        <section class="call_to_action">
+            <h3 class="animated bounceInDown">Our <strong>Board of Directors</strong></h3>
+            <h4 class="animated bounceInUp skincolored">Pillars in the South Asian <strong>Community</strong></h4>
+        </section>
+    </div>
+</div>
+<div class="main">
+    <div class="container">
+        <section class="hgroup">
+            @*<h1>About us</h1>*@
+            <h2>
+                To provide comprehensive & integrated Social Services to the Immigrant population of India, Pakistan, Bangladesh, the Middle East & European countries. These services include but are not limited to <strong>
+                    educate, counsel, assist & empower individuals & families</strong> to become productive members in their new home.
+            </h2>
+            <ul class="breadcrumb pull-right">
+                <li><a href="/">Home</a> </li>
+                <li><a href="/Restaurant">Restaurants</a> </li>
+                <li class="active">@Model.Name</li>
+            </ul>
+        </section>
+        @if(Model.Reviews.Count > 0){
+            <h2>Reviews for @Model.Name</h2>
+        
+                 @Html.Partial("_Reviews", Model.Reviews)
+                    <p>
+                        @Html.ActionLink("Create New", "Create", new { restaurantId = Model.Id })
+                    </p>
+            }
+        else{
+            <h2>No reviews for @Model.Name yet</h2>
+                    <p>
+                        @Html.ActionLink("Create One!", "Create", new { restaurantId = Model.Id })
+                    </p>
+        }
+
+        
+
+</div>

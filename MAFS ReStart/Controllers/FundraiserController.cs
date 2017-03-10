@@ -18,7 +18,7 @@ namespace MAFS_ReStart.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Fundraisers.ToList().OrderByDescending(r => r.Date.Year));
+            return View(db.Fundraisers.ToList().OrderByDescending(r => r.Date));
         }
 
         public ActionResult Index2()
@@ -65,6 +65,7 @@ namespace MAFS_ReStart.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create(Fundraiser fundraiser)
         {
             if (ModelState.IsValid)
@@ -79,7 +80,7 @@ namespace MAFS_ReStart.Controllers
 
         //
         // GET: /Fundraiser/Edit/5
-
+        [Authorize]
         public ActionResult Edit(int id = 0)
         {
             Fundraiser fundraiser = db.Fundraisers.Find(id);
@@ -95,6 +96,7 @@ namespace MAFS_ReStart.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit(Fundraiser fundraiser)
         {
             if (ModelState.IsValid)
@@ -108,7 +110,7 @@ namespace MAFS_ReStart.Controllers
 
         //
         // GET: /Fundraiser/Delete/5
-
+        [Authorize]
         public ActionResult Delete(int id = 0)
         {
             Fundraiser fundraiser = db.Fundraisers.Find(id);
@@ -125,6 +127,7 @@ namespace MAFS_ReStart.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             Fundraiser fundraiser = db.Fundraisers.Find(id);

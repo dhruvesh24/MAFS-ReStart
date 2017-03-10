@@ -1,0 +1,120 @@
+﻿@model MAFS_ReStart.Models.EmailResponse
+@{
+    ViewBag.Title = "Contact";
+    string Error = "has-error";
+}
+
+<style type="text/css">
+    .validation-summary-errors, .field-validation-valid {
+        color: #953b39;
+    }
+
+    .input-validation-error {
+        border: 1px solid #953b39;
+        background-color: #fee;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.validation-summary-errors, .field-validation-valid').each(function () {
+            $(this).remove().addClass('form-group has-error');
+        });
+    });
+
+</script>
+<div class="full_page_photo">
+    <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2964.14438525393!2d-87.6898215!3d42.018634899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd02db1977f7f%3A0xe422c0b61d364c29!2sMetropolitan+Asian+Family+Services!5e0!3m2!1sen!2sus!4v1436212228630"></iframe>
+</div>
+<div class="main">
+    <div class="container">
+        <section class="hgroup">
+            <h1>Contact us</h1>
+            <h2>We would love to hear from you. Send us your comments, suggestions, ideas, random thoughts, or complaints. Any feedback from you helps make our service better.</h2>
+            <ul class="breadcrumb pull-right">
+                <li><a href="index.html">Home</a> </li>
+                <li class="active">Contact</li>
+            </ul>
+        </section>
+        <section>
+            <div class="row">
+                <div class="office_address col-sm-4 col-md-4">
+                    <div class="team_member">
+                        <img src="~/images/favicon.png" width="90" height="90" alt="logo">
+                        <h5>MAFS</h5>
+                        <small>family | advocacy | service | support</small><br>
+                        <br>
+                        <div class="team_social">
+                            <a href="https://www.facebook.com/mafsinc" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/mafsinc" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/metropolitan-asian-family-services" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                        <address>
+                            <strong></strong>
+                            <br>
+                            7541 N Western Ave<br>
+                            Chicago, IL 60645<br>
+                            <abbr title="Phone">P:</abbr>
+                            (773) 465-3105
+                        </address>
+                        <address>
+                            <abbr title="Email">E:</abbr>
+                            <a href="mailto:support@mafsinc.com">support@mafsinc.com</a>
+                        </address>
+                    </div>
+                </div>
+                <div class="contact_form col-sm-8 col-md-8">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                            
+                        @*@Html.ValidationSummary()*@
+
+                                    
+                        <div class="row">
+                            @* <div class="form-group @if (Html.ValidationMessageFor(x => x.Name) != null){@Error} ">
+                                       <label class="control-label" for="inputError1">Name </label>
+                                  </div>*@
+
+                            <div class="col-sm-6 col-md-6">
+                                <label class="control-label @if (Html.ValidationMessageFor(x => x.Name) != null)
+                                                            {@Error} ">Name </label>
+                                @*<input name="Name" id="Name" class="form-control" type="text" value="@Request["Name"]">*@
+                                @Html.TextBoxFor(x => x.Name, null, new { @class = "form-control", @placeholder = "John Smith" })
+                                @Html.ValidationMessageFor(x => x.Name, null, new { @class = "has-error" })
+
+
+
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <label>E-mail</label>
+                                @*<input name="email" id="email" class="form-control" type="text" value="">*@
+                                @Html.TextBoxFor(x => x.Email, null, new { @class = "form-control", @placeholder = "john@smith.com" })
+                                @Html.ValidationMessageFor(x => x.Email)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <label>Subject </label>
+                                @*<input name="subject" id="subject" class="form-control" type="text">*@
+                                @Html.TextBoxFor(x => x.Subject, null, new { @class = "form-control", @placeholder = "Subject" })
+                                @Html.ValidationMessageFor(x => x.Subject)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <label>Message</label>
+                                @*<textarea name="message" id="message" rows="8" class="form-control"></textarea>*@
+                                @Html.TextAreaFor(x => x.Message, new { @class = "form-control", @rows = "8", @placeholder = "Hello World!" })
+                                @Html.ValidationMessageFor(x => x.Message)
+                            </div>
+                            <div class="col-sm-12 col-md-12">
+                                <br />
+                                <input type="submit" class="btn btn-primary" name="submit" value="Submit Message">
+                                <span id="notice" class="alert alert-warning alert-dismissable hidden" style="margin-left: 20px;"></span>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </section>
+    </div>

@@ -496,7 +496,7 @@ C:\Users\prashant.MAFSINC\Desktop\GitHub\MAFS-ReStart\MAFS ReStart\bin\ru\System
 C:\Users\prashant.MAFSINC\Desktop\GitHub\MAFS-ReStart\MAFS ReStart\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\prashant.MAFSINC\Desktop\GitHub\MAFS-ReStart\MAFS ReStart\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\prashant.MAFSINC\Desktop\GitHub\MAFS-ReStart\MAFS ReStart\obj\Debug\MAFS ReStart.csprojResolveAssemblyReference.cache
-C:\Users\prashant.MAFSINC\Desktop\GitHub\MAFS-ReStart\MAFS ReStart\obj\Debug\MAFS_ReStart.Migrations.InitialCreate.resources
-C:\Users\prashant.MAFSINC\Desktop\GitHub\MAFS-ReStart\MAFS ReStart\obj\Debug\MAFS ReStart.csproj.GenerateResource.Cache
 C:\Users\prashant.MAFSINC\Desktop\GitHub\MAFS-ReStart\MAFS ReStart\obj\Debug\MAFS ReStart.dll
 C:\Users\prashant.MAFSINC\Desktop\GitHub\MAFS-ReStart\MAFS ReStart\obj\Debug\MAFS ReStart.pdb
+C:\Users\prashant.MAFSINC\Desktop\GitHub\MAFS-ReStart\MAFS ReStart\obj\Debug\MAFS_ReStart.Migrations.InitialCreate.resources
+C:\Users\prashant.MAFSINC\Desktop\GitHub\MAFS-ReStart\MAFS ReStart\obj\Debug\MAFS ReStart.csproj.GenerateResource.Cache

@@ -1,0 +1,46 @@
+﻿@model MAFS_ReStart.Models.Program
+
+@{
+    ViewBag.Title = Model.Title.Replace("-", " ") + " Program";
+}
+@*<div class="full_page_photo" style="background-image: url(../../../Images/@Model.BannerImg);"></div>*@
+
+<div class="main">
+    <div class="container">
+        <section class="hgroup">
+
+            <ul class="breadcrumb pull-right">
+                <li><a href="/Home">Home</a> </li>
+                <li><a href="/Program">Programs</a> </li>
+                <li class="active">@Model.Title.Replace("-", " ")</li>
+            </ul>
+        </section>
+        <section>
+            <div class="row">
+
+
+                <div class="col-sm-8 col-md-8">
+
+                    <article class="post">
+                        <!--<div class="post_header">
+                               <h3 class="post_title"><a href="single_post.html">Fugiat dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters amet risus.</a></h3>
+                               <div class="post_sub"><i class="fa-time"></i> March 1, 2013 <a href="single_post.html#post_comments"><i class="fa-comments-alt"></i> 6 comments</a> </div>
+                          </div>-->
+                        <div class="post_content">
+                            <figure>
+                                <img alt="0" src="~/images/@Model.BannerImg">
+                            </figure>
+                            <p class="columns_2">
+                                @Html.Raw(Model.Description)
+                            </p>
+
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    @Html.Partial("_ProgramTileDark", Model)
+                </div>
+            </div>
+        </section>
+
+    </div>

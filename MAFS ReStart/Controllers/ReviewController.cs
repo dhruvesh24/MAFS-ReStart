@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MAFS_ReStart.Views
 {
+    [Authorize]
     public class ReviewController : Controller
     {
 

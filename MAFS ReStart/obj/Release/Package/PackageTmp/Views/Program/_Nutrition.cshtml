@@ -1,0 +1,80 @@
+﻿
+<article class="post">
+    <div class="post_content">
+        @*<figure>
+            
+                <img alt="0" src="~/images/about.jpg">
+            
+        </figure>*@
+        <p class="columns_2">
+            <img src="~/Images/book/food.png" class="float-right" />
+            MAFS is in its 15th year of serving hot lunches to the senior citizen population. These lunches are nutritionally balanced but more importantly they provide an opportunity for seniors to make friends and socialize to break free from isolation. These meals are freshly prepared by trained cooks under strict hygienic conditions. We provided 33,905 hot meals to the community this year from our Chicago, Niles and Roselle facilities. 
+
+        </p>
+
+
+    </div>
+</article>
+@{
+    string s = "MAFS is in its 15th year of serving hot lunches to the senior citizen population. These lunches are nutritionally balanced but more importantly they provide an opportunity for seniors to make friends and socialize to break free from isolation. These meals are freshly prepared by trained cooks under strict hygienic conditions. We provided 33,905 hot meals to the community this year from our Chicago, Niles and Roselle facilities.";
+    string dots = "...";
+}
+<div class="row">
+    <div class="col-sm-4 col-md-4">
+        <section class="hgroup centered">
+
+            <img src="~/Images/icons/nutrition_icon.png" width="55%" />
+            <h2 class="section_header fancy centered">Nutrition Program<small></small></h2>
+            <br />
+            <p class="centered">
+                @(s.Substring(0,200) + dots)
+            </p>
+            <a class="btn btn-success" href="~/Program/Info/"><i class="fa fa-info"></i>&nbsp; Learn More  &raquo;</a>
+        </section>
+    </div>
+    <div class="col-sm-4 col-md-4">
+        <section class="hgroup centered">
+
+            <img src="~/Images/icons/public_benefits_icon.png" width="55%" />
+            <h2 class="section_header fancy centered">Public Benefits Program<small></small></h2>
+            <br />
+            <p class="centered">
+                MAFS is in its 15th year of serving hot lunches to the senior citizen population. These lunches are nutritionally balanced but more importantly they provide an opportunity for seniors to make friends and socialize to break free from isolation. These meals are freshly prepared by trained cooks under strict hygienic conditions. We provided 33,905 hot meals to the community this year from our Chicago, Niles and Roselle facilities. 
+            </p>
+        </section>
+    </div>
+    <div class="col-sm-4 col-md-4">
+        <section class="hgroup centered">
+
+            <img src="~/Images/icons/health_icon.png" width="55%" />
+            <h2 class="section_header fancy centered">Health Research & Education<small></small></h2>
+            <br />
+            <p class="centered">
+                MAFS is in its 15th year of serving hot lunches to the senior citizen population. These lunches are nutritionally balanced but more importantly they provide an opportunity for seniors to make friends and socialize to break free from isolation. These meals are freshly prepared by trained cooks under strict hygienic conditions. We provided 33,905 hot meals to the community this year from our Chicago, Niles and Roselle facilities. 
+            </p>
+        </section>
+    </div>
+</div>
+<div class="row">
+    @for (int i = 0; i < 3; i++)
+    {
+        <div class="col-sm-4 col-md-4">
+            <div class="team_member">
+                <img src="~/Images/icons/health_icon.png">
+                <h2>Health & Research</h2>
+                @*<small>program</small>*@
+                <hr>
+                <p>
+                    @(s.Substring(0, 200) + dots)
+                </p>
+                <div class="team_social">
+                    
+                </div>
+                @*<p class="short_bio">@member.FirstName @member.LastName</p>*@
+                <br />
+                <a class="btn btn-primary" href="#"><i class="fa fa-info"></i>&nbsp; Learn More  &raquo;</a>
+            </div>
+        </div>
+    }
+    
+</div>

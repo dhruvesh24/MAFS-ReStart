@@ -1,0 +1,401 @@
+﻿@model IEnumerable<MAFS_ReStart.Models.Fundraiser>
+
+@{
+    ViewBag.Title = "Fundraisers";
+}
+
+<div class="full_page_photo" style="background-image: url(../../../images/fundraisers.jpg);">
+    <div class="container">
+        <section class="call_to_action">
+            <h3 class="animated bounceInDown">Our <strong>Fundraisers</strong> @ViewBag.Message</h3>
+            <h4 class="animated bounceInUp skincolored">are expositions of South Asian art, culture, and cuisine in order to raise funds to <strong>support programs our community</strong> so
+                desperately needs.
+            </h4>
+        </section>
+    </div>
+</div>
+<div class="main">
+    <div class="container">
+        <section class="hgroup">
+            @*<h1>About us</h1>*@
+            <h2>Fundraising is a tool we utilize for one obvious reason, to raise funds to continuously provide quality of service to those less fortunate.
+                In addition to this, fundraising can increase awareness of our organization and promote our cause within the local community therefore attracting new members and supporters.
+                Bringing so many people together in one place allows us to showcase our agency and our culture.
+                Furthermore, it lets us spread our message and raise awareness of the issues that are impacting our community to a much larger audience.
+                So again, it is in this spirit, <strong>ask you to help us do more through your support</strong>. 
+
+            </h2>
+            <ul class="breadcrumb pull-right">
+                <li><a href="/">Home</a></li>
+                <li class="active">@ViewContext.RouteData.Values["controller"].ToString()</li>
+            </ul>
+        </section>
+        
+
+        <section>
+            @* add a partial view*@
+            <section class="portfolio_teasers_wrapper">
+                <div class="portfolio_strict row">
+                    @foreach (var fundrasier in Model)
+                    {
+                        <div class="col-sm-4 col-md-4">
+                            <div class="portfolio_item">
+                                <a href="~/Fundraiser/Details/@fundrasier.Id" data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                                    <figure style="background-image:url(../../images/@fundrasier.CoverPhoto">
+                                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                            <path d="M 180,0 0,0 0,0 180,0 z" />
+                                        </svg>
+                                        <figcaption>
+                                            <p>@fundrasier.Intro.Substring(0, Math.Min(fundrasier.Intro.Length, 250)) ...</p>
+                                            <div class="view_button">View</div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <div class="portfolio_description">
+                                    <h3><a href="~/Fundraiser/Details/@fundrasier.Id">@fundrasier.Date.Year</a></h3>
+                                    @if (!fundrasier.IsMini)
+                                    {
+                                        <p>Annual Fundraiser</p>
+                                    }
+                                    else
+                                    {
+                                        <p>Mini Fundraiser</p>
+                                    }
+
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </section>
+        </section>
+
+                        @*<section class="portfolio_slider_wrapper">
+                    <div class="flexslider" id="portfolio_slider">
+                        <ul class="slides">
+                            @foreach(var fundraiser in Model){
+                                <li class="item" data-thumb="~/images/@fundraiser.CoverPhoto" style="background-image: url(../../images/@fundraiser.CoverPhoto)">
+                                    <div class="container">
+                                        <a href="~/images/@fundraiser.CoverPhoto" rel="prettyPhoto[gal]"></a>
+                                        <div class="carousel-caption">
+                                            <p class="lead"><a href="Fundraiser/Details/@fundraiser.Id">@fundraiser.Date.Year Fundraiser, @fundraiser.Venue, @fundraiser.Location</a></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                              
+                            
+                            <li class="item" data-thumb="~/images/portfolio/item/4.jpg" style="background-image: url(../../images/portfolio/item/4.jpg)">
+                                <div class="container">
+                                    <a href="~/images/portfolio/item/4.jpg" rel="prettyPhoto[gal]"></a>
+                                    <div class="carousel-caption">
+                                        <p class="lead">optional description of the photo</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item" data-thumb="~/images/portfolio/item/5.jpg" style="background-image: url(../../images/portfolio/item/5.jpg)">
+                                <div class="container">
+                                    <a href="~/images/portfolio/item/5.jpg" rel="prettyPhoto[gal]"></a>
+                                    <div class="carousel-caption">
+                                        <p class="lead">optional description of the photo</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item" data-thumb="~/images/portfolio/item/7.jpg" style="background-image: url(../../images/portfolio/item/7.jpg)">
+                                <div class="container">
+                                    <a href="~/images/portfolio/item/7.jpg" rel="prettyPhoto[gal]"></a>
+                                    <div class="carousel-caption">
+                                        <p class="lead">optional description of the photo</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item" data-thumb="~/images/portfolio/item/1.jpg" style="background-image: url(../../images/portfolio/item/1.jpg)">
+                                <div class="container">
+                                    <a href="~/images/portfolio/item/1.jpg" rel="prettyPhoto[gal]"></a>
+                                    <div class="carousel-caption">
+                                        <p class="lead">optional description of the photo</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item" data-thumb="~/images/portfolio/item/8.jpg" style="background-image: url(../../images/portfolio/item/8.jpg)">
+                                <div class="container">
+                                    <a href="~/images/portfolio/item/8.jpg" rel="prettyPhoto[gal]"></a>
+                                    <div class="carousel-caption">
+                                        <p class="lead">optional description of the photo</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item" data-thumb="~/images/portfolio/item/9.jpg" style="background-image: url(../../images/portfolio/item/9.jpg)">
+                                <div class="container">
+                                    <a href="~/images/portfolio/item/9.jpg" rel="prettyPhoto[gal]"></a>
+                                    <div class="carousel-caption">
+                                        <p class="lead">optional description of the photo</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item" data-thumb="~/images/portfolio/item/10.jpg" style="background-image: url(../../images/portfolio/item/10.jpg)">
+                                <div class="container">
+                                    <a href="~/images/portfolio/item/10.jpg" rel="prettyPhoto[gal]"></a>
+                                    <div class="carousel-caption">
+                                        <p class="lead">optional description of the photo</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item" data-thumb="~/images/portfolio/item/11.jpg" style="background-image: url(../../images/portfolio/item/11.jpg)">
+                                <div class="container">
+                                    <a href="~/images/portfolio/item/11.jpg" rel="prettyPhoto[gal]"></a>
+                                    <div class="carousel-caption">
+                                        <p class="lead">optional description of the photo</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="carousel" class="flexslider">
+                        <ul class="slides">
+                            @foreach(var fundraiser in Model){
+                                <li>
+                                    <img src="~/images/@fundraiser.CoverPhoto" alt="@fundraiser.Date.Year Fundraiser">
+                                </li>
+                            }
+                            
+                            <li>
+                                <img src="~/images/portfolio/item/4.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/images/portfolio/item/5.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/images/portfolio/item/7.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/images/portfolio/item/1.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/images/portfolio/item/8.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/images/portfolio/item/9.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/images/portfolio/item/10.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/images/portfolio/item/11.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+
+        @*add if statement>
+    <h2 class="section_header elegant centered">Help sponser our @DateTime.Now.Year Event! <small>Check back to see when this event becomes available.</small></h2>
+    <div class="row">
+
+        <div class="col-sm-3 col-md-3">
+            <div class="pricing_plan">
+                <h3><strong>Senior</strong> <small>Admission</small></h3>
+                <div class="the_price"><span>$</span>50<small>/person</small></div>
+                <div class="the_offerings">
+                    <p>Includes:</p>
+                    <ul>
+                        <li><strong>1</strong> Seat</li>
+                        <li><strong></strong> Dinner</li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-primary btn-lg disabled">Get it Now!</a>
+            </div>
+        </div>
+        <div class="col-sm-3 col-md-3">
+            <div class="pricing_plan">
+                <h3><strong>Regular</strong> <small>Admission</small></h3>
+                <div class="the_price"><span>$</span>100<small>/person</small></div>
+                <div class="the_offerings">
+                    <p>Includes:</p>
+                    <ul>
+                        <li><strong>1</strong> Seat</li>
+                        <li><strong></strong> Dinner</li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-primary btn-lg disabled">Get it Now!</a>
+            </div>
+        </div>
+        <div class="col-sm-3 col-md-3">
+            <div class="pricing_plan">
+                <h3><strong>VIP</strong> <small>Admission</small></h3>
+                <div class="the_price"><span>$</span>125<small>/person</small></div>
+                <div class="the_offerings">
+                    <p>Includes:</p>
+                    <ul>
+                        <li><strong>1</strong> Seat</li>
+                        <li><strong></strong> Dinner</li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-primary btn-lg disabled">Get it Now!</a>
+            </div>
+        </div>
+        <div class="col-sm-3 col-md-3">
+            <div class="pricing_plan">
+                <h3><strong>VVIP</strong> <small>Admission</small></h3>
+                <div class="the_price"><span>$</span>175<small>/person</small></div>
+                <div class="the_offerings">
+                    <p>Includes:</p>
+                    <ul>
+                        <li><strong>1</strong> Seat</li>
+                        <li><strong></strong> Dinner</li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-primary btn-lg disabled">Get it Now!</a>
+            </div>
+        </div>
+
+        <ul class="pager">
+            <li class="previous">@Html.ActionLink("← Older", "Details", new {id=1})</li>
+            <li class="next disabled"><a href="#"> Newer →</a></li>
+        </ul>
+    </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-8">
+
+               
+
+            </div>
+
+
+            <!-- Sidebar -->
+            <div id="sidebar" class="col-sm-4 col-md-4">
+
+                <aside class="widget">
+
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="active"><a data-toggle="tab" href="#recent">Archive</a></li>
+                       
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div id="recent" class="tab-pane fade active in">
+                            <ul class="media-list">
+                                @foreach (var fundraiser in Model)
+                                {
+                                    <li class="media">
+                                        <a href="Fundraiser/Details/@fundraiser.Id" class="media-photo" style="background-image: url(../../images/@fundraiser.CoverPhoto)"></a><a href="Fundraiser/Details/@fundraiser.Id" class="media-date">@fundraiser.Date.ToString("MMM").ToUpper()<span>@fundraiser.Date.ToString("yyyy")</span></a>
+                                        <h5 class="media-heading"><a href="Fundraiser/Details/@fundraiser.Id">@Html.ActionLink(fundraiser.Date.ToString("yyyy") + " Fundraiser", "Details", new { id = fundraiser.Id })</a></h5>
+                                        <p>@fundraiser.Venue, @fundraiser.Location</p>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        <div id="tags" class="tab-pane fade">
+                            <aside class="widget">
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li class="active"><a href="#">2014</a></li>
+                                    <li><a href="~/Fundraiser/2013">2013</a></li>
+                                    <li><a href="~/Fundraiser/2012">2012</a></li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </aside>
+
+                @Html.Partial("_Facebook")
+
+                <aside class="widget ads clearfix">
+                    <h4>Ads</h4>
+                    <a href="#">
+                        <img src="http://placehold.it/110" alt="">
+                    </a><a href="#">
+                        <img src="http://placehold.it/110" alt="">
+                    </a><a href="#">
+                        <img src="http://placehold.it/110" alt="">
+                    </a><a href="#">
+                        <img src="http://placehold.it/110" alt="">
+                    </a>
+                </aside>
+
+            </div>
+        </div>
+        <!-- End Sidebar -->
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+*@
+
+    </div>
+    <!-- End Container -->
+
+
+
+    
+    @*<table>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsMini)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Venue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Intro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WriteUp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoverPhoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IssuuLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FlickrGallery)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsMini)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Venue)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Intro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WriteUp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CoverPhoto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IssuuLink)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FlickrGallery)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>*@

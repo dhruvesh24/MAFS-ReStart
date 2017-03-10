@@ -1,0 +1,18 @@
+﻿@model MAFS_ReStart.Models.Program
+
+@{
+        string dots = "...";
+}
+
+<div class="col-sm-4 col-md-4">
+    <section class="hgroup centered">
+
+        <img src="~/Images/icons/nutrition_icon.png" width="55%" />
+        <h2 class="section_header fancy centered">@Model.Title Program<small></small></h2>
+        <br />
+        <p class="centered">
+            @(Model.ShortDescription.Substring(0, 200) + dots)
+        </p>
+        <a class="btn btn-success" href="~/Program/Info/@Model.Title"><i class="fa fa-info"></i>&nbsp; Learn More  &raquo;</a>
+    </section>
+</div>

@@ -9,6 +9,7 @@ using MAFS_ReStart.Models;
 
 namespace MAFS_ReStart.Controllers
 {
+    [Authorize]
     public class NewsController : Controller
     {
         private MafsDb db = new MafsDb();

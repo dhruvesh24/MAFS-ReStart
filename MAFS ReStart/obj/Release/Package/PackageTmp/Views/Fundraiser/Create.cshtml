@@ -1,0 +1,96 @@
+﻿@model MAFS_ReStart.Models.Fundraiser
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Fundraiser</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Date)
+            @Html.ValidationMessageFor(model => model.Date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsMini)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsMini)
+            @Html.ValidationMessageFor(model => model.IsMini)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Location)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Location)
+            @Html.ValidationMessageFor(model => model.Location)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Venue)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Venue)
+            @Html.ValidationMessageFor(model => model.Venue)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Intro)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Intro)
+            @Html.ValidationMessageFor(model => model.Intro)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WriteUp)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WriteUp)
+            @Html.ValidationMessageFor(model => model.WriteUp)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CoverPhoto)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CoverPhoto)
+            @Html.ValidationMessageFor(model => model.CoverPhoto)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IssuuLink)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IssuuLink)
+            @Html.ValidationMessageFor(model => model.IssuuLink)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FlickrGallery)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FlickrGallery)
+            @Html.ValidationMessageFor(model => model.FlickrGallery)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

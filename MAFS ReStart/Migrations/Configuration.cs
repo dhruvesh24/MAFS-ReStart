@@ -1,16 +1,18 @@
 namespace MAFS_ReStart.Migrations
 {
     using MAFS_ReStart.Models;
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
+using System;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
+using System.Linq;
+using System.Web.Security;
+using WebMatrix.WebData;
 
     internal sealed class Configuration : DbMigrationsConfiguration<MAFS_ReStart.Models.MafsDb>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(MAFS_ReStart.Models.MafsDb context)
@@ -168,7 +170,7 @@ namespace MAFS_ReStart.Migrations
             //Ceda
             FundingAgency Ceda = new FundingAgency();
             Ceda.Name = "CEDA";
-            Ceda.URL = "http://www.cedaorg.net/www2/EnergyAssistance.html";
+            Ceda.URL = "http://www.cedaorg.net/www2/Energy.html";
             Ceda.ImageURL = "images/funders/ceda.png";
             Ceda.ShortBio = "Low Income Home Energy Assistance Program (LIHEAP) is designed to assist income-eligible households with energy services, in the form of a one-time benefit payment to the utility companies that is applied directly to the household’s energy bills. The amount of the payment is determined by income, household size, and fuel type. Please call the Energy Services Hotline for more information.";
             context.Funders.AddOrUpdate(r => r.Name, Ceda);
@@ -468,8 +470,7 @@ namespace MAFS_ReStart.Migrations
                 CoverPhoto = "Fundraiser/2015-mini.jpg",
                 FlickrGallery = ""
             });
-            //2015 Fundraiser TODO
-            //2016 Mini TODO
+            
             //2016 Fundraiser
             context.Fundraisers.AddOrUpdate(r => r.Date, new Fundraiser
             {
@@ -477,49 +478,69 @@ namespace MAFS_ReStart.Migrations
                 IsMini = false,
                 Location = "Downers Grove, IL",
                 Venue = "Ashyana Banquets",
-                Intro = "300 seniors and prominent community members attended Metropolitan Asian Family Service’s Mini Fundraising dinner on June 13, 2015 at 1032 E Ogden Ave, Naperville, IL.",
-                WriteUp = "In his opening remarks our keynote speaker, Mayor Lalmalani, commended the MAFS team for serving the community on all fronts for over 3 decades. He congratulated the MAFS team for opening new location at Schaumburg and expressed his concern on recent budget cut. Similar remarks of concern were presented by Mr. Bansal, he urged community to come forward and join in MAFS mission of serving and caring. " +
-" Mrs. Kumar presented a detailed annual report. She said that the requirement for all our Nutrition, Public Benefit and Health Research and education related programs are to raise matching funds from our community and urged all those in attendance to understand the facts and come forward to support these programs. " +
-" Ms. Beena Patel, MAFS Secretary expressed her concern on recent budget cut. Ms. Patel read out all our lobbying efforts to save Community Care and Adult Day Care Services. Our guest speaker Mayor George Pradel boosted everyone spirit with his vigor and energy. " +
-" The program started with Ganesh Vandana by Radhika Akolkar of the Radhika Dance Academy. Our Carol Stream seniors presented a very fascinating and well-balanced Tippani Dance performance.  " +
-" Our Naperville staff and seniors presented a historical dance performance from the city of Gujarat called RAAS but it was our Chicago seniors under the guidance of Pankaj Patel, ADS Coordinator, that stole the show with their superb performance. " +
-" Mandi Theater of Chicago presented a hilarious drama called as Udan Khatola performed by Jagmohan Rawat, Rohit Sharma and Alka Sharma. " +
-" The celebration also had an award ceremony. Gopal Lalmalani was given the Community Service Award; Mayor George Pradel was given the Support Service Award. Appreciation Awards were given to Nimish Jani, Krishna Bansal and Nakul Singh Chand. " +
-" Our emcees Neelam Desai, Naperville Manager and Jahnavi Bavisi, Niles Manager successfully managed the entire program and the event was concluded with vegetarian dinner which prepared by our kitchen. Beena Patel has presented vote of thanks. ",
+                Intro = "The 24th Annual Fundraiser of Metropolitan Asian Family Services (MAFS) was a grand success with around 1000 people attending the program.",
+                WriteUp = "The evening showcased multi-cultural Colombian & Polish dances by Tierra Colombiana, Polish Ensembles and Indian semi-classical by Madhura Sane of Nritya Natya Kala Academy. The live orchestra set the evening with old Mukesh Melodies by Sanket Patel Group. The event was well-attended by dignitaries from the state and community leaders and headed by Mrs. Santosh Kumar, Executive Director Metropolitan Asian Family Services (MAFS). This year’s MAFS fundraiser was organized as a tribute to Late Mr. Pramod Kumar, Treasurer, and supporter of MAFS. The objective of raising funds was to fill in the gaps from state funding to continue to provide services our seniors. The keynote speaker, Jean Bohnhoff, Director-Illinois Department on Aging shared the state’s vision and goals for senior care for the next fiscal year. She also paid tribute to Mr. Kumar appreciating his professionalism and hard work that contributed to the expansion of Universal Industries, Universal Metro Asian Services, and MAFS. A brief report was presented on MAFS programs by Connie Dogaru, Public Benefits Specialist-MAFS and Awilda Gonzalez, CCP Program Manager-UMAS. Mrs. Santosh Kumar, Executive Director-MAFS while remembering her late husband Mr. Pramod Kumar said, “He was a kind man who touched many lives, and his loss can never be filled.” Her sons Prashant & Sagar Kumar have joined the family business, and they will be a pillar of support for her. The evening commenced with traditional deep lighting and prayers by Swami Mukudananda Ji of Bharat Sevashram, along with the board of directors and community leaders. Dr. Jafri, President MAFS, welcomed everyone and gave a heartfelt tribute to Mr. Kumar. Many other dignitaries and community leaders shared their sentiments and paid tribute to Mr. Kumar. The Master of Ceremonies were Jyotsna Vasudeva, Marketing Director-UMAS and Alka Sharma, Channel Head & RJ. They both hosted the event beautifully - introducing the speakers & dignitaries, creating excitement over donation checks, raffles, auction tickets, and kept the show moving smoothly at a steady pace while keeping the audience enthralled. Among the attending dignitaries were Mayor of Oak Brook, Gopal Lalmalani; State representative from Aurora, Stephanie Kifowit; Candidate for Congressman from 8th District, Raja Krishnamoorthi; Cook County Commissioner, Edward Moody (represented by his brother Fred Moody); Director-Department on Aging, Jean Bohnhoff; CLESE Executive Director, Marta Pereyra; Trustee-Township of Schaumburg, Nimish Jani; Chairman for the Naperville Indian-American Outreach, Krishna Bansal; Candidate-Dupage Recorder of Deeds, Moon Khan; Chairman AMUAA, Ateeq Ahmed; Board Member AMUAA, Atia Ushman; Dr. Aasifa Kansari; Midwest Manager for Air India-Nakul Singh Chand; Owner-Patel Brothers, Mafatlal Patel, and the MAFS Board of Directors. Air India sponsored two economy class tickets to be auctioned at the event in support of MAFS fundraiser. MAFS also received support from its other major sponsors - Wintrust Bank, Medstar Laboratory, Mode Architects, Steeplechase, Healthcare Solutions, Dupage Dental Clinic.",
                 CoverPhoto = "Fundraiser/2016.jpg",
                 FlickrGallery = "",
-                IssuuLink = "9480861/32475518", //change
-            }); 
+                IssuuLink = "9480861/43271631", 
+            });
 
+            //2015 Fundraiser
+            context.Fundraisers.AddOrUpdate(r => r.Date, new Fundraiser
+            {
+                Date = new DateTime(2015, 10, 10),
+                IsMini = false,
+                Location = "Downers Grove, IL",
+                Venue = "Ashyana Banquets",
+                Intro = "An unbelievable amalgamation of immigrant and mainstream community members, about a 1,000 people in the audience gathered to celebrate elderly senior services for  the 23rd  annual fundraising dinner of Metropolitan Asian Family Services on Saturday, October 10, 2015 at Ashyana Banquet Hall India, 1620  75th St., Downer’s Grove, IL 60516.",
+                WriteUp = "The event began with the lightning of a traditional lamp by Pandit Jagdishbhai Joshi followed by Ganesh Vandna by the members. Prominent dignitaries in attendance were Mr. Ausaf Sayeed, the Counsel General, India, Mr. Nirav Shah, the Director, Illinois department of Public Health, Michelle Mussaman, State of Representative, Mr. Gopal Lalamalani, the Village President, Oakbrook, Mr. Krishna Bansal, an Outreach Specialist, Naperville, Ms. Marta Pereyra, the Executive director, CLESE who spoke of great appreciation to the splendid home care and adult day care services rendered for immigrant the elderly seniors of Asian Communities at large as well the East European Communities in the Metropolitan Chicago  under the dynamic leadership of Mr. and Mrs. Kumar. Mariachi Universal of Chicago, Illinois took part in making  the evening of our fundraiser one to remember with their Mexican Folkloric Music, their heavily voices and their attire. Polonia group captivated the audience with their delightfully graceful Polish Folk Dance in their traditional attire making the annual dinner a fascinating evening. Kathrine Jafri and group with their enchantingly charming Bollywood Dance Act, delighting the seniors and others making a memorable entertainment experience. Arya Dance Academy performed dances choreographed by Shree Desai. Raju Bhankapur & Pratibha Jairath performed Bollywood Music.",
+                CoverPhoto = "Fundraiser/2015.jpg",
+                FlickrGallery = "",
+                IssuuLink = "9480861/33913829",
+            });
+
+            //2016 Mini TODO
+            context.Fundraisers.AddOrUpdate(r => r.Date, new Fundraiser
+            {
+                Date = new DateTime(2016, 5, 21),
+                IsMini = true,
+                Location = "Naperville, IL",
+                Venue = "MAFS Naperville",
+                Intro = "Over 300 seniors and prominent community members attended Metropolitan Asian Family Service’s Mini Fundraising dinner on May 21, 2016 at 1032 E Ogden Ave, Naperville, IL. ",
+                WriteUp = "The celebration started with the Diya ceremony which was performed by Swami Mukundananda of Bharat Sevashram of Chicago. Prominent leaders in attendance were Steve Chirico Mayor of Naperville, Aurora Alderman Rick Mervine, Krishna Bansal, Outreach Coordinator Naperville Village, and MAFS board members. In his opening remarks our keynote speaker, Steve Chirico, Mayor of Naperville, spoke about the importance such community services provide to the society and commended the MAFS team for serving the community on all fronts for over 3 decades. Mr. Krishna Bansal in his opening statement said that he counts himself as part of MAFS family and urged the community to come forward and join in MAFS mission of serving and caring. Mr. Rick Mervine was honored to be a part of this event and wanted to know if it was possible to have a center like this in his constituency of Aurora. Ms. Awilda Gonzalez UMAS CCP Director spoke about her concerns on the recent budget cut and the effect it is having on our programs.Ms. Gonzalez spoke about all our lobbying efforts to save Community Care and Adult Day Care Services. The entertainment program began with the Naperville ADS seniors performing a beautiful Bollywood song \"Prem Ratan Dhan Payo\" wonderfully choreographed by ADS coordinators Heena Mehta and Eva Contractor. Our Schaumburg ADS seniors performed a pulsating Gujarati garba \"Nagada Sang Dhol Baje\" ably choreographed by ADS coordinators Dipti Shah and Mital Patel. Chicago and Orland Park ADS seniors preformed 2 more mesmerizing Garbas choreographed by ADS coordinators Pankaj Patel and Grishma Shah respectively but the stage was set on fire by the students of Glenbard North High School, Carol Stream performing a Punjabi Bhangra. The Niles ADS seniors stole the show with 80 year olds performing \"Ladki Kar Gayi Chull\" with their walking sticks as props. Chicago Staff Pankaj and Kiran Patel brought a tear to every eye by their heartwarming performance and Naperville Staff also showcased their talent by performing taditional garba. The grand finale was by the Naperville ADS seniors performing a lively Qawwali number which was encored by the audience. Our emcees Neelam Desai, Naperville Manager, Jahnavi Bavisi, Niles Manager and Nehal Thakkar, Carol Stream  CCP Supervisor successfully managed the entire program and the event was concluded with vegetarian dinner prepared by our Kitchen staff. Mrs. Santosh Kumar presented the vote of thanks.",
+                CoverPhoto = "Fundraiser/2016-mini.jpg",
+                FlickrGallery = ""
+            });
 
             
             //CATEGORY
             //Nutrition
             //Nutrition Program
-            Category Nut = new Category();
-            Nut.Title = "Nutrition";
-            Nut.Description = "To eat is a necessity, but to eat intelligently is an art. Our staff and members strongly believe in this adage. We serve hot, fresh, home-cooked meals that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis. We also help educate participants on choosing the right kind of foods that help prevent & manage diseases like diabetes and hypertension which are common in our culture.    The smell of masala in the kitchen does not only entice one’s appetite, it also brings people together.  Sharing a meal with a group can be the cure seniors need against feelings of social isolation.  So come join us for a meal and tell that joke you know!  MAFS is in its 15th year of serving hot lunches to the senior citizen population. These lunches are nutritionally balanced but more importantly they provide an opportunity for seniors to make friends and socialize to break free from isolation. These meals are freshly prepared by trained cooks under strict hygienic conditions. We provided 33,905 hot meals to the community this year from our Chicago, Niles and Roselle facilities. ";
-            Nut.IconUrl = @"~/Images/icons/nutrition_icon.png";
-            Nut.BannerImg = "nutrition3.jpg";
-            context.Categories.AddOrUpdate(r => r.Title, Nut);
+            //Category Nut = new Category();
+            //Nut.Title = "Nutrition";
+            //Nut.Description = "To eat is a necessity, but to eat intelligently is an art. Our staff and members strongly believe in this adage. We serve hot, fresh, home-cooked meals that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis. We also help educate participants on choosing the right kind of foods that help prevent & manage diseases like diabetes and hypertension which are common in our culture.    The smell of masala in the kitchen does not only entice one’s appetite, it also brings people together.  Sharing a meal with a group can be the cure seniors need against feelings of social isolation.  So come join us for a meal and tell that joke you know!  MAFS is in its 15th year of serving hot lunches to the senior citizen population. These lunches are nutritionally balanced but more importantly they provide an opportunity for seniors to make friends and socialize to break free from isolation. These meals are freshly prepared by trained cooks under strict hygienic conditions. We provided 33,905 hot meals to the community this year from our Chicago, Niles and Roselle facilities. ";
+            //Nut.IconUrl = @"~/Images/icons/nutrition_icon.png";
+            //Nut.BannerImg = "nutrition3.jpg";
+            //context.Categories.AddOrUpdate(r => r.Title, Nut);
 
             //Nutrition Program
             Program Nutrition = new Program();
             Nutrition.Title = "Nutrition";
-            Nutrition.ShortDescription = "<strong>To eat is a necessity, but to eat intelligently is an art.</strong> Our staff and members strongly believe in this adage. We serve hot, fresh, home-cooked meals that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis.";
+            Nutrition.ShortDescription = "To eat is a necessity, but to eat intelligently is an art. Our staff and members strongly believe in this adage. We serve hot, fresh, home-cooked meals that take into account the dietary requirements and traditions of Indians, Pakistanis, and Bangladeshis.";
             Nutrition.Description = " We also help educate participants on choosing the right kind of foods that help prevent & manage diseases like diabetes and hypertension which are common in our culture.    The smell of masala in the kitchen does not only entice one’s appetite, it also brings people together.  Sharing a meal with a group can be the cure seniors need against feelings of social isolation.  So come join us for a meal and tell that joke you know!  MAFS is in its 15th year of serving hot lunches to the senior citizen population. These lunches are nutritionally balanced but more importantly they provide an opportunity for seniors to make friends and socialize to break free from isolation. These meals are freshly prepared by trained cooks under strict hygienic conditions. We provided 33,905 hot meals to the community this year from our Chicago, Niles and Roselle facilities. ";
             Nutrition.BannerImg = "nutrition3.jpg";
-            Nutrition.PartialView = "_Nutrition";
+            Nutrition.Icon = "nutrition_icon.png";
+            
             context.Programs.AddOrUpdate(r => r.Title, Nutrition);
 
             //Public Benefits
-            Program PublicBeneifits = new Program();
-            PublicBeneifits.Title = "Public-Benefits";
-            PublicBeneifits.ShortDescription = "Have you ever wondered what benefits you qualify for? Many people do not know what is available to them.  MAFS can help you understand and apply for benefits you qualify for.";
-            PublicBeneifits.Description = "MAFS is a pioneer in providing social services to low-income and underserved populations. The demand for these kinds of services is increasing due to the slow recovery of our economy. MAFS staff assists clients in accessing public benefits available to fit their individual needs. Our staff helps fill-out applications for these services and escorts them to the appropriate public benefit offices such as Department of Human Services or Social Security Administration, Immigration and Naturalization to submit the application and serve as their interpreter. We also translate official forms in Hindi, Urdu, Gujarati, Spanish and Bosnian languages to facilitate the process of applying for benefits. Our staff acts as liaisons between the client and public officials to help our community members get the help and support they require. This year we had the privilege of helping complete 6,225 cases in Cook, Suburban Cook County, DuPage and Lake County.  MAFS can help you understand and apply for benefits like:  + Medicare + Medicaid + Social Security + Access to Care + Citizenship/Immigration + Transportation + Kids Care + SSI Prescription Drug Assistance + Food Stamps  + LIHEAP  + SHIP and many others.  Come in and talk to our friendly staff about your needs and we will try our utmost to help!";
-            PublicBeneifits.BannerImg = "ceda.jpg";
-            PublicBeneifits.PartialView = "_Public";
-            context.Programs.AddOrUpdate(r => r.Title, PublicBeneifits);
+            Program PublicBenefits = new Program();
+            PublicBenefits.Title = "Public-Benefits";
+            PublicBenefits.ShortDescription = "Have you ever wondered what benefits you qualify for? Many people do not know what is available to them.  MAFS can help you understand and apply for benefits you qualify for.";
+            PublicBenefits.Description = "MAFS is a pioneer in providing social services to low-income and underserved populations. The demand for these kinds of services is increasing due to the slow recovery of our economy. MAFS staff assists clients in accessing public benefits available to fit their individual needs. Our staff helps fill-out applications for these services and escorts them to the appropriate public benefit offices such as Department of Human Services or Social Security Administration, Immigration and Naturalization to submit the application and serve as their interpreter. We also translate official forms in Hindi, Urdu, Gujarati, Spanish and Bosnian languages to facilitate the process of applying for benefits. Our staff acts as liaisons between the client and public officials to help our community members get the help and support they require. This year we had the privilege of helping complete 6,225 cases in Cook, Suburban Cook County, DuPage and Lake County.  MAFS can help you understand and apply for benefits like:  + Medicare + Medicaid + Social Security + Access to Care + Citizenship/Immigration + Transportation + Kids Care + SSI Prescription Drug Assistance + Food Stamps  + LIHEAP  + SHIP and many others.  Come in and talk to our friendly staff about your needs and we will try our utmost to help!";
+            PublicBenefits.BannerImg = "ceda.jpg";
+            PublicBenefits.Icon = "public_benefits_icon.png";
+            context.Programs.AddOrUpdate(r => r.Title, PublicBenefits);
 
             //Education
             Program Education = new Program();
@@ -527,35 +548,36 @@ namespace MAFS_ReStart.Migrations
             Education.ShortDescription = "At MAFS we believe in education.";
             Education.Description = "Education and knowledge help you better understand yourself and the world around you. It also helps you obtain a higher paying job. To help educate and train our community we offer educational and technical programs including, English as a Second Language (ESL), Bright Ideas, CPR training, and Computer training";
             Education.BannerImg = "education.jpg";
+            Education.Icon = "education_icon.png";
             context.Programs.AddOrUpdate(r => r.Title, Education);
 
             //Research
             Program Research = new Program();
-            Research.Title = "Research";
+            Research.Title = "Health-Research";
             Research.ShortDescription = "We partner with the leading health and educational institutions to explore and study problems that concern our culture the most.";
             Research.Description = "We have collaborated with Northwestern University’s Feinberg School of Medicine to teach the South Asian community how to make important dietary changes, engage in an active lifestyle, reduce stress, and lose weight to reduce or prevent their chances of stroke and/or heart attacks We also partner with the Asian Health Coalition on two projects. The first is the Pink Pashmina project which offers free breast cancer screenings and mammograms to South Asian woman. The second is to provide our community with free screening and testing for Hepatitis B.";
             Research.BannerImg = "research.jpg";
-            Research.PartialView = "_Research";
+            Research.Icon = "health_icon.png";
             context.Programs.AddOrUpdate(r => r.Title, Research);
 
-            //Citizenship
-            Program Citizenship = new Program();
-            Citizenship.Title = "Citizenship-and-Immigration-Assistance";
-            Citizenship.ShortDescription = "Since its establishment, MAFS has, and continues to provide help with the immigration and naturalization process for community members.";
-            //more
-            Citizenship.Description = "MAFS also helps applicable members of the community in acquiring their Overseas Citizen of India (OCI) card. This year we have helped 160 seniors to fill N.400 for citizenship and I-130 for family petition. This service is provided without outside funding, however, we continue this service to benefit immigrant families. ";
-            Citizenship.BannerImg = "immigration.jpg";
-            context.Programs.AddOrUpdate(r => r.Title, Citizenship);
+            ////Citizenship
+            //Program Citizenship = new Program();
+            //Citizenship.Title = "Citizenship-and-Immigration-Assistance";
+            //Citizenship.ShortDescription = "Since its establishment, MAFS has, and continues to provide help with the immigration and naturalization process for community members.";
+            ////more
+            //Citizenship.Description = "MAFS also helps applicable members of the community in acquiring their Overseas Citizen of India (OCI) card. This year we have helped 160 seniors to fill N.400 for citizenship and I-130 for family petition. This service is provided without outside funding, however, we continue this service to benefit immigrant families. ";
+            //Citizenship.BannerImg = "immigration.jpg";
+            //context.Programs.AddOrUpdate(r => r.Title, Citizenship);
 
-            //HealthInsurance
-            Program HealthInsurance = new Program();
-            HealthInsurance.Title = "Health-Insurance-Assistance";
-            //Not the greatest
-            HealthInsurance.ShortDescription = " We collaborate with the Asian Health Coalition to assist our community with the Affordable Care Act (Obamacare).";
-            //Not the greatest
-            HealthInsurance.Description = "Metropolitan Asian Family Services has collaborated with the Asian Health Coalition for assisting our community with the Affordable Care Act also known as Obamacare. It was the state-run outreach and education program offered to all legal residents of Illinois to enroll into Medicaid or Marketplace health insurance. This year our Navigators, Ms. Nazneen Begum and Meenu Jethi, have enrolled over 500 individuals into Medicaid or Marketplace health insurance and reached out to over 1500 people through outreach at temples, mosques, churches and Gurudwaras.";
-            HealthInsurance.BannerImg = "obamacare.jpg";
-            context.Programs.AddOrUpdate(r => r.Title, HealthInsurance);
+            ////HealthInsurance
+            //Program HealthInsurance = new Program();
+            //HealthInsurance.Title = "Health-Insurance-Assistance";
+            ////Not the greatest
+            //HealthInsurance.ShortDescription = " We collaborate with the Asian Health Coalition to assist our community with the Affordable Care Act (Obamacare).";
+            ////Not the greatest
+            //HealthInsurance.Description = "Metropolitan Asian Family Services has collaborated with the Asian Health Coalition for assisting our community with the Affordable Care Act also known as Obamacare. It was the state-run outreach and education program offered to all legal residents of Illinois to enroll into Medicaid or Marketplace health insurance. This year our Navigators, Ms. Nazneen Begum and Meenu Jethi, have enrolled over 500 individuals into Medicaid or Marketplace health insurance and reached out to over 1500 people through outreach at temples, mosques, churches and Gurudwaras.";
+            //HealthInsurance.BannerImg = "obamacare.jpg";
+            //context.Programs.AddOrUpdate(r => r.Title, HealthInsurance);
 
             //Blog Posts
             
@@ -580,6 +602,33 @@ namespace MAFS_ReStart.Migrations
                 ImgUrl = "~/Images/news/jewel-of-india.jpg",
                 SourceURL = null,
             });
+          //Seed Membership
+           
+        }
+
+        private void SeedMembership()
+        {
+            if(!WebSecurity.Initialized){
+                WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+            }
+            
+            var roles = (SimpleRoleProvider)Roles.Provider;
+            var membership = (SimpleMembershipProvider)Membership.Provider;
+
+            if(!roles.RoleExists("SuperAdmin")){
+                roles.CreateRole("SuperAdmin");
+            }
+            if (membership.GetUser("prashantk@umasinc.com", false) == null)
+            {
+                membership.CreateUserAndAccount("prashantk@umasinc.com", "Umasinc@1");
+            }
+            if(!roles.GetRolesForUser("prashantk@umasinc.com").Contains("SuperAdmin")){
+                roles.AddUsersToRoles(new[] { "prashantk@umasinc.com" }, new[] { "SuperAdmin" });
+            }
         }
     }
-}
+
+ } 
+
+   
+

@@ -7,8 +7,10 @@ using System.Web;
 using System.Web.Mvc;
 using MAFS_ReStart.Models;
 
+
 namespace MAFS_ReStart.Controllers
 {
+    [Authorize]
     public class RestaurantController : Controller
     {
         private MafsDb db = new MafsDb();
