@@ -306,6 +306,7 @@
     <Content Include="fonts\font-awesome\scss\_spinning.scss" />
     <Content Include="fonts\font-awesome\scss\_stacked.scss" />
     <Content Include="fonts\font-awesome\scss\_variables.scss" />
+    <Content Include="Images\board\board2.jpg" />
     <Content Include="Images\icons\education_icon.png" />
     <Content Include="less\custom_variables.less" />
     <Content Include="less\style.less" />
@@ -730,6 +731,7 @@
     <Content Include="Views\Program\PublicBenefits.cshtml" />
     <Content Include="Views\Program\HealthResearch.cshtml" />
     <Content Include="Views\Program\Education.cshtml" />
+    <Content Include="Views\Fundraiser\Mini2017.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

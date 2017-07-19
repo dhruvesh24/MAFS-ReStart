@@ -21,6 +21,11 @@ namespace MAFS_ReStart.Controllers
             return View(db.Fundraisers.ToList().OrderByDescending(r => r.Date));
         }
 
+        public ActionResult Mini2017()
+        {
+            return View();
+        }
+
         public ActionResult Index2()
         {
             return View(db.Fundraisers.ToList().OrderByDescending(r => r.Date.Year));

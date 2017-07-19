@@ -266,7 +266,7 @@ using WebMatrix.WebData;
                 Image = "Pramod-Kumar.png",
                 Image2 = "Pramod-Kumar2.png",
                 IsStaff = false,
-                IsActive = true,
+                IsActive = false,
                 Facebook = @"https://www.facebook.com/pramod.kumar.9862",
                 Email = "pramodk@umasinc.com",
                 LinkedIn = @"https://www.linkedin.com/in/pramod-kumar-24a9a626"
@@ -281,7 +281,7 @@ using WebMatrix.WebData;
                 Image = "Beena-Patel.png",
                 Image2 = "Beena-Patel2.png",
                 IsStaff = false,
-                IsActive = true,
+                IsActive = false,
                 Facebook = @"https://www.facebook.com/beena.patel.9638",
                 Email = "beenapate@gmail.com",
                 LinkedIn = @"https://www.linkedin.com/in/beena-patel-4279145a"
@@ -343,7 +343,7 @@ using WebMatrix.WebData;
                 Image = "Shweta-Singh.png",
                 Image2 = "Shweta-Singh2.png",
                 IsStaff = false,
-                IsActive = true,
+                IsActive = false,
                 Facebook = @"https://www.facebook.com/1ShwetaSingh",
                 Email = @"Ssingh9@luc.edu",
                 LinkedIn = @"https://www.linkedin.com/in/shweta-singh-a7004714"
