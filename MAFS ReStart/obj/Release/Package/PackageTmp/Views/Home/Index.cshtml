@@ -49,12 +49,36 @@
     <div class="container">
         <h2 class="section_header elegant centered"><small>Welcome to the new </small> Metropolitan Asian Family Services!</h2>
 
+
+
         <div class="row">
             <section>
                 @Html.Action("getProgramTile", "Program", null)
             </section>
         </div>
-        <div class="row">
+        
+        <div class="row hidden-sm hidden-xs">
+            <div class="well col-md-12">
+                <!-- LEFT -->
+                <div class="col-md-9">
+                    <h2>Subscribe to our newsletter!</h2>
+                    <p>
+                        The best way to stay informed about all our promotions and offers is to sign up for our newsletter. Sign up today and you will never miss one our annual fundraisers. Our newsletter also keeps you up to date with CEDA, the Affordable Healthcare Act and other program deadlines.
+                    </p>
+                </div>
+                <!-- /LEFT -->
+                <!-- RIGHT -->
+                <div class="col-md-3">
+                    <div class="pull-right">
+                        <br /><br />
+                        <a class="btn btn-danger  btn-lg" href="http://eepurl.com/c0J3uL" target="_blank">Subscribe &raquo;</a>
+                    </div>
+
+                </div>
+                <!-- /RIGHT -->
+            </div>
+        </div>
+        <div class="row hidden-sm hidden-xs">
             <section>
                 @Html.Action("getRandomFunder", "Home", new { id = 4 })
             </section>

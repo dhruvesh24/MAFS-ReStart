@@ -307,6 +307,8 @@
     <Content Include="fonts\font-awesome\scss\_stacked.scss" />
     <Content Include="fonts\font-awesome\scss\_variables.scss" />
     <Content Include="Images\board\board2.jpg" />
+    <Content Include="Images\board\Harish-Kolasani.png" />
+    <Content Include="Images\board\Harish-Kolasani2.png" />
     <Content Include="Images\icons\education_icon.png" />
     <Content Include="less\custom_variables.less" />
     <Content Include="less\style.less" />

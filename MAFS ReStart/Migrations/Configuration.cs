@@ -333,6 +333,22 @@ using WebMatrix.WebData;
                 LinkedIn = string.Empty
             });
 
+            //Harish Kolasani
+            context.Members.AddOrUpdate(r => r.FirstName, new Member
+            {
+                FirstName = "Harish",
+                LastName = "Kolasani",
+                Position = "Board Member",
+                Bio = "is an individual who serves the needy for his own satisfaction & that is the reason for the quality of his services. He always focuses on spreading positive energy. As an NRI, he has been serving many Indians & Americans in various forms through numerous organizations and as an individual for the past 6 years. He has been providing free physical therapy treatments, free blood tests & yoga every day in India by setting up 3-week mobile health camps in slums, schools and senior homes. These services are offered under the NRI SEVA Foundation with his personal financial backing . He’s been playing an important role in FIA Chicago (Federation of Indian Associations) and representing pride in India to all communities in Chicago. The Indian Consulate in Chicago recognized his dedication and took his help to Coordinate KALA UTSAV in 2014 & confirmed him as Coordinator for 2016. Currently he is serving as President of the NRI SEVA Foundation & Indian American Business Council, Managing Director of the Desiworld TV Channel, Secretary of the Association of Indians in America (AIA), Advisory Board Member of the Indian Diaspora Club, and Indian Government Affairs Chair in TANA. He shares motivating messages from his social media pages followed by more than one million followers.",
+                Image = "Harish-Kolasani.png",
+                Image2 = "Harish-Kolasani2.png",
+                IsStaff = false,
+                IsActive = true,
+                Facebook = "https://www.facebook.com/HarishKolasani",
+                Email = "kolasani@me.com",
+                LinkedIn = string.Empty
+            });
+
             //Shweta Singh
             context.Members.AddOrUpdate(r => r.FirstName, new Member
             {
