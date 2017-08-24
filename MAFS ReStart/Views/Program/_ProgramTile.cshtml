@@ -23,7 +23,7 @@
     <div class="col-sm-3 col-md-3">
         <section class="hgroup centered">
 
-            <img src="~/Images/icons/@program.Icon" width="55%" />
+            <img src="~/Images/icons/@program.Icon" width="45%" />
             @if (program.Title.Equals("Nutrition"))
             {
                 <h2 class="section_header fancy centered">@program.Title.Replace("-"," ") <br />Program<small></small></h2>
@@ -48,7 +48,7 @@
                 }
                    
             
-            <a class="btn btn-success" href="~/Program/@program.Title.Replace("-"," ")"><i class="fa fa-info"></i>&nbsp; Learn More  &raquo;</a>
+            <a class="btn btn-success" href="~/Program/@program.Title.Replace("-","")"><i class="fa fa-info"></i>&nbsp; Learn More  &raquo;</a>
         </section>
     </div>
 }

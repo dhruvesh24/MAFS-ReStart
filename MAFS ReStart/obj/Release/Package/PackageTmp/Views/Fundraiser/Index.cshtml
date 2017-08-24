@@ -3,6 +3,8 @@
 @{
     ViewBag.Title = "Fundraisers";
 }
+<link rel="stylesheet" href="js/isotope/css/style.css" type="text/css" media="screen">
+
 
 <div class="full_page_photo" style="background-image: url(../../../images/fundraisers.jpg);">
     <div class="container">
@@ -31,43 +33,64 @@
             </ul>
         </section>
         
+        <section>
+            <ul class="portfolio_filters">
+                <li><a href="#" data-filter="*">Show All</a></li>
+                <li><a href="#" data-filter=".cat_annual">Annual</a></li>
+                <li><a href="#" data-filter=".cat_mini">Mini</a></li>
+            </ul>
+        </section>
+
 
         <section>
             @* add a partial view*@
-            <section class="portfolio_teasers_wrapper">
-                <div class="portfolio_strict row">
-                    @foreach (var fundrasier in Model)
-                    {
-                        <div class="col-sm-4 col-md-4">
-                            <div class="portfolio_item">
-                                <a href="~/Fundraiser/Details/@fundrasier.Id" data-path-hover="M 180,190 0,158 0,0 180,0 z">
-                                    <figure style="background-image:url(../../images/@fundrasier.CoverPhoto">
-                                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
-                                            <path d="M 180,0 0,0 0,0 180,0 z" />
-                                        </svg>
-                                        <figcaption>
-                                            <p>@fundrasier.Intro.Substring(0, Math.Min(fundrasier.Intro.Length, 250)) ...</p>
-                                            <div class="view_button">View</div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                                <div class="portfolio_description">
-                                    <h3><a href="~/Fundraiser/Details/@fundrasier.Id">@fundrasier.Date.Year</a></h3>
-                                    @if (!fundrasier.IsMini)
-                                    {
-                                        <p>Annual Fundraiser</p>
-                                    }
-                                    else
-                                    {
-                                        <p>Mini Fundraiser</p>
-                                    }
+            <section class="portfolio_strict">
+                <div class="row isotope_portfolio_container">
+                        @{
+                            string filter = "";
+                        }
+                        @foreach (var fundrasier in Model)
+                        {
+                            if (!fundrasier.IsMini)
+                            {
+                                filter = "cat_annual";
+                            }
+                            else
+                            {
+                                filter = "cat_mini";
+                            }
 
+                            <div class="@filter col-sm-4 col-md-4">
+                                <div class="portfolio_item">
+                                    <a href="~/Fundraiser/Details/@fundrasier.Id" data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                                        <figure style="background-image:url(../../images/@fundrasier.CoverPhoto">
+                                            <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                                <path d="M 180,0 0,0 0,0 180,0 z" />
+                                            </svg>
+                                            <figcaption>
+                                                <p>@fundrasier.Intro.Substring(0, Math.Min(fundrasier.Intro.Length, 250)) ...</p>
+                                                <div class="view_button">View</div>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                    <div class="portfolio_description">
+                                        <h3><a href="~/Fundraiser/Details/@fundrasier.Id">@fundrasier.Date.Year</a></h3>
+                                        @if (!fundrasier.IsMini)
+                                        {
+                                            <p>Annual Fundraiser</p>
+                                        }
+                                        else
+                                        {
+                                            <p>Mini Fundraiser</p>
+                                        }
+
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    }
-                </div>
+                        }
+                    </div>
             </section>
+
         </section>
 
                         @*<section class="portfolio_slider_wrapper">
