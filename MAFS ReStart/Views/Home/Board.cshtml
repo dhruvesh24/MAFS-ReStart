@@ -102,8 +102,63 @@ individuals & families</strong> to become productive members in their new home.
                                      @*<p class="short_bio">@member.FirstName @member.LastName</p>*@
                                      <br />
                                      @*<a class="btn btn-primary" href="#">Full Bio &raquo;</a>*@
+                                     @{
+                                            string DataTarget = "Modal" + member.FirstName + member.LastName;
+                                     }
+                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#@DataTarget">
+                                         Full Bio &raquo;
+                                     </button>
                                  </div>
                              </div>
+
+                            <!-- Modal @member.FirstName @member.LastName -->
+                            <section class="team_members">
+                                <div class="modal fade " id="@DataTarget" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content modal-lg">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">@member.FirstName @member.LastName - <small>@member.Position</small></h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-8 col-md-4">
+                                                        <div class="team_member">
+                                                            <figure style="background-image: url(../../../images/board/@member.Image2)"><img src="~/images/board/@member.Image" alt="@member.FirstName @member.LastName"></figure>
+                                                            <h5>@member.FirstName @member.LastName</h5>
+                                                            <small>@member.Position</small>
+                                                            <hr>
+                                                            <div class="team_social">
+                                                                @if (member.Facebook != string.Empty)
+                                                                {
+                                                                    <a href="@member.Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                                                }
+                                                                @if (member.LinkedIn != string.Empty)
+                                                                {
+                                                                    <a href="@member.LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                                                }
+                                                                @if (member.Email != string.Empty)
+                                                                {
+                                                                    <a href="mailto: @member.Email" target="_blank"><i class="fa fa-envelope"></i></a>
+                                                                }
+                                                            </div>
+                                                            @*<p class="short_bio">In hac habitasse platea dictumst. Suspendisse non tellus ligula. Morbi molestie feugiat tortor a hendrerit.</p>*@
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-16 col-md-8">
+                                                        <p class="columns_2"><strong>@member.FirstName @member.LastName</strong> @member.Bio</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
 
                              if (counter % 3 == 0)
                              {
@@ -170,58 +225,6 @@ individuals & families</strong> to become productive members in their new home.
 
          </div>
 
-    <!-- Button trigger modal -->
-
-@*<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-    <section class="team_members">
-        <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content modal-lg">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-              </div>
-              <div class="modal-body">
-                  <div class="row">
-                  <div class="col-sm-8 col-md-4">
-                                 <div class="team_member">
-                                      <figure style="background-image: url(../../../images/1b.jpg)"><img src="~/images/1a.jpg" alt="1a"></figure>
-                                      <h5>Johny Boycot</h5>
-                                      <small>Web-Developer / Founder</small>
-                                      <hr>
-                                      <div class="team_social"> <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a> <a href="https://twitter.com/leonartgr"><i class="fa fa-twitter"></i></a> <a href="#pinterest"><i class="fa fa-linkedin"></i></a> <a href="https://github.com/PlethoraThemes"><i class="fa fa-github-alt"></i></a> </div>
-                                      <p class="short_bio">In hac habitasse platea dictumst. Suspendisse non tellus ligula. Morbi molestie feugiat tortor a hendrerit.</p>
-                                 </div>
-                            </div>
-
-                      <div class="col-sm-16 col-md-8">
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas pulvinar sem, at semper lorem rutrum nec. Mauris non dui ut libero consequat hendrerit. Cras ut dolor ut velit viverra pharetra. Aliquam gravida lectus non libero dictum venenatis. Fusce congue, ante at porttitor aliquam, ante neque tempus dui, at sagittis dolor augue nec magna. Praesent ultrices ut sem in cursus. Nulla cursus egestas augue molestie maximus. Praesent sit amet lacinia tortor. Sed rhoncus sollicitudin vulputate. Nullam congue risus elit, nec sodales orci finibus at. Maecenas ac urna in metus ultricies feugiat sed et odio. Duis a velit purus.
-
-        Pellentesque cursus commodo odio. Quisque venenatis lectus eget libero consectetur tempus. Nunc dui neque, laoreet in nisi eget, molestie vulputate nunc. Donec aliquam purus vel eros pellentesque, ut feugiat dui rutrum. Nam est ante, tristique vel commodo vitae, finibus eget mi. Integer sed arcu urna. Etiam semper sapien nec luctus egestas. Donec sed metus non ex gravida semper in ac metus. Mauris ultricies tellus nec massa consectetur, quis lacinia purus scelerisque. Nullam est metus, sollicitudin id ligula quis, tempus viverra lacus. Vivamus dictum auctor nunc nec laoreet.
-
-        In ornare ligula eros, ut maximus odio faucibus a. Etiam tincidunt, nulla eu semper tincidunt, felis nisl condimentum ante, eu tincidunt nisi risus ut risus. Nam auctor porta dolor in aliquam. Nam sollicitudin condimentum sem, bibendum gravida nulla convallis id. Suspendisse mattis arcu a iaculis commodo. Vivamus semper arcu sit amet magna placerat bibendum. Nunc nec volutpat erat. Cras sed leo a odio commodo vehicula.
-
-        Etiam gravida eu lectus et tempor. Praesent non arcu id tortor porta sagittis in eu arcu. Pellentesque interdum ante id felis vestibulum congue. Etiam in sodales odio, in iaculis purus. In hac habitasse platea dictumst. Duis aliquam elit quis lorem tempor vehicula. Sed ultrices euismod turpis, sed vehicula massa scelerisque in. Etiam tellus erat, vulputate nec vestibulum quis, tempus ut sapien. Donec blandit lacus vel dolor eleifend maximus. Phasellus et leo condimentum, tempus felis non, finibus nibh. Praesent tellus mauris, finibus ac pulvinar vitae, aliquet sit amet felis. Nunc imperdiet ultricies dolor, eu mollis velit. Integer sed commodo purus.
-
-        Mauris rutrum felis quam. Praesent hendrerit condimentum justo at sollicitudin. Morbi semper nisl sed urna convallis euismod. Fusce sodales est purus, mattis viverra augue vulputate vel. Nulla imperdiet convallis nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sit amet nunc maximus, ultricies libero non, interdum elit. Aenean et euismod nulla.
-                            </div>
-                      </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-         <!-- issuu embed -->
-         <div data-configid="9480861/11710604" style="width:650px; height:421px;" class="issuuembed"></div><script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>*@
 
 
 
