@@ -32,66 +32,116 @@
                 <li class="active">@ViewContext.RouteData.Values["controller"].ToString()</li>
             </ul>
         </section>
-        
-        <section>
-            <ul class="portfolio_filters">
-                <li><a href="#" data-filter="*">Show All</a></li>
-                <li><a href="#" data-filter=".cat_annual">Annual</a></li>
-                <li><a href="#" data-filter=".cat_mini">Mini</a></li>
-            </ul>
-        </section>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Join us for our 2017 Annual Fundraiser!</h2>
+                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F35696459%2F225386498320%2F1%2Foriginal.jpg?w=800&rect=3126%2C155%2C2090%2C1045&s=fbc3e4eb44e6916697518bdc1a9af8aa" />
+                
+                <p>
+                    <br />
+                    Our fundraiser will help support and fund senior programs in Chicagoland. Enjoy a fun-filled evening of Dancing, a Fashion Show and Dinner. MAFS has positively impacted more than 10,000 seniors in 11 counties. We were incorporated as a Not-for-Profit, Tax Exempt 501(c)(3) organization in 1993 with a mission to provide comprehensive and integrated services to the community at large. MAFS is a multi-cultural and multi-ethnic organization and has, at its core, a commitment to educate, assist and empower the immigrant community to adjust to life in the United States and become productive members of society instead of dependent on government aid.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <section class="pricing_wrapper">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="pricing_plan wow animated flipInY">
+                                <h3>Regular<strong>Ticket</strong> <small></small></h3>
+                                <div class="the_price"><span>$</span>75<small>/ticket</small></div>
+                                <div class="the_offerings">
+                                    <p> <strong>Dinner</strong> </p>
+                                    <p> <strong>Entertainment</strong> </p>
+                                    <p> <strong>Fashion Show</strong> </p>
+                                    <p> <strong>Regular Seating</strong> </p>
+                                </div>
+                                <a href="https://www.eventbrite.com/e/2017-mafs-annual-fundraiser-tickets-37664072254" class="btn btn-primary btn-lg" target="_blank">Get it Now!</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="pricing_plan special wow animated flipInY">
+                                <h3>VIP<strong>Ticket</strong> <small></small></h3>
+                                <div class="the_price"><span>$</span>100<small>/ticket</small></div>
+                                <div class="the_offerings">
+                                    <p> <strong>Dinner</strong> </p>
+                                    <p> <strong>Entertainment</strong> </p>
+                                    <p> <strong>Fashion Show</strong> </p>
+                                    <p> <strong>Preferred Seating</strong> </p>
+                                </div>
+                                <a href="https://www.eventbrite.com/e/2017-mafs-annual-fundraiser-tickets-37664072254" class="btn btn-primary btn-lg" target="_blank">Get it Now!</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
 
-        <section>
-            @* add a partial view*@
-            <section class="portfolio_strict">
-                <div class="row isotope_portfolio_container">
-                        @{
-                            string filter = "";
-                        }
-                        @foreach (var fundrasier in Model)
-                        {
-                            if (!fundrasier.IsMini)
-                            {
-                                filter = "cat_annual";
+            </div>
+            
+            
+        </div>
+
+        <div class="row">
+                <section>
+                    <ul class="portfolio_filters">
+                        <li><a href="#" data-filter="*">Show All</a></li>
+                        <li><a href="#" data-filter=".cat_annual">Annual</a></li>
+                        <li><a href="#" data-filter=".cat_mini">Mini</a></li>
+                    </ul>
+                </section>
+
+
+                <section>
+                    @* add a partial view*@
+                    <section class="portfolio_strict">
+                        <div class="row isotope_portfolio_container">
+                            @{
+                                string filter = "";
                             }
-                            else
+                            @foreach (var fundrasier in Model)
                             {
-                                filter = "cat_mini";
-                            }
+                                if (!fundrasier.IsMini)
+                                {
+                                    filter = "cat_annual";
+                                }
+                                else
+                                {
+                                    filter = "cat_mini";
+                                }
 
-                            <div class="@filter col-sm-4 col-md-4">
-                                <div class="portfolio_item">
-                                    <a href="~/Fundraiser/Details/@fundrasier.Id" data-path-hover="M 180,190 0,158 0,0 180,0 z">
-                                        <figure style="background-image:url(../../images/@fundrasier.CoverPhoto">
-                                            <svg viewBox="0 0 180 320" preserveAspectRatio="none">
-                                                <path d="M 180,0 0,0 0,0 180,0 z" />
-                                            </svg>
-                                            <figcaption>
-                                                <p>@fundrasier.Intro.Substring(0, Math.Min(fundrasier.Intro.Length, 250)) ...</p>
-                                                <div class="view_button">View</div>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                    <div class="portfolio_description">
-                                        <h3><a href="~/Fundraiser/Details/@fundrasier.Id">@fundrasier.Date.Year</a></h3>
-                                        @if (!fundrasier.IsMini)
-                                        {
-                                            <p>Annual Fundraiser</p>
-                                        }
-                                        else
-                                        {
-                                            <p>Mini Fundraiser</p>
-                                        }
+                                <div class="@filter col-sm-4 col-md-4">
+                                    <div class="portfolio_item">
+                                        <a href="~/Fundraiser/Details/@fundrasier.Id" data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                                            <figure style="background-image:url(../../images/@fundrasier.CoverPhoto">
+                                                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                                    <path d="M 180,0 0,0 0,0 180,0 z" />
+                                                </svg>
+                                                <figcaption>
+                                                    <p>@fundrasier.Intro.Substring(0, Math.Min(fundrasier.Intro.Length, 250)) ...</p>
+                                                    <div class="view_button">View</div>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <div class="portfolio_description">
+                                            <h3><a href="~/Fundraiser/Details/@fundrasier.Id">@fundrasier.Date.Year</a></h3>
+                                            @if (!fundrasier.IsMini)
+                                            {
+                                                <p>Annual Fundraiser</p>
+                                            }
+                                            else
+                                            {
+                                                <p>Mini Fundraiser</p>
+                                            }
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        }
-                    </div>
-            </section>
+                            }
+                        </div>
+                    </section>
 
-        </section>
+                </section>
+        </div>
+
 
                         @*<section class="portfolio_slider_wrapper">
                     <div class="flexslider" id="portfolio_slider">
