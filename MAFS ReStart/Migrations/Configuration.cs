@@ -307,7 +307,7 @@ using WebMatrix.WebData;
             {
                 FirstName = "Rakesh",
                 LastName = "Asthana",
-                Position = "Board Member",
+                Position = "Secretary",
                 Bio = "is a veterinarian by education and is a retired Major of the Indian army. After having practiced for nearly eighteen years as a veterinarian with the Indian Army, he was seconded to the Kuwaiti Army for two years. After having migrated to the US in 1993, Dr. Asthana has worked as a Cardiovascular Specialist, with various pharmaceutical companies like Parke-Davis, Pfizer, Glaxo, Novartis, and Astra Zeneca. He currently works as a \"Senior Cardiovascular Specialist\" with the Japanese Pharmaceutical company Daiichi-Sankyo US.  He tirelessly volunteers in various not-for-profit organizations. He sits on the Board of Directors of Black Feet Volunteer Medical Corps (BVMC). Rakesh also volunteers his time with \"Young Hearts 4 Life\", a stellar organization, screening young high school children in the US to avoid \"Sudden Cardiac Death\" syndrome. Rakesh firmly believes that the elderly and senior citizens in the US need our help and that MAFS is doing commendable work, which should be whole-heartedly supported.",
                 Image = "Rakesh-Asthana.png",
                 Image2 = "Rakesh-Asthana2.png",
@@ -464,7 +464,8 @@ using WebMatrix.WebData;
 
 "The greatest attraction of the evening was Shyam E Bahaar – A Musical Show by Swar Sarita, music group from Bombay, India. The singers were Samsuddin Vaghela, Madhuri Goswami, and Kunal Mahant who were accompanied by musicians, Jayesh Raval and Pankaj Raval. They enthralled everyone with pulsating Bollywood numbers and also mesmerized all with a variety of nostalgic, old songs.",
                 CoverPhoto = "Fundraiser/2014-mini.jpg",
-                FlickrGallery = ""
+                FlickrGallery = "",
+                IssuuLink = String.Empty
             }); 
 
             //2015 Mini
@@ -484,7 +485,9 @@ using WebMatrix.WebData;
 " The celebration also had an award ceremony. Gopal Lalmalani was given the Community Service Award; Mayor George Pradel was given the Support Service Award. Appreciation Awards were given to Nimish Jani, Krishna Bansal and Nakul Singh Chand. "+
 " Our emcees Neelam Desai, Naperville Manager and Jahnavi Bavisi, Niles Manager successfully managed the entire program and the event was concluded with vegetarian dinner which prepared by our kitchen. Beena Patel has presented vote of thanks. ",
                 CoverPhoto = "Fundraiser/2015-mini.jpg",
-                FlickrGallery = ""
+                FlickrGallery = "",
+                IssuuLink = String.Empty
+
             });
             
             //2016 Fundraiser
@@ -525,7 +528,8 @@ using WebMatrix.WebData;
                 Intro = "Over 300 seniors and prominent community members attended Metropolitan Asian Family Service’s Mini Fundraising dinner on May 21, 2016 at 1032 E Ogden Ave, Naperville, IL. ",
                 WriteUp = "The celebration started with the Diya ceremony which was performed by Swami Mukundananda of Bharat Sevashram of Chicago. Prominent leaders in attendance were Steve Chirico Mayor of Naperville, Aurora Alderman Rick Mervine, Krishna Bansal, Outreach Coordinator Naperville Village, and MAFS board members. In his opening remarks our keynote speaker, Steve Chirico, Mayor of Naperville, spoke about the importance such community services provide to the society and commended the MAFS team for serving the community on all fronts for over 3 decades. Mr. Krishna Bansal in his opening statement said that he counts himself as part of MAFS family and urged the community to come forward and join in MAFS mission of serving and caring. Mr. Rick Mervine was honored to be a part of this event and wanted to know if it was possible to have a center like this in his constituency of Aurora. Ms. Awilda Gonzalez UMAS CCP Director spoke about her concerns on the recent budget cut and the effect it is having on our programs.Ms. Gonzalez spoke about all our lobbying efforts to save Community Care and Adult Day Care Services. The entertainment program began with the Naperville ADS seniors performing a beautiful Bollywood song \"Prem Ratan Dhan Payo\" wonderfully choreographed by ADS coordinators Heena Mehta and Eva Contractor. Our Schaumburg ADS seniors performed a pulsating Gujarati garba \"Nagada Sang Dhol Baje\" ably choreographed by ADS coordinators Dipti Shah and Mital Patel. Chicago and Orland Park ADS seniors preformed 2 more mesmerizing Garbas choreographed by ADS coordinators Pankaj Patel and Grishma Shah respectively but the stage was set on fire by the students of Glenbard North High School, Carol Stream performing a Punjabi Bhangra. The Niles ADS seniors stole the show with 80 year olds performing \"Ladki Kar Gayi Chull\" with their walking sticks as props. Chicago Staff Pankaj and Kiran Patel brought a tear to every eye by their heartwarming performance and Naperville Staff also showcased their talent by performing taditional garba. The grand finale was by the Naperville ADS seniors performing a lively Qawwali number which was encored by the audience. Our emcees Neelam Desai, Naperville Manager, Jahnavi Bavisi, Niles Manager and Nehal Thakkar, Carol Stream  CCP Supervisor successfully managed the entire program and the event was concluded with vegetarian dinner prepared by our Kitchen staff. Mrs. Santosh Kumar presented the vote of thanks.",
                 CoverPhoto = "Fundraiser/2016-mini.jpg",
-                FlickrGallery = ""
+                FlickrGallery = "",
+                IssuuLink = String.Empty
             });
 
             

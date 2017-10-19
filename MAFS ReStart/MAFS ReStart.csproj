@@ -309,6 +309,8 @@
     <Content Include="Images\board\board2.jpg" />
     <Content Include="Images\board\Harish-Kolasani.png" />
     <Content Include="Images\board\Harish-Kolasani2.png" />
+    <Content Include="Images\Fundraiser\2017-mini.png" />
+    <Content Include="Images\Fundraiser\Flyer-Top.jpg" />
     <Content Include="Images\icons\education_icon.png" />
     <Content Include="Images\icons\education_icon2.png" />
     <Content Include="Images\icons\health_icon.png" />
