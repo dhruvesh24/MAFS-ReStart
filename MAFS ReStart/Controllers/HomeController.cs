@@ -1,8 +1,10 @@
 ﻿using MAFS_ReStart.Models;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
@@ -131,7 +133,16 @@ namespace MAFS_ReStart.Controllers
         [HttpPost]
         public ActionResult Contact(EmailResponse Response)
         {
-            if (ModelState.IsValid)
+            //Validate Google ReCaptcha
+            var reCaptchaResponse = Request["g-recaptcha-response"];
+            string secretKey = "6Lfpw0sUAAAAAInEL5B4PXTOqDwMS1D5zL9PQQrR";
+            var client = new WebClient();
+            var result = client.DownloadString(string.Format("https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}", secretKey, reCaptchaResponse));
+            var obj = JObject.Parse(result);
+            var reCaptchaStatus = (bool)obj.SelectToken("success");
+            ViewBag.reCaptchaMessage = reCaptchaStatus ? "Success" : "Failed";
+
+            if (ModelState.IsValid && reCaptchaStatus)
             {
                 return View("Thanks", Response);
             }

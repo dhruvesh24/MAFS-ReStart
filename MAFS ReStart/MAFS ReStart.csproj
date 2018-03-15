@@ -306,9 +306,16 @@
     <Content Include="fonts\font-awesome\scss\_spinning.scss" />
     <Content Include="fonts\font-awesome\scss\_stacked.scss" />
     <Content Include="fonts\font-awesome\scss\_variables.scss" />
+    <Content Include="Images\board\2017-Board.png" />
     <Content Include="Images\board\board2.jpg" />
     <Content Include="Images\board\Harish-Kolasani.png" />
     <Content Include="Images\board\Harish-Kolasani2.png" />
+    <Content Include="Images\board\James-DMello.png" />
+    <Content Include="Images\board\James-DMello2.png" />
+    <Content Include="Images\board\Sagar-Kumar.png" />
+    <Content Include="Images\board\Sagar-Kumar2.png" />
+    <Content Include="Images\board\Sonal-Patel.png" />
+    <Content Include="Images\board\Sonal-Patel2.png" />
     <Content Include="Images\Donate.jpg" />
     <Content Include="Images\Fundraiser\2017-mini.png" />
     <Content Include="Images\Fundraiser\Flyer-Top.jpg" />

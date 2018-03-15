@@ -338,7 +338,7 @@ using WebMatrix.WebData;
             {
                 FirstName = "Harish",
                 LastName = "Kolasani",
-                Position = "Board Member",
+                Position = "Vice President",
                 Bio = "is an individual who serves the needy for his own satisfaction & that is the reason for the quality of his services. He always focuses on spreading positive energy. As an NRI, he has been serving many Indians & Americans in various forms through numerous organizations and as an individual for the past 6 years. He has been providing free physical therapy treatments, free blood tests & yoga every day in India by setting up 3-week mobile health camps in slums, schools and senior homes. These services are offered under the NRI SEVA Foundation with his personal financial backing . He’s been playing an important role in FIA Chicago (Federation of Indian Associations) and representing pride in India to all communities in Chicago. The Indian Consulate in Chicago recognized his dedication and took his help to Coordinate KALA UTSAV in 2014 & confirmed him as Coordinator for 2016. Currently he is serving as President of the NRI SEVA Foundation & Indian American Business Council, Managing Director of the Desiworld TV Channel, Secretary of the Association of Indians in America (AIA), Advisory Board Member of the Indian Diaspora Club, and Indian Government Affairs Chair in TANA. He shares motivating messages from his social media pages followed by more than one million followers.",
                 Image = "Harish-Kolasani.png",
                 Image2 = "Harish-Kolasani2.png",
@@ -363,6 +363,54 @@ using WebMatrix.WebData;
                 Facebook = @"https://www.facebook.com/1ShwetaSingh",
                 Email = @"Ssingh9@luc.edu",
                 LinkedIn = @"https://www.linkedin.com/in/shweta-singh-a7004714"
+            });
+
+            //Sagar Kumar
+            context.Members.AddOrUpdate(r => r.FirstName, new Member
+            {
+                FirstName = "Sagar",
+                LastName = "Kumar",
+                Position = "Treasurer",
+                Bio = "Sagar Kumar is an Industrial Engineer by profession from Purdue University and received his MBA with emphasis on Entrepreneurship and Leadership from Arizona State University. He worked in Honeywell Aerospace as a New Product Development Program Manager for Honeywell’s top commercial jet engine. He worked for Honeywell for 7 years before moving back to Illinois. Sagar became an active board member in late 2016. He brings a very strategic and project-based mindset to MAFS as well a more technical approach on the day to day operations.",
+                Image = "Sagar-Kumar.png",
+                Image2 = "Sagar-Kumar2.png",
+                IsStaff = false,
+                IsActive = true,
+                Facebook = @"https://www.facebook.com/sagar.kumar.purdue",
+                Email = @"sagark@umasinc.com",
+                LinkedIn = @"https://www.linkedin.com/in/sagar-kumar-93991632/"
+            });
+
+            //James D'Mello
+            context.Members.AddOrUpdate(r => r.FirstName, new Member
+            {
+                FirstName = "James",
+                LastName = "DMello",
+                Position = "Board Member",
+                Bio = "Mr. D’mello has a Master’s degree in education from Mumbai, India. He started his career as a math teacher for 13 years in India as well as 4 years in Chicago at Nettle Horst School. He worked for whole foods market as a customer service manager for 14 years. Currently, he is with MB Financial Bank. He was born and raised in Gujarat, India. He was the State and National champion in Soccer and Field Hockey. James found that MAFS is one of the largest institutions that provide all kinds of service to all different religions in Good Faith and that is what made him come and join the board to give some extra time in helping fund programs and different events. He has worked in all different fields and lived everywhere east to west but found that MAFS is one of the best in the Chicagoland area. He wants to help our community with all respects to all religions and stay united as an Indian.",
+                Image = "James-DMello.png",
+                Image2 = "James-DMello2.png",
+                IsStaff = false,
+                IsActive = true,
+                Facebook = string.Empty,
+                Email = @"JDMello@mbfinancial.com",
+                LinkedIn = string.Empty
+            });
+
+            //Sonal Patel
+            context.Members.AddOrUpdate(r => r.FirstName, new Member
+            {
+                FirstName = "Sonal",
+                LastName = "Patel",
+                Position = "Board Member",
+                Bio = "Dr. Patel is a doctor of anesthesiology and has a fellowship in pain management. She graduated with honors in 1994. She has more than 23 years of experiences in the medical field. She works at St Alexius Medical Center in Hoffman Estates where she is also the clinical director of pain management. She strongly believes in giving back to society and preserving our heritage and culture. Along with supporting MAFS, she also supports VGS and AIA organizations. She joined the board in 2017.",
+                Image = "Sonal-Patel.png",
+                Image2 = "Sonal-Patel2.png",
+                IsStaff = false,
+                IsActive = true,
+                Facebook = @"https://www.facebook.com/sonal.n.patel",
+                Email = @"sonalnpatel@hotmail.com",
+                LinkedIn = string.Empty
             });
 
             //Staff
