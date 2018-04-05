@@ -588,3 +588,4 @@ C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\obj\Debug\MAFS_ReS
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\obj\Debug\MAFS ReStart.csproj.GenerateResource.Cache
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\obj\Debug\MAFS ReStart.dll
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\obj\Debug\MAFS ReStart.pdb
+C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\obj\Debug\MAFS_ReStart.Migrations.YouTubeLink.resources

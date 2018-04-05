@@ -17,5 +17,6 @@ namespace MAFS_ReStart.Models
         public string CoverPhoto { get; set; }
         public string IssuuLink { get; set; }
         public string FlickrGallery { get; set; }
+        public string YouTubeLink { get; set; }
     }
 }

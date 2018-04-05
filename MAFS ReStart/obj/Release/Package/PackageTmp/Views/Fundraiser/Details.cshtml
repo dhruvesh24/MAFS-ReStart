@@ -165,6 +165,23 @@
                             <img src="http://placehold.it/110" alt="">
                         </a>
                     </aside>*@
+                   
+                        
+                    @if (!Model.YouTubeLink.Equals(String.Empty))
+                    {
+                        @*<div class="post_header">
+                            <h3 class="post_title"><a href="single_post.html">Fugiat dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters amet risus.</a></h3>
+                            <div class="post_sub"><i class="fa-time"></i> February 3, 2013 <a href="single_post.html#post_comments"><i class="fa-comments-alt"></i> 6 comments</a> </div>
+                        </div>*@
+                        <div class="post_content">
+                            <figure>
+                                <iframe class="video_iframe" src="@Model.YouTubeLink" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen height="400"></iframe>
+                            </figure>
+                            @*<p>Fugiat dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters amet risus. Cras mattis cosi sectetut amet fermens etrsaters tum aecenas faucib sadips amets. Fugiat dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters amet risus. Cras mattis cosi sectetut amet fermens etrsaters tum aecenas faucib sadips amets....</p>
+                        <a href="single_post.html" class="btn btn-primary">Read More</a>*@
+                        </div>
+                    }
+
                     @if (!Model.IssuuLink.Equals(String.Empty))
                     {
                         <aside class="widget">

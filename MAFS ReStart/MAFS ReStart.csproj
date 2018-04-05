@@ -195,6 +195,10 @@
     <Compile Include="Migrations\201701252116112_InitialCreate.Designer.cs">
       <DependentUpon>201701252116112_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804042300587_YouTubeLink.cs" />
+    <Compile Include="Migrations\201804042300587_YouTubeLink.Designer.cs">
+      <DependentUpon>201804042300587_YouTubeLink.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\BlogPost.cs" />
@@ -759,6 +763,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201701252116112_InitialCreate.resx">
       <DependentUpon>201701252116112_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804042300587_YouTubeLink.resx">
+      <DependentUpon>201804042300587_YouTubeLink.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
