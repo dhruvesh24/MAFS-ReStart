@@ -517,12 +517,9 @@ C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\Microsoft.Web.
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\Microsoft.Web.WebPages.OAuth.dll
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\Newtonsoft.Json.dll
-C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Net.Http.Formatting.dll
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Spatial.dll
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Web.Helpers.dll
-C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Web.Http.dll
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Web.Http.OData.dll
-C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Web.Http.WebHost.dll
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Web.Mvc.dll
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Web.Optimization.dll
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Web.Razor.dll
@@ -534,10 +531,7 @@ C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\WebMatrix.Data
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\WebMatrix.WebData.dll
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\EntityFramework.xml
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\Newtonsoft.Json.xml
-C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Net.Http.Formatting.xml
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Web.Helpers.xml
-C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Web.Http.xml
-C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Web.Http.WebHost.xml
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Web.Mvc.xml
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Web.Razor.xml
 C:\Users\prashantk\Documents\GitHub\MAFS-ReStart\MAFS ReStart\bin\System.Web.WebPages.xml
